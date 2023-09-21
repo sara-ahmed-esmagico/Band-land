@@ -8,6 +8,11 @@ import MainLogo from "../../images/Bandland Logo@3x.png";
 import axios from "axios";
 import AlertMessage from "../../common/AlertMessage";
 import HeaderBase from "../../images/Header Base.png";
+import MainBg from "../../images/BGOrange.svg";
+import SideBorder from "../../images/Border.png";
+import MidBanner from "../../images/Banner2.png";
+import FooterBase from "../../images/Footer Base.png";
+import RegisterBanner from "../../images/Register Banner.svg";
 
 const Register = () => {
   const [formValues, setFormValues] = useState({
@@ -24,8 +29,6 @@ const Register = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-
-    console.log(name, value, "m");
     setFormValues({ ...formValues, [name]: value });
   };
 
@@ -51,13 +54,12 @@ const Register = () => {
               severity: "success",
             });
           }
-
-          // setFormValues({
-          //   name: "",
-          //   phone: "",
-          //   email: "",
-          //   city: "",
-          // })
+          setFormValues({
+            name: "",
+            phone: "",
+            email: "",
+            city: "",
+          });
         });
     } catch (error) {
       setSnackbar({
@@ -76,29 +78,56 @@ const Register = () => {
       justifyContent={"center"}
       alignItems={"center"}
     >
-      <img className="headerBaseStyle" src={HeaderBase} />
-      <Box display={"flex"} justifyContent={"center"}>
+      <img className="mainBaseStyle" src={MainBg} width={"1500px"} />
+      <img className="pos-absolute sideBorder" src={SideBorder} height={'230%'} width={'90%'} />
+      <img className="midBanner pos-absolute" src={MidBanner} width={'60%'}  />
+      <img className="headerBaseStyle pos-absolute " src={HeaderBase} />
+      <img className="pos-absolute mainLogo" src={MainLogo} />
+      <img className="pos-absolute registerFooterBase" src={FooterBase} />
+      <img className="pos-absolute registerBanner" src={RegisterBanner} />
+      <Box
+        className="headerBtn pos-absolute "
+        display={"flex"}
+        justifyContent={"center"}
+      >
         <Button className="homeBtn texturinaFont">HOME</Button>
         <Bolt fontSize="large" sx={{ mt: 2 }} />
         <Button className="homeBtn texturinaFont">REGISTER</Button>
+        <Bolt fontSize="large" sx={{ mt: 2 }} />
+        <Button className="homeBtn texturinaFont">ABOUT</Button>
+        <Bolt fontSize="large" sx={{ mt: 2 }} />
+        <Button className="homeBtn texturinaFont">THE ARTISTS</Button>
+        <Bolt fontSize="large" sx={{ mt: 2 }} />
+        <Button className="homeBtn texturinaFont">TICKETS</Button>
+        <Bolt fontSize="large" sx={{ mt: 2 }} />
+        <Button className="homeBtn texturinaFont">fAQ</Button>
       </Box>
 
-      <Typography className="texturinaFont">PRESENTS</Typography>
-      <img src={MainLogo} />
+      <Box className="pos-absolute school">
+        <Typography
+          className="texturinaFont schoolDesc"
+          color={"white"}
+          variant="h6"
+        >
+          EMBASSY INTERNATIONAL RIDING SCHOOL
+        </Typography>
+      </Box>
 
-      <Typography className="texturinaFont">
-        PLEDGE ALLEGIANCE TO THE BAND!
-      </Typography>
-      <Typography className="texturinaFont">
+      <Box className="pos-absolute midBannerHead">
+        <Typography className="midHeading" sx={{ fontSize: 40 }}>
+          PLEDGE ALLEGIANCE TO THE BAND!
+        </Typography>
+      </Box>
+
+      <Typography
+        className="texturinaFont pos-absolute midBannerDesc"
+        color={"white"}
+      >
         Join the inner circle to receive all festival updates, from artist
         lineup to tickets, schedule, guides & more. This one’s for you!
       </Typography>
-      <Typography className="midHeading">BE A CITIZEN OF BANDLAND!</Typography>
-      <Typography className="texturinaFont" sx={{ fontWeight: 600 }}>
-        Pass on the mic. Grab the stand. Take the stage.
-      </Typography>
 
-      <form className="form-group">
+      <form className="pos-absolute registerForm">
         <Grid container>
           <Grid
             item
@@ -115,6 +144,7 @@ const Register = () => {
           </Grid>
           <Grid item xs={6} sx={{ mt: 3 }}>
             <TextField
+              className="registerTextfield"
               size="small"
               value={formValues?.name}
               name="name"
@@ -137,6 +167,7 @@ const Register = () => {
           <Grid item xs={6} sx={{ mt: 3 }}>
             <TextField
               size="small"
+              className="registerTextfield"
               value={formValues?.phone}
               name="phone"
               onChange={handleInputChange}
@@ -158,6 +189,7 @@ const Register = () => {
 
           <Grid item xs={6} sx={{ mt: 3 }}>
             <TextField
+              className="registerTextfield"
               size="small"
               value={formValues?.email}
               name="email"
@@ -179,6 +211,7 @@ const Register = () => {
           </Grid>
           <Grid item xs={6} sx={{ mt: 3 }}>
             <TextField
+              className="registerTextfield"
               size="small"
               value={formValues?.city}
               name="city"
@@ -205,26 +238,28 @@ const Register = () => {
         </Grid>
       </form>
 
-      <img src={WhiteLogo} className="rotate" />
+      <Box className="pos-absolute registerFooterBox">
+        <img src={WhiteLogo} className="rotate" />
 
-      <Box display={"flex"} justifyContent={"center"}>
-        <Button className="homeBtn texturinaFont">HOME</Button>
-        <Bolt fontSize="large" sx={{ mt: 2 }} />
-        <Button className="homeBtn texturinaFont">REGISTER</Button>
-        <Bolt fontSize="large" sx={{ mt: 2 }} />
-        <Button className="homeBtn texturinaFont">ABOUT</Button>
-        <Bolt fontSize="large" sx={{ mt: 2 }} />
-        <Button className="homeBtn texturinaFont">THE ARTISTS</Button>
-        <Bolt fontSize="large" sx={{ mt: 2 }} />
-        <Button className="homeBtn texturinaFont">TICKETS</Button>
-        <Bolt fontSize="large" sx={{ mt: 2 }} />
-        <Button className="homeBtn texturinaFont">fAQ</Button>
+        <Box display={"flex"} justifyContent={"center"} sx={{ mt: 5 }}>
+          <Button className="homeBtn texturinaFont">HOME</Button>
+          <Bolt fontSize="large" sx={{ mt: 2 }} />
+          <Button className="homeBtn texturinaFont">REGISTER</Button>
+          <Bolt fontSize="large" sx={{ mt: 2 }} />
+          <Button className="homeBtn texturinaFont">ABOUT</Button>
+          <Bolt fontSize="large" sx={{ mt: 2 }} />
+          <Button className="homeBtn texturinaFont">THE ARTISTS</Button>
+          <Bolt fontSize="large" sx={{ mt: 2 }} />
+          <Button className="homeBtn texturinaFont">TICKETS</Button>
+          <Bolt fontSize="large" sx={{ mt: 2 }} />
+          <Button className="homeBtn texturinaFont">fAQ</Button>
+        </Box>
+
+        <img src={BMSLiveSvg} className="rotate" style={{ marginTop: 45 }} />
+        <Typography className="texturinaFont" sx={{ mt: 2 }}>
+          © | Privacy | Terms & Conditions
+        </Typography>
       </Box>
-
-      <img src={BMSLiveSvg} className="rotate" />
-      <Typography className="texturinaFont">
-        © | Privacy | Terms & Conditions
-      </Typography>
 
       <AlertMessage snackbar={snackbar} setSnackbar={setSnackbar} />
     </Box>

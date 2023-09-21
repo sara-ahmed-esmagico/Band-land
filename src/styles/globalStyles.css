@@ -17,26 +17,186 @@
   color: #ffffff !important;
   text-shadow: 3px 3px 0px #390c06 !important;
   opacity: 1 !important;
-  font-size: 50px !important;
 }
 
 .signUpBtn {
   background-color: #44c0a8;
 }
 
+.registerTextfield {
+    width: 180px;
+    background-color: #ffffff;
+}
+
 .registerBox {
   border: 1px solid;
-  width: 250px;
+  width: 150px;
+  background-color: #ffffff;
 }
 
 .rotate {
   transform: rotate(180deg);
 }
 
+.pos-absolute {
+  position: absolute;
+}
+
+.pos-relative {
+  position: relative;
+}
+
 .headerBaseStyle {
-  top:0px;
-  left: -96.7115478515625px;
-  width: 1543px;
-  height: 296px;
+  top: -60px;
   opacity: 1;
 }
+
+.mainBaseStyle {
+  position: relative;
+}
+
+.headerBtn {
+  top: 20px;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+.sideBorder {
+  top: 80px;
+}
+
+.midBanner {
+  top: 5%;
+}
+
+.mainLogo {
+  top: 45%;
+  width: 30%;
+}
+
+.school {
+  top: 71%;
+  display: flex;
+  justify-content: center;
+  text-align: -webkit-center;
+}
+
+.schoolDesc {
+  width: 70%;
+}
+
+.midBannerHead {
+    top: 80%;
+}
+
+.midBannerDesc {
+    top: 87%;
+    width: 30%;
+    text-align: center;
+}
+
+.midHeading {
+  font: "normal normal normal 72px/64px Modesto Condensed";
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-shadow: 3px 3px 0px #390c06;
+  opacity: 1;
+}
+
+.textBanner {
+    top: 90%;
+    width: 700px;
+}
+
+.secondTextBanner {
+    top: 230%;
+    width: 700px;
+}
+
+.bannerBrief {
+    top: 98%;
+    width: 500px;
+    text-align: center;
+}
+
+.secondBannerBrief {
+    top: 240%;
+    width: 600px;
+    text-align: center;
+}
+
+.secondBannerSubBrief {
+    top: 245%;
+    width: 600px;
+    text-align: center; 
+}
+
+.orangeBand {
+    top: 130%;
+    width: 99%;
+}
+
+.belowOrangeBand {
+    top: 220%;
+}
+
+.signUpBtnPos {
+    position: absolute !important;
+    top: 253% !important;
+}
+
+.footerBase {
+    top: 300%;
+}
+
+.registerFooterBase {
+    top: 172%;
+}
+
+.footerBox {
+    top: 320%;
+    text-align: center;
+}
+
+.registerFooterBox {
+    top: 190%;
+    text-align: center;
+}
+.registerBanner {
+    top: 100%;
+}
+
+.registerForm {
+    top: 110%;
+}
+
+
+@media (min-width: 280px) and (max-width: 319px) {
+   
+  }
+  @media (min-width: 320px) and (max-width: 424px) {
+   
+  }
+  
+  @media (min-width: 425px) and (max-width: 500px) {
+   
+  }
+  
+  @media (min-width: 768px) and (max-width: 911px) {
+    
+  }
+  
+  @media (min-width: 1024px) and (max-width: 1400px) {
+  
+  }
+  
+  @media (width: 1440px) {
+    
+  }
+  
