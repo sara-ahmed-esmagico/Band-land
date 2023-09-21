@@ -1,0 +1,42 @@
+.texturinaFont {
+  font-family: "normal normal medium 20px/31px Texturina" !important;
+  letter-spacing: 0px !important;
+}
+
+.homeBtn {
+  font-size: 30px !important;
+  text-decoration: none !important;
+  color: black !important;
+  font-weight: 800 !important;
+}
+
+.midHeading {
+  text-align: center !important;
+  font-family: "normal normal normal 72px/64px Modesto Condensed" !important;
+  letter-spacing: 0px !important;
+  color: #ffffff !important;
+  text-shadow: 3px 3px 0px #390c06 !important;
+  opacity: 1 !important;
+  font-size: 50px !important;
+}
+
+.signUpBtn {
+  background-color: #44c0a8;
+}
+
+.registerBox {
+  border: 1px solid;
+  width: 250px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.headerBaseStyle {
+  top:0px;
+  left: -96.7115478515625px;
+  width: 1543px;
+  height: 296px;
+  opacity: 1;
+}
