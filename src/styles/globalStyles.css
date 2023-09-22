@@ -1,6 +1,19 @@
+.page-container {
+  height: 370vh;
+}
+
+.register-page-container {
+  height: 248vh;
+}
+
 .texturinaFont {
-  font-family: "normal normal medium 20px/31px Texturina" !important;
+  font-family: "Texturina" !important;
   letter-spacing: 0px !important;
+}
+
+.boltBtn {
+  font-size: 40px !important;
+  margin-top: 10px;
 }
 
 .homeBtn {
@@ -24,8 +37,8 @@
 }
 
 .registerTextfield {
-    width: 180px;
-    background-color: #ffffff;
+  width: 180px;
+  background-color: #ffffff;
 }
 
 .registerBox {
@@ -47,8 +60,10 @@
 }
 
 .headerBaseStyle {
-  top: -60px;
-  opacity: 1;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 }
 
 .mainBaseStyle {
@@ -57,6 +72,8 @@
 
 .headerBtn {
   top: 20px;
+  position: fixed;
+  z-index: 9999;
 }
 
 .fullWidth {
@@ -69,6 +86,7 @@
 
 .sideBorder {
   top: 80px;
+  position: fixed;
 }
 
 .midBanner {
@@ -76,12 +94,12 @@
 }
 
 .mainLogo {
-  top: 45%;
+  top: 55%;
   width: 30%;
 }
 
 .school {
-  top: 71%;
+  top: 85%;
   display: flex;
   justify-content: center;
   text-align: -webkit-center;
@@ -92,13 +110,13 @@
 }
 
 .midBannerHead {
-    top: 80%;
+  top: 110%;
 }
 
 .midBannerDesc {
-    top: 87%;
-    width: 30%;
-    text-align: center;
+  top: 87%;
+  width: 30%;
+  text-align: center;
 }
 
 .midHeading {
@@ -110,93 +128,262 @@
 }
 
 .textBanner {
-    top: 90%;
-    width: 700px;
+  top: 130%;
+  width: 700px;
 }
 
 .secondTextBanner {
-    top: 230%;
-    width: 700px;
+  top: 230%;
+  width: 700px;
 }
 
 .bannerBrief {
-    top: 98%;
-    width: 500px;
-    text-align: center;
+  top: 140%;
+  width: 500px;
+  text-align: center;
 }
 
 .secondBannerBrief {
-    top: 240%;
-    width: 600px;
-    text-align: center;
+  top: 240%;
+  width: 600px;
+  text-align: center;
 }
 
 .secondBannerSubBrief {
-    top: 245%;
-    width: 600px;
-    text-align: center; 
+  top: 245%;
+  width: 600px;
+  text-align: center;
 }
 
 .orangeBand {
-    top: 130%;
-    width: 99%;
+  top: 130%;
+  width: 100%;
 }
 
 .belowOrangeBand {
-    top: 220%;
+  top: 220%;
 }
 
 .signUpBtnPos {
-    position: absolute !important;
-    top: 253% !important;
+  position: absolute !important;
+  top: 253% !important;
 }
 
 .footerBase {
-    top: 300%;
+  top: 305%;
+  width: 100%;
 }
 
 .registerFooterBase {
-    top: 172%;
+  top: 181%;
 }
 
 .footerBox {
-    top: 320%;
-    text-align: center;
+  top: 360%;
+  text-align: center;
 }
 
 .registerFooterBox {
-    top: 190%;
-    text-align: center;
+  top: 200%;
+  text-align: center;
 }
 .registerBanner {
-    top: 100%;
+  top: 100%;
 }
 
 .registerForm {
-    top: 110%;
+  top: 110%;
 }
 
+@media (min-width: 280px) and (max-width: 374px) {
+  .headerBtn {
+    top: 0px;
+  }
+  .headerBaseStyle {
+    width: 63%;
+  }
+  .homeBtn {
+    font-size: 10px !important;
+    font-weight: 600 !important;
+  }
+  .boltBtn {
+    font-size: 12px !important;
+    margin-top: 8px;
+  }
+  .mainLogo {
+    top: 13%;
+    width: 30%;
+  }
+  .textBanner {
+    top: 27%;
+    width: 200px;
+  }
+  .midBannerHead {
+    top: 23%;
+  }
+  .midHeading {
+    font-size: 18px !important;
+  }
 
-@media (min-width: 280px) and (max-width: 319px) {
-   
+  .school {
+    top: 20.5%;
   }
-  @media (min-width: 320px) and (max-width: 424px) {
-   
+  .schoolDesc {
+    font-size: 5px !important;
   }
-  
-  @media (min-width: 425px) and (max-width: 500px) {
-   
+
+  .bannerBrief {
+    top: 28%;
+    width: 150px;
+    font-size: 6px !important ;
   }
-  
-  @media (min-width: 768px) and (max-width: 911px) {
-    
+}
+@media (min-width: 375px) and (max-width: 424px) {
+  .headerBtn {
+    top: 0px;
   }
-  
-  @media (min-width: 1024px) and (max-width: 1400px) {
-  
+  .headerBaseStyle {
+    width: 70%;
   }
-  
-  @media (width: 1440px) {
-    
+  .homeBtn {
+    font-size: 10px !important;
+    font-weight: 600 !important;
   }
-  
+  .boltBtn {
+    font-size: 12px !important;
+    margin-top: 8px;
+  }
+  .mainLogo {
+    top: 13%;
+    width: 30%;
+  }
+  .textBanner {
+    top: 30%;
+    width: 220px;
+  }
+  .midBannerHead {
+    top: 25%;
+  }
+  .midHeading {
+    font-size: 20px !important;
+  }
+
+  .school {
+    top: 20.5%;
+  }
+  .schoolDesc {
+    font-size: 5px !important;
+  }
+
+  .bannerBrief {
+    top: 33%;
+    width: 150px;
+    font-size: 6px !important ;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 500px) {
+  .headerBtn {
+    top: 0px;
+  }
+  .headerBaseStyle {
+    width: 75.5%;
+  }
+  .homeBtn {
+    font-size: 10px !important;
+    font-weight: 600 !important;
+  }
+  .boltBtn {
+    font-size: 12px !important;
+    margin-top: 8px;
+  }
+  .mainLogo {
+    top: 15%;
+    width: 30%;
+  }
+  .textBanner {
+    top: 35%;
+    width: 250px;
+  }
+  .midBannerHead {
+    top: 30%;
+  }
+  .midHeading {
+    font-size: 20px !important;
+  }
+
+  .school {
+    top: 24%;
+  }
+  .schoolDesc {
+    font-size: 5px !important;
+  }
+
+  .bannerBrief {
+    top: 37%;
+    width: 150px;
+    font-size: 6px !important ;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 911px) {
+  .headerBtn {
+    top: 0;
+  }
+  .homeBtn {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+  }
+  .boltBtn {
+    font-size: 20px !important;
+  }
+  .mainLogo {
+    top: 30%;
+  }
+  .textBanner {
+    top: 70%;
+    width: 400px;
+  }
+  .midBannerHead {
+    top: 55%;
+  }
+
+  .school {
+    top: 45%;
+  }
+  .bannerBrief {
+    top: 72%;
+    width: 300px;
+    font-size: 12px !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+  .headerBtn {
+    top: 5px;
+  }
+  .mainLogo {
+    top: 40%;
+    width: 30%;
+  }
+  .textBanner {
+    top: 88%;
+    width: 600px;
+  }
+  .midBannerHead {
+    top: 75%;
+  }
+
+  .school {
+    top: 60%;
+  }
+
+  .bannerBrief {
+    top: 94%;
+    width: 450px;
+    font-size: medium;
+  }
+}
+
+@media (width: 1440px) {
+}

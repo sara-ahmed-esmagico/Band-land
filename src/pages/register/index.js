@@ -77,8 +77,10 @@ const Register = () => {
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
+      backgroundColor={'coral'}
+      className='register-page-container'
     >
-      <img className="mainBaseStyle" src={MainBg} width={"1500px"} />
+      {/* <img className="mainBaseStyle" src={MainBg} width={"1500px"} /> */}
       <img className="pos-absolute sideBorder" src={SideBorder} height={'230%'} width={'90%'} />
       <img className="midBanner pos-absolute" src={MidBanner} width={'60%'}  />
       <img className="headerBaseStyle pos-absolute " src={HeaderBase} />
@@ -90,17 +92,17 @@ const Register = () => {
         display={"flex"}
         justifyContent={"center"}
       >
-        <Button className="homeBtn texturinaFont">HOME</Button>
+        <Button href="/" className="homeBtn texturinaFont">HOME</Button>
         <Bolt fontSize="large" sx={{ mt: 2 }} />
-        <Button className="homeBtn texturinaFont">REGISTER</Button>
-        <Bolt fontSize="large" sx={{ mt: 2 }} />
+        <Button href="/register" className="homeBtn texturinaFont">REGISTER</Button>
+        {/* <Bolt fontSize="large" sx={{ mt: 2 }} />
         <Button className="homeBtn texturinaFont">ABOUT</Button>
         <Bolt fontSize="large" sx={{ mt: 2 }} />
         <Button className="homeBtn texturinaFont">THE ARTISTS</Button>
         <Bolt fontSize="large" sx={{ mt: 2 }} />
         <Button className="homeBtn texturinaFont">TICKETS</Button>
         <Bolt fontSize="large" sx={{ mt: 2 }} />
-        <Button className="homeBtn texturinaFont">fAQ</Button>
+        <Button className="homeBtn texturinaFont">fAQ</Button> */}
       </Box>
 
       <Box className="pos-absolute school">
@@ -242,17 +244,17 @@ const Register = () => {
         <img src={WhiteLogo} className="rotate" />
 
         <Box display={"flex"} justifyContent={"center"} sx={{ mt: 5 }}>
-          <Button className="homeBtn texturinaFont">HOME</Button>
+          <Button href="/" className="homeBtn texturinaFont">HOME</Button>
           <Bolt fontSize="large" sx={{ mt: 2 }} />
-          <Button className="homeBtn texturinaFont">REGISTER</Button>
-          <Bolt fontSize="large" sx={{ mt: 2 }} />
+          <Button  href="/register" className="homeBtn texturinaFont">REGISTER</Button>
+          {/* <Bolt fontSize="large" sx={{ mt: 2 }} />
           <Button className="homeBtn texturinaFont">ABOUT</Button>
           <Bolt fontSize="large" sx={{ mt: 2 }} />
           <Button className="homeBtn texturinaFont">THE ARTISTS</Button>
           <Bolt fontSize="large" sx={{ mt: 2 }} />
           <Button className="homeBtn texturinaFont">TICKETS</Button>
           <Bolt fontSize="large" sx={{ mt: 2 }} />
-          <Button className="homeBtn texturinaFont">fAQ</Button>
+          <Button className="homeBtn texturinaFont">fAQ</Button> */}
         </Box>
 
         <img src={BMSLiveSvg} className="rotate" style={{ marginTop: 45 }} />
