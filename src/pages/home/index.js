@@ -1,5 +1,5 @@
 import { Bolt } from "@mui/icons-material";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import "../../styles/globalStyles.css";
 import BMSLiveSvg from "../../images/BMS LIVE.svg";
@@ -39,13 +39,17 @@ const Home = () => {
         <img className="pos-absolute footerBase" src={RightShrub} /> */}
 
         <Box className="headerBtn" display={"flex"} justifyContent={"center"}>
-          <Button href="/" className="homeBtn " sx={{ fontFamily: "Domine" }}>
+          <Button
+            href="/"
+            className="homeBtn "
+            sx={{ fontFamily: "modesto-condensed" }}
+          >
             HOME
           </Button>
           <Bolt className="boltBtn" />
 
           <Button
-            sx={{ fontFamily: "Mondesto Condensed" }}
+            sx={{ fontFamily: "modesto-condensed" }}
             href="/register"
             className="homeBtn "
           >
@@ -63,7 +67,11 @@ const Home = () => {
           </Typography>
         </Box>
         <Box className="pos-absolute midBannerHead">
-          <Typography className="midHeading" fontSize={50}>
+          <Typography
+            className="midHeading"
+            fontSize={50}
+            style={{ fontFamily: "modesto-condensed" }}
+          >
             ENTER BANDLAND
           </Typography>
         </Box>
@@ -78,6 +86,30 @@ const Home = () => {
           homecoming, back to Bangalore. Trends may come & go, but Bandland is
           forever.
         </Typography>
+
+        <Box className={"pos-absolute orangeDesc"}>
+          <Grid container display={"flex"} justifyContent={"center"}>
+            <Box display={"flex"} sx={{ mb: "-100px" }}>
+              <Grid item xs={{ xs: 6, sm: 8 }}>
+                <Typography className="midDesc1">2</Typography>
+              </Grid>
+              <Grid item xs={6} className="midSeparator">
+                <Typography className="midDesc2">DAYS.</Typography>
+                <Typography className="midDesc2">STAGES.</Typography>
+              </Grid>
+            </Box>
+
+            <Box display={"flex"} className="orangeMidPoint">
+              <Grid item xs={5}>
+                <Typography className="midDesc1">12</Typography>
+              </Grid>
+              <Grid item xs={7} className="midSeparator">
+                <Typography className="midDesc2">POWER PACKED.</Typography>
+                <Typography className="midDesc2">PERFORMANCES.</Typography>
+              </Grid>
+            </Box>
+          </Grid>
+        </Box>
         <Box className="pos-absolute belowOrangeBand">
           <Typography className="midHeading" fontSize={50}>
             BE A CITIZEN OF BANDLAND!
@@ -97,30 +129,29 @@ const Home = () => {
           Join the inner circle to receive all festival updates, from artist
           lineup to tickets, schedule, guides & more. This one’s for you!
         </Typography>
-        <Button
-          href="/register"
-          variant="contained"
-          sx={{ backgroundColor: "#44C0A8" }}
-          className="texturinaFont signUpBtnPos"
-        >
+        <Button href="/register" variant="contained" className=" signUpBtnPos">
           {" "}
           Sign Up{" "}
         </Button>
         <Box className="footerBox pos-absolute">
           <img src={WhiteLogo} className="rotate" />
 
-          <Box sx={{ mt: 2 }} display={"flex"} justifyContent={"center"}>
-            <Button sx={{ p: "0px 8px" }} className="homeBtn texturinaFont">
+          <Box
+            sx={{ mt: { lg: 2 } }}
+            display={"flex"}
+            justifyContent={"center"}
+          >
+            <Button sx={{ p: "0px 8px" }} className="homeBtn">
               HOME
             </Button>
-            <Bolt fontSize="large" sx={{ mt: 2 }} />
-            <Button href="/register" className="homeBtn texturinaFont">
+            <Bolt className="boltBtn" />
+            <Button href="/register" className="homeBtn">
               REGISTER
             </Button>
           </Box>
 
           <img src={BMSLiveSvg} className="rotate" />
-          <Box sx={{ mt: 2 }}>
+          <Box sx={{ mt: { lg: 2 } }}>
             <Typography variant="caption" sx={{ fontFamily: "Texturina" }}>
               © | Privacy | Terms & Conditions
             </Typography>

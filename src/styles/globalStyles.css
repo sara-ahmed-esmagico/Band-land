@@ -1,3 +1,6 @@
+.orangeMidPoint {
+}
+
 .page-container {
   height: 370vh;
 }
@@ -13,11 +16,12 @@
 
 .boltBtn {
   font-size: 40px !important;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .homeBtn {
-  font-size: 30px !important;
+  font-family: "modesto-condensed" !important;
+  font-size: 40px !important;
   text-decoration: none !important;
   color: black !important;
   font-weight: 800 !important;
@@ -25,7 +29,7 @@
 
 .midHeading {
   text-align: center !important;
-  font-family: "normal normal normal 72px/64px Modesto Condensed" !important;
+  font-family: "modesto-condensed" !important;
   letter-spacing: 0px !important;
   color: #ffffff !important;
   text-shadow: 3px 3px 0px #390c06 !important;
@@ -133,8 +137,8 @@
 }
 
 .secondTextBanner {
-  top: 230%;
-  width: 700px;
+  top: 300%;
+  width: 600px;
 }
 
 .bannerBrief {
@@ -144,14 +148,14 @@
 }
 
 .secondBannerBrief {
-  top: 240%;
-  width: 600px;
+  top: 305%;
+  width: 500px;
   text-align: center;
 }
 
 .secondBannerSubBrief {
-  top: 245%;
-  width: 600px;
+  top: 310%;
+  width: 500px;
   text-align: center;
 }
 
@@ -160,13 +164,39 @@
   width: 100%;
 }
 
+.orangeDesc {
+  top: 185%;
+  width: 200px;
+}
+
+.midDesc1 {
+  text-shadow: 3px 3px 0px #390c06 !important;
+  font-family: "modesto-open-caps" !important;
+  font-size: 200px !important;
+  color: white;
+}
+
+.midSeparator {
+  margin-top: 65px !important;
+}
+
+.midDesc2 {
+  text-shadow: 3px 3px 0px #390c06 !important;
+  font-family: "modesto-condensed" !important;
+  font-size: 60px !important;
+  color: white;
+}
+
 .belowOrangeBand {
-  top: 220%;
+  top: 280%;
 }
 
 .signUpBtnPos {
   position: absolute !important;
-  top: 253% !important;
+  top: 320% !important;
+  margin-top: 10px !important;
+  background-color: #44c0a8 !important;
+  font-family: "modesto-condensed" !important;
 }
 
 .footerBase {
@@ -179,7 +209,7 @@
 }
 
 .footerBox {
-  top: 360%;
+  top: 395%;
   text-align: center;
 }
 
@@ -200,7 +230,7 @@
     top: 0px;
   }
   .headerBaseStyle {
-    width: 63%;
+    width: 69.5%;
   }
   .homeBtn {
     font-size: 10px !important;
@@ -211,7 +241,7 @@
     margin-top: 8px;
   }
   .mainLogo {
-    top: 13%;
+    top: 14%;
     width: 30%;
   }
   .textBanner {
@@ -237,13 +267,37 @@
     width: 150px;
     font-size: 6px !important ;
   }
+
+  .orangeDesc {
+    top: 40.5%;
+    width: 200px;
+  }
+  .orangeMidPoint {
+    margin-top: 55px;
+  }
+
+  .midDesc1 {
+    font-size: 60px !important;
+  }
+
+  .midSeparator {
+    margin-top: 25px !important;
+    margin-left: 10px !important;
+  }
+
+  .midDesc2 {
+    font-size: 15px !important;
+  }
+  .belowOrangeBand {
+    top: 65%;
+  }
 }
 @media (min-width: 375px) and (max-width: 424px) {
   .headerBtn {
     top: 0px;
   }
   .headerBaseStyle {
-    width: 70%;
+    width: 77%;
   }
   .homeBtn {
     font-size: 10px !important;
@@ -254,31 +308,53 @@
     margin-top: 8px;
   }
   .mainLogo {
-    top: 13%;
+    top: 18%;
     width: 30%;
   }
   .textBanner {
-    top: 30%;
+    top: 35%;
     width: 220px;
   }
   .midBannerHead {
-    top: 25%;
+    top: 28%;
   }
   .midHeading {
     font-size: 20px !important;
   }
-
   .school {
-    top: 20.5%;
+    top: 26%;
   }
   .schoolDesc {
     font-size: 5px !important;
   }
 
   .bannerBrief {
-    top: 33%;
+    top: 36%;
     width: 150px;
     font-size: 6px !important ;
+  }
+  .orangeDesc {
+    top: 47%;
+    width: 250px;
+  }
+  .orangeMidPoint {
+    margin-top: 60px;
+  }
+
+  .midDesc1 {
+    font-size: 70px !important;
+  }
+
+  .midSeparator {
+    margin-top: 25px !important;
+    margin-left: 10px !important;
+  }
+
+  .midDesc2 {
+    font-size: 20px !important;
+  }
+  .belowOrangeBand {
+    top: 75%;
   }
 }
 
@@ -287,7 +363,7 @@
     top: 0px;
   }
   .headerBaseStyle {
-    width: 75.5%;
+    width: 92%;
   }
   .homeBtn {
     font-size: 10px !important;
@@ -324,14 +400,60 @@
     width: 150px;
     font-size: 6px !important ;
   }
+  .orangeDesc {
+    top: 55%;
+    width: 250px;
+  }
+  .orangeMidPoint {
+    margin-top: 60px;
+  }
+
+  .midDesc1 {
+    font-size: 70px !important;
+  }
+
+  .midSeparator {
+    margin-top: 25px !important;
+    margin-left: 10px !important;
+  }
+
+  .midDesc2 {
+    font-size: 20px !important;
+  }
+  .belowOrangeBand {
+    top: 85%;
+  }
+
+  .secondTextBanner {
+    top: 92%;
+    width: 250px;
+  }
+  .secondBannerBrief {
+    top: 94%;
+    font-size: 10px !important;
+  }
+  .secondBannerSubBrief {
+    top: 96%;
+    width: 200px;
+    font-size: 8px !important;
+  }
+  .signUpBtnPos {
+    top: 100.5% !important;
+    width: 20px !important;
+    height: 10px !important;
+    font-size: 10px !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 911px) {
   .headerBtn {
     top: 0;
   }
+  .orangeMidPoint {
+    margin-top: 30px;
+  }
   .homeBtn {
-    font-size: 15px !important;
+    font-size: 20px !important;
     font-weight: 600 !important;
   }
   .boltBtn {
@@ -355,6 +477,44 @@
     top: 72%;
     width: 300px;
     font-size: 12px !important;
+  }
+  .orangeDesc {
+    top: 95%;
+    width: 250px;
+  }
+
+  .midDesc1 {
+    font-size: 130px !important;
+  }
+
+  .midSeparator {
+    margin-top: 40px !important;
+  }
+
+  .midDesc2 {
+    font-size: 40px !important;
+  }
+  .belowOrangeBand {
+    top: 150%;
+  }
+  .secondTextBanner {
+    top: 165%;
+    width: 450px;
+  }
+  .secondBannerBrief {
+    top: 168%;
+    font-size: 13px !important;
+  }
+  .secondBannerSubBrief {
+    top: 172%;
+    width: 370px;
+    font-size: 13px !important;
+  }
+  .signUpBtnPos {
+    top: 178% !important;
+  }
+  .footerBox {
+    top: 190%;
   }
 }
 
@@ -382,6 +542,40 @@
     top: 94%;
     width: 450px;
     font-size: medium;
+  }
+  .orangeDesc {
+    top: 125%;
+    width: 200px;
+  }
+
+  .midDesc1 {
+    font-size: 175px !important;
+  }
+
+  .midSeparator {
+    margin-top: 55px !important;
+  }
+
+  .midDesc2 {
+    font-size: 55px !important;
+  }
+  .belowOrangeBand {
+    top: 200%;
+  }
+  .secondTextBanner {
+    top: 215%;
+  }
+  .secondBannerBrief {
+    top: 220%;
+  }
+  .secondBannerSubBrief {
+    top: 225%;
+  }
+  .signUpBtnPos {
+    top: 235% !important;
+  }
+  .footerBox {
+    top: 270%;
   }
 }
 
