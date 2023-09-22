@@ -4,15 +4,17 @@ import "../../styles/globalStyles.css";
 import { Bolt } from "@mui/icons-material";
 import BMSLiveSvg from "../../images/BMS LIVE.svg";
 import WhiteLogo from "../../images/Bandland Logo White.svg";
-import MainLogo from "../../images/Bandland Logo@3x.png";
+import MainLogo from "../../images/Bandland Logo@3x@2x.png";
 import axios from "axios";
 import AlertMessage from "../../common/AlertMessage";
-import HeaderBase from "../../images/Header Base.png";
+import HeaderBase from "../../images/BaseHeader.png";
 import MainBg from "../../images/BGOrange.svg";
 import SideBorder from "../../images/Border.png";
+import MidBanner1 from "../../images/Banner1.png";
 import MidBanner from "../../images/Banner2.png";
-import FooterBase from "../../images/Footer Base.png";
+import FooterBase from "../../images/FooterBase.png";
 import RegisterBanner from "../../images/Register Banner.svg";
+import BorderLine from "../../images/Line.svg";
 
 const Register = () => {
   const [formValues, setFormValues] = useState({
@@ -77,190 +79,235 @@ const Register = () => {
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
-      backgroundColor={'coral'}
-      className='register-page-container'
+      backgroundColor={"coral"}
+      className="register-page-container"
     >
       {/* <img className="mainBaseStyle" src={MainBg} width={"1500px"} /> */}
-      <img className="pos-absolute sideBorder" src={SideBorder} height={'230%'} width={'90%'} />
-      <img className="midBanner pos-absolute" src={MidBanner} width={'60%'}  />
+      <img className="pos-absolute registerSideBorder" src={SideBorder} />
+      <img
+        className="regMidBanner pos-absolute"
+        src={MidBanner}
+        width={"60%"}
+      />
       <img className="headerBaseStyle pos-absolute " src={HeaderBase} />
-      <img className="pos-absolute mainLogo" src={MainLogo} />
-      <img className="pos-absolute registerFooterBase" src={FooterBase} />
-      <img className="pos-absolute registerBanner" src={RegisterBanner} />
-      <Box
-        className="headerBtn pos-absolute "
-        display={"flex"}
-        justifyContent={"center"}
-      >
-        <Button href="/" className="homeBtn texturinaFont">HOME</Button>
-        <Bolt fontSize="large" sx={{ mt: 2 }} />
-        <Button href="/register" className="homeBtn texturinaFont">REGISTER</Button>
-        {/* <Bolt fontSize="large" sx={{ mt: 2 }} />
-        <Button className="homeBtn texturinaFont">ABOUT</Button>
-        <Bolt fontSize="large" sx={{ mt: 2 }} />
-        <Button className="homeBtn texturinaFont">THE ARTISTS</Button>
-        <Bolt fontSize="large" sx={{ mt: 2 }} />
-        <Button className="homeBtn texturinaFont">TICKETS</Button>
-        <Bolt fontSize="large" sx={{ mt: 2 }} />
-        <Button className="homeBtn texturinaFont">fAQ</Button> */}
-      </Box>
-
-      <Box className="pos-absolute school">
-        <Typography
-          className="texturinaFont schoolDesc"
-          color={"white"}
-          variant="h6"
-        >
+      <Box className="pos-absolute regMainLogoBox">
+        <img className="regMainLogo" src={MainLogo} />
+        <Typography className="regSchoolDesc" color={"white"}>
           EMBASSY INTERNATIONAL RIDING SCHOOL
         </Typography>
-      </Box>
-
-      <Box className="pos-absolute midBannerHead">
-        <Typography className="midHeading" sx={{ fontSize: 40 }}>
+        <Typography className="regMidHeading">
           PLEDGE ALLEGIANCE TO THE BAND!
         </Typography>
+        <Typography className="texturinaFont regMidHeadDesc" color={"white"}>
+          Join the inner circle to receive all festival updates, from artist
+          lineup to tickets, schedule, guides & more. This one’s for you!
+        </Typography>
+        <Box position={"relative"}>
+          <img src={RegisterBanner} className="regBannerSize" />
+          <form className="formStyle">
+            <Grid container className="regBoxSize">
+              <Grid
+                item
+                xs={6}
+                display={"flex"}
+                justifyContent={"end"}
+                sx={{ mt: { xs: 2, lg: 3 } }}
+              >
+                <Box className="registerBox">
+                  <Typography
+                    sx={{
+                      p: 1,
+                      textAlign: "start",
+                      fontSize: { xs: "15px", lg: "20px" },
+                    }}
+                    className="texturinaFont "
+                  >
+                    Name:
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid
+                item
+                xs={6}
+                sx={{ mt: { xs: 2, lg: 3 } }}
+                display={"flex"}
+                justifyContent={"start"}
+              >
+                <TextField
+                  className="registerTextfield"
+                  size="small"
+                  value={formValues?.name}
+                  name="name"
+                  onChange={handleInputChange}
+                />
+              </Grid>
+              <Grid
+                item
+                xs={6}
+                display={"flex"}
+                justifyContent={"end"}
+                sx={{ mt: { xs: 2, lg: 3 } }}
+              >
+                <Box className="registerBox">
+                  <Typography
+                    sx={{
+                      p: 1,
+                      textAlign: "start",
+                      fontSize: { xs: "15px", lg: "20px" },
+                    }}
+                    className="texturinaFont"
+                  >
+                    Phone No:
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid
+                item
+                xs={6}
+                sx={{ mt: { xs: 2, lg: 3 } }}
+                display={"flex"}
+                justifyContent={"start"}
+              >
+                <TextField
+                  size="small"
+                  className="registerTextfield"
+                  value={formValues?.phone}
+                  name="phone"
+                  onChange={handleInputChange}
+                />
+              </Grid>
+              <Grid
+                item
+                xs={6}
+                display={"flex"}
+                justifyContent={"end"}
+                sx={{ mt: { xs: 2, lg: 3 } }}
+              >
+                <Box className="registerBox">
+                  <Typography
+                    sx={{
+                      p: 1,
+                      textAlign: "start",
+                      fontSize: { xs: "15px", lg: "20px" },
+                    }}
+                    className="texturinaFont"
+                  >
+                    Email ID:
+                  </Typography>
+                </Box>
+              </Grid>
+
+              <Grid
+                item
+                xs={6}
+                sx={{ mt: { xs: 2, lg: 3 } }}
+                display={"flex"}
+                justifyContent={"start"}
+              >
+                <TextField
+                  className="registerTextfield"
+                  size="small"
+                  value={formValues?.email}
+                  name="email"
+                  onChange={handleInputChange}
+                />
+              </Grid>
+              <Grid
+                item
+                xs={6}
+                display={"flex"}
+                justifyContent={"end"}
+                sx={{ mt: { xs: 2, lg: 3 } }}
+              >
+                <Box className="registerBox">
+                  <Typography
+                    sx={{
+                      p: 1,
+                      textAlign: "start",
+                      fontSize: { xs: "15px", lg: "20px" },
+                    }}
+                    className="texturinaFont"
+                  >
+                    City:
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid
+                item
+                xs={6}
+                sx={{ mt: { xs: 2, lg: 3 } }}
+                display={"flex"}
+                justifyContent={"start"}
+              >
+                <TextField
+                  className="registerTextfield"
+                  size="small"
+                  value={formValues?.city}
+                  name="city"
+                  onChange={handleInputChange}
+                />
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                display={"flex"}
+                justifyContent={"center"}
+                sx={{ mt: 3 }}
+              >
+                <Button
+                  variant="contained"
+                  className="texturinaFont"
+                  sx={{ backgroundColor: "#44C0A8" }}
+                  onClick={handleRegisterNow}
+                >
+                  {" "}
+                  Register Now{" "}
+                </Button>
+              </Grid>
+            </Grid>
+          </form>
+        </Box>
+      </Box>
+      <img className="pos-absolute registerFooterBase" src={FooterBase} />
+      <img className="pos-absolute borderLine" src={BorderLine} />
+      <Box
+        className="headerBtn pos-absolute mt--5"
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
+        <Button href="/" className="homeBtn texturinaFont">
+          HOME
+        </Button>
+        <Bolt />
+        <Button href="/register" className="homeBtn texturinaFont">
+          REGISTER
+        </Button>
       </Box>
 
-      <Typography
-        className="texturinaFont pos-absolute midBannerDesc"
-        color={"white"}
-      >
-        Join the inner circle to receive all festival updates, from artist
-        lineup to tickets, schedule, guides & more. This one’s for you!
-      </Typography>
-
-      <form className="pos-absolute registerForm">
-        <Grid container>
-          <Grid
-            item
-            xs={6}
-            display={"flex"}
-            justifyContent={"end"}
-            sx={{ mt: 3 }}
-          >
-            <Box className="registerBox">
-              <Typography sx={{ p: 1 }} className="texturinaFont">
-                Name:
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={6} sx={{ mt: 3 }}>
-            <TextField
-              className="registerTextfield"
-              size="small"
-              value={formValues?.name}
-              name="name"
-              onChange={handleInputChange}
-            />
-          </Grid>
-          <Grid
-            item
-            xs={6}
-            display={"flex"}
-            justifyContent={"end"}
-            sx={{ mt: 3 }}
-          >
-            <Box className="registerBox">
-              <Typography sx={{ p: 1 }} className="texturinaFont">
-                Phone No:
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={6} sx={{ mt: 3 }}>
-            <TextField
-              size="small"
-              className="registerTextfield"
-              value={formValues?.phone}
-              name="phone"
-              onChange={handleInputChange}
-            />
-          </Grid>
-          <Grid
-            item
-            xs={6}
-            display={"flex"}
-            justifyContent={"end"}
-            sx={{ mt: 3 }}
-          >
-            <Box className="registerBox">
-              <Typography sx={{ p: 1 }} className="texturinaFont">
-                Email ID:
-              </Typography>
-            </Box>
-          </Grid>
-
-          <Grid item xs={6} sx={{ mt: 3 }}>
-            <TextField
-              className="registerTextfield"
-              size="small"
-              value={formValues?.email}
-              name="email"
-              onChange={handleInputChange}
-            />
-          </Grid>
-          <Grid
-            item
-            xs={6}
-            display={"flex"}
-            justifyContent={"end"}
-            sx={{ mt: 3 }}
-          >
-            <Box className="registerBox">
-              <Typography sx={{ p: 1 }} className="texturinaFont">
-                City:
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={6} sx={{ mt: 3 }}>
-            <TextField
-              className="registerTextfield"
-              size="small"
-              value={formValues?.city}
-              name="city"
-              onChange={handleInputChange}
-            />
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            display={"flex"}
-            justifyContent={"center"}
-            sx={{ mt: 3 }}
-          >
-            <Button
-              variant="contained"
-              className="texturinaFont"
-              sx={{ backgroundColor: "#44C0A8" }}
-              onClick={handleRegisterNow}
-            >
-              {" "}
-              Register Now{" "}
-            </Button>
-          </Grid>
-        </Grid>
-      </form>
-
       <Box className="pos-absolute registerFooterBox">
-        <img src={WhiteLogo} className="rotate" />
+        <img src={WhiteLogo} className="rotate logoSize" />
 
-        <Box display={"flex"} justifyContent={"center"} sx={{ mt: 5 }}>
-          <Button href="/" className="homeBtn texturinaFont">HOME</Button>
-          <Bolt fontSize="large" sx={{ mt: 2 }} />
-          <Button  href="/register" className="homeBtn texturinaFont">REGISTER</Button>
-          {/* <Bolt fontSize="large" sx={{ mt: 2 }} />
-          <Button className="homeBtn texturinaFont">ABOUT</Button>
-          <Bolt fontSize="large" sx={{ mt: 2 }} />
-          <Button className="homeBtn texturinaFont">THE ARTISTS</Button>
-          <Bolt fontSize="large" sx={{ mt: 2 }} />
-          <Button className="homeBtn texturinaFont">TICKETS</Button>
-          <Bolt fontSize="large" sx={{ mt: 2 }} />
-          <Button className="homeBtn texturinaFont">fAQ</Button> */}
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          className={"mt--5"}
+        >
+          <Button href="/" className="regHomeBtn">
+            HOME
+          </Button>
+          <Bolt />
+          <Button href="/register" className="regHomeBtn">
+            REGISTER
+          </Button>
         </Box>
-
-        <img src={BMSLiveSvg} className="rotate" style={{ marginTop: 45 }} />
-        <Typography className="texturinaFont" sx={{ mt: 2 }}>
-          © | Privacy | Terms & Conditions
-        </Typography>
+        <img src={BMSLiveSvg} className="rotate BMSLogo" />
+        <Box>
+          <Typography variant="caption" sx={{ fontFamily: "Texturina" }}>
+            © | Privacy | Terms & Conditions
+          </Typography>
+        </Box>
       </Box>
 
       <AlertMessage snackbar={snackbar} setSnackbar={setSnackbar} />
