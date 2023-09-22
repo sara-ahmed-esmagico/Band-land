@@ -7,10 +7,10 @@ import WhiteLogo from "../../images/Bandland Logo White.svg";
 import MainLogo from "../../images/Bandland Logo@3x@2x.png";
 import axios from "axios";
 import AlertMessage from "../../common/AlertMessage";
-import HeaderBase from "../../images/BaseHeader.png";
-import MainBg from "../../images/BGOrange.svg";
-import SideBorder from "../../images/Border.png";
-import MidBanner1 from "../../images/Banner1.png";
+import HeaderBase from "../../images/BaseHeader.svg";
+// import MainBg from "../../images/BGOrange.svg";
+import SideBorder from "../../images/OutlineBorder.svg";
+// import MidBanner1 from "../../images/Banner1.png";
 import MidBanner from "../../images/Banner2.png";
 import FooterBase from "../../images/FooterBase.png";
 import RegisterBanner from "../../images/Register Banner.svg";
@@ -83,13 +83,13 @@ const Register = () => {
       className="register-page-container"
     >
       {/* <img className="mainBaseStyle" src={MainBg} width={"1500px"} /> */}
-      <img className="pos-absolute registerSideBorder" src={SideBorder} />
+      <img className="pos-absolute registerSideBorder " src={SideBorder} />
       <img
         className="regMidBanner pos-absolute"
         src={MidBanner}
         width={"60%"}
       />
-      <img className="headerBaseStyle pos-absolute " src={HeaderBase} />
+      <img className="regHeaderBaseStyle pos-absolute " src={HeaderBase} />
       <Box className="pos-absolute regMainLogoBox">
         <img className="regMainLogo" src={MainLogo} />
         <Typography className="regSchoolDesc" color={"white"}>
@@ -111,16 +111,17 @@ const Register = () => {
                 xs={6}
                 display={"flex"}
                 justifyContent={"end"}
-                sx={{ mt: { xs: 2, lg: 3 } }}
+                sx={{ mt: { sm: 2, lg: 3 } }}
               >
                 <Box className="registerBox">
                   <Typography
                     sx={{
-                      p: 1,
+                      p: { xs: 0, sm: 1 },
                       textAlign: "start",
-                      fontSize: { xs: "15px", lg: "20px" },
+                      fontSize: { xs: "12px", sm: "15px", lg: "20px" },
+                      height: "20px",
                     }}
-                    className="texturinaFont "
+                    className="texturinaFont"
                   >
                     Name:
                   </Typography>
@@ -129,11 +130,12 @@ const Register = () => {
               <Grid
                 item
                 xs={6}
-                sx={{ mt: { xs: 2, lg: 3 } }}
+                sx={{ mt: { sm: 2, lg: 3 }}}
                 display={"flex"}
                 justifyContent={"start"}
+
               >
-                <TextField
+                <input
                   className="registerTextfield"
                   size="small"
                   value={formValues?.name}
@@ -146,14 +148,16 @@ const Register = () => {
                 xs={6}
                 display={"flex"}
                 justifyContent={"end"}
-                sx={{ mt: { xs: 2, lg: 3 } }}
+                sx={{ mt: { sm: 2, lg: 3 } }}
               >
                 <Box className="registerBox">
                   <Typography
                     sx={{
-                      p: 1,
+                      p: { xs: 0, sm: 1 },
+
                       textAlign: "start",
-                      fontSize: { xs: "15px", lg: "20px" },
+                      fontSize: { xs: "12px", sm: "15px", lg: "20px" },
+                      height: "20px",
                     }}
                     className="texturinaFont"
                   >
@@ -164,11 +168,11 @@ const Register = () => {
               <Grid
                 item
                 xs={6}
-                sx={{ mt: { xs: 2, lg: 3 } }}
+                sx={{ mt: { sm: 2, lg: 3 } }}
                 display={"flex"}
                 justifyContent={"start"}
               >
-                <TextField
+                <input
                   size="small"
                   className="registerTextfield"
                   value={formValues?.phone}
@@ -181,14 +185,16 @@ const Register = () => {
                 xs={6}
                 display={"flex"}
                 justifyContent={"end"}
-                sx={{ mt: { xs: 2, lg: 3 } }}
+                sx={{ mt: { sm: 2, lg: 3 } }}
               >
                 <Box className="registerBox">
                   <Typography
                     sx={{
-                      p: 1,
+                      p: { xs: 0, sm: 1 },
+
                       textAlign: "start",
-                      fontSize: { xs: "15px", lg: "20px" },
+                      fontSize: { xs: "12px", sm: "15px", lg: "20px" },
+                      height: "20px",
                     }}
                     className="texturinaFont"
                   >
@@ -200,11 +206,11 @@ const Register = () => {
               <Grid
                 item
                 xs={6}
-                sx={{ mt: { xs: 2, lg: 3 } }}
+                sx={{ mt: { sm: 2, lg: 3 } }}
                 display={"flex"}
                 justifyContent={"start"}
               >
-                <TextField
+                <input
                   className="registerTextfield"
                   size="small"
                   value={formValues?.email}
@@ -217,14 +223,15 @@ const Register = () => {
                 xs={6}
                 display={"flex"}
                 justifyContent={"end"}
-                sx={{ mt: { xs: 2, lg: 3 } }}
+                sx={{ mt: { sm: 2, lg: 3 } }}
               >
                 <Box className="registerBox">
                   <Typography
                     sx={{
-                      p: 1,
+                      p: { xs: 0, sm: 1 },
                       textAlign: "start",
-                      fontSize: { xs: "15px", lg: "20px" },
+                      fontSize: { xs: "12px", sm: "15px", lg: "20px" },
+                      height: "20px",
                     }}
                     className="texturinaFont"
                   >
@@ -235,11 +242,11 @@ const Register = () => {
               <Grid
                 item
                 xs={6}
-                sx={{ mt: { xs: 2, lg: 3 } }}
+                sx={{ mt: { sm: 2, lg: 3 } }}
                 display={"flex"}
                 justifyContent={"start"}
               >
-                <TextField
+                <input
                   className="registerTextfield"
                   size="small"
                   value={formValues?.city}
@@ -252,12 +259,13 @@ const Register = () => {
                 xs={12}
                 display={"flex"}
                 justifyContent={"center"}
-                sx={{ mt: 3 }}
+                sx={{ mt: {xs: 1, sm: 3 }}}
               >
                 <Button
-                  variant="contained"
+                size="small"
+                  variant="contained"    
                   className="texturinaFont"
-                  sx={{ backgroundColor: "#44C0A8" }}
+                  sx={{ backgroundColor: "#44C0A8", height: {xs:'22px', sm: '20px'} }}
                   onClick={handleRegisterNow}
                 >
                   {" "}
@@ -271,7 +279,7 @@ const Register = () => {
       <img className="pos-absolute registerFooterBase" src={FooterBase} />
       <img className="pos-absolute borderLine" src={BorderLine} />
       <Box
-        className="headerBtn pos-absolute mt--5"
+        className="regHeaderBtn pos-absolute"
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
@@ -303,8 +311,8 @@ const Register = () => {
           </Button>
         </Box>
         <img src={BMSLiveSvg} className="rotate BMSLogo" />
-        <Box>
-          <Typography variant="caption" sx={{ fontFamily: "Texturina" }}>
+        <Box sx={{mt: {xs:0,sm:2}}}>
+          <Typography variant="caption" sx={{ fontFamily: "Texturina", fontSize: {xs: 6, sm:12} }}>
             © | Privacy | Terms & Conditions
           </Typography>
         </Box>

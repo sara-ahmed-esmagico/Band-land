@@ -11,7 +11,7 @@
 }
 
 .logoSize {
-  width: 200px;
+  width: 250px;
 }
 
 .texturinaFont {
@@ -65,6 +65,7 @@
 .registerTextfield {
   width: 180px;
   background-color: #ffffff;
+  line-height: inherit;
 }
 
 .registerBox {
@@ -104,11 +105,15 @@
 }
 
 .headerBtn {
-  top: 20px;
+  top: 0;
   position: fixed;
   z-index: 9999;
 }
-
+.regHeaderBtn {
+  top: 0;
+  position: fixed;
+  z-index: 9999;
+}
 .fullWidth {
   width: 100%;
 }
@@ -123,9 +128,9 @@
 }
 
 .registerSideBorder {
+  bottom: 0;
   top: 0;
   position: fixed;
-  height: 1600px;
   width: 100%;
 }
 
@@ -135,7 +140,6 @@
 .regMidBanner {
   top: 0;
 }
-
 
 .mainLogo {
   top: 390px;
@@ -288,7 +292,7 @@
   position: absolute;
   bottom: 0;
   width: 60%;
-} 
+}
 
 .registerFooterBox {
   text-align: center;
@@ -323,81 +327,24 @@
 }
 
 .regBoxSize {
-
 }
 
 .BMSLogo {
-  
-} 
+  width: 120px;
+  height: 120px;
+}
 
 @media (min-width: 280px) and (max-width: 374px) {
-  .headerBtn {
-    top: 0px;
+  .register-page-container {
+    height: 91vh;
   }
-  .headerBaseStyle {
-    width: 69.5%;
+  .registerTextfield {
+    font-size: 10px;
+    width: 60px;
   }
-  .homeBtn {
-    font-size: 10px !important;
-    font-weight: 600 !important;
+  .regHeaderBtn {
+    top: -5px;
   }
-  .boltBtn {
-    font-size: 12px !important;
-    margin-top: 8px;
-  }
-  .mainLogo {
-    top: 14%;
-    width: 30%;
-  }
-  .textBanner {
-    top: 27%;
-    width: 200px;
-  }
-  .midBannerHead {
-    top: 23%;
-  }
-  .midHeading {
-    font-size: 18px !important;
-  }
-
-  .school {
-    top: 20.5%;
-  }
-  .schoolDesc {
-    font-size: 5px !important;
-  }
-
-  .bannerBrief {
-    top: 28%;
-    width: 150px;
-    font-size: 6px !important ;
-  }
-
-  .orangeDesc {
-    top: 40.5%;
-    width: 200px;
-  }
-  .orangeMidPoint {
-    margin-top: 55px;
-  }
-
-  .midDesc1 {
-    font-size: 60px !important;
-  }
-
-  .midSeparator {
-    margin-top: 25px !important;
-    margin-left: 10px !important;
-  }
-
-  .midDesc2 {
-    font-size: 15px !important;
-  }
-  .belowOrangeBand {
-    top: 65%;
-  }
-}
-@media (min-width: 375px) and (max-width: 424px) {
   .headerBtn {
     top: 0px;
   }
@@ -461,9 +408,231 @@
   .belowOrangeBand {
     top: 75%;
   }
+  .regMainLogo {
+    width: 150px;
+  }
+  .regMainLogoBox {
+    top: 80px;
+  }
+  .regSchoolDesc {
+    font-size: 5px !important;
+    width: 80px;
+  }
+  .regMidHeading {
+    margin-top: 30px !important;
+    text-shadow: 1px 1px 0px #390c06 !important;
+    font-size: 12px !important;
+  }
+  .regMidHeadDesc {
+    width: 170px;
+    font-size: 5px !important;
+  }
+  .regBannerSize {
+    width: 180px;
+    margin-top: 20px;
+  }
+  .registerBox {
+    width: 60px;
+    height: 20px;
+  }
+  .regHeaderBtn {
+    top: -5px;
+  }
+  .formStyle {
+    top: 40px;
+  }
+  .logoSize {
+    width: 50px;
+  }
+  .BMSLogo {
+    width: 50px;
+    height: 20px;
+    margin-bottom: -10px;
+  }
+  .footerBox {
+    top: 120%;
+  }
+  .regHomeBtn {
+    font-size: 8px !important;
+  }
+}
+@media (min-width: 375px) and (max-width: 424px) {
+  .register-page-container {
+    height: 100vh;
+  }
+  .registerTextfield {
+    font-size: 10px;
+    width: 60px;
+  }
+  .regHeaderBtn {
+    top: -5px;
+  }
+  .headerBtn {
+    top: 0px;
+  }
+  .headerBaseStyle {
+    width: 77%;
+  }
+  .homeBtn {
+    font-size: 10px !important;
+    font-weight: 600 !important;
+  }
+  .boltBtn {
+    font-size: 12px !important;
+    margin-top: 8px;
+  }
+  .mainLogo {
+    top: 18%;
+    width: 30%;
+  }
+  .textBanner {
+    top: 35%;
+    width: 220px;
+  }
+  .midBannerHead {
+    top: 28%;
+  }
+  .midHeading {
+    font-size: 20px !important;
+  }
+  .school {
+    top: 26%;
+  }
+  .schoolDesc {
+    font-size: 5px !important;
+  }
+
+  .bannerBrief {
+    top: 36%;
+    width: 150px;
+    font-size: 6px !important ;
+  }
+  .orangeDesc {
+    top: 47%;
+    width: 250px;
+  }
+  .orangeMidPoint {
+    margin-top: 60px;
+  }
+
+  .midDesc1 {
+    font-size: 70px !important;
+  }
+
+  .midSeparator {
+    margin-top: 25px !important;
+    margin-left: 10px !important;
+  }
+
+  .midDesc2 {
+    font-size: 20px !important;
+  }
+  .belowOrangeBand {
+    top: 75%;
+  }
+  .regMainLogo {
+    width: 150px;
+  }
+  .regMainLogoBox {
+    top: 80px;
+  }
+  .regSchoolDesc {
+    font-size: 5px !important;
+    width: 80px;
+  }
+  .regMidHeading {
+    margin-top: 20px !important;
+    text-shadow: 1px 1px 0px #390c06 !important;
+    font-size: 12px !important;
+  }
+  .regMidHeadDesc {
+    width: 200px;
+    font-size: 5px !important;
+  }
+  .regBannerSize {
+    width: 200px;
+    margin-top: 20px;
+  }
+  .registerBox {
+    width: 60px;
+    height: 20px;
+  }
+  .regHeaderBtn {
+    top: -5px;
+  }
+  .formStyle {
+    top: 40px;
+  }
+  .logoSize {
+    width: 50px;
+  }
+  .BMSLogo {
+    width: 50px;
+    height: 20px;
+    margin-bottom: -10px;
+  }
+  .footerBox {
+    top: 120%;
+  }
+  .regHomeBtn {
+    font-size: 8px !important;
+  }
 }
 
 @media (min-width: 425px) and (max-width: 500px) {
+  .regHomeBtn {
+    font-size: 12px !important;
+  }
+  .logoSize {
+    width: 50px;
+  }
+  .BMSLogo {
+    width: 50px;
+    height: 20px;
+  }
+  .footerBox {
+    top: 120%;
+  }
+  .register-page-container {
+    height: 100vh;
+  }
+  .registerTextfield {
+    font-size: 12px;
+    width: 80px;
+  }
+
+  .regMainLogo {
+    width: 150px;
+  }
+  .regMainLogoBox {
+    top: 80px;
+  }
+  .regSchoolDesc {
+    font-size: 5px !important;
+    width: 80px;
+  }
+  .regMidHeading {
+    margin-top: 40px !important;
+    text-shadow: 1px 1px 0px #390c06 !important;
+    font-size: 20px !important;
+  }
+  .regMidHeadDesc {
+    width: 200px;
+    font-size: 5px !important;
+  }
+  .regBannerSize {
+    width: 230px;
+  }
+  .registerBox {
+    width: 60px;
+    height: 20px;
+  }
+  .regHeaderBtn {
+    top: -5px;
+  }
+  .registerSideBorder {
+    width: 90%;
+  }
   .headerBtn {
     top: 0px;
   }
@@ -548,45 +717,52 @@
     height: 10px !important;
     font-size: 10px !important;
   }
+  .formStyle {
+    top: 60px;
+  }
+  .regBoxSize {
+    width: 250px !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 911px) {
+  .registerTextfield {
+    width: 120px;
+  }
   .BMSLogo {
     width: 70px;
     height: 70px;
     margin-top: -10px;
     margin-bottom: -10px;
-  } 
+  }
   .regHomeBtn {
     font-size: 15px !important;
     font-weight: 500 !important;
   }
   .logoSize {
     width: 150px;
-  } 
+  }
   .register-page-container {
     height: 180vh;
   }
   .formStyle {
-    top:50px;
+    top: 50px;
   }
-   .regBoxSize {
-     width: 250px !important;
-   }
-  .regHeaderBaseStyle {
-    width: 98%;
+  .regBoxSize {
+    width: 250px !important;
   }
+
   .regBannerSize {
     width: 550px;
   }
   .regBannerSize {
     width: 400px;
-  } 
+  }
   .regMidHeading {
     font-size: 35px !important;
   }
   .headerBtn {
-    top: 0;
+    top: -5px;
   }
   .orangeMidPoint {
     margin-top: 30px;
@@ -667,6 +843,18 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1400px) {
+  .registerTextfield {
+    width: 160px;
+  }
+  .regHeaderBtn {
+    top: -15px;
+  }
+  .BMSLogo {
+    width: 80px;
+    height: 80px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
   .formStyle {
     top: 80px;
   }
@@ -674,7 +862,7 @@
     width: 500px;
   }
   .headerBtn {
-    top: 5px;
+    top: -15px;
   }
   .mainLogo {
     top: 40%;
