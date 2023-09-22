@@ -137,7 +137,6 @@ const Home = () => {
           <img src={WhiteLogo} className="rotate" />
 
           <Box
-            sx={{ mt: { lg: 2 } }}
             display={"flex"}
             justifyContent={"center"}
           >
@@ -151,7 +150,7 @@ const Home = () => {
           </Box>
 
           <img src={BMSLiveSvg} className="rotate" />
-          <Box sx={{ mt: { lg: 2 } }}>
+          <Box >
             <Typography variant="caption" sx={{ fontFamily: "Texturina" }}>
               © | Privacy | Terms & Conditions
             </Typography>

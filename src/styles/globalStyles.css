@@ -1,9 +1,6 @@
 .orangeMidPoint {
 }
 
-.page-container {
-  height: 370vh;
-}
 
 .register-page-container {
   height: 248vh;
@@ -209,7 +206,7 @@
 }
 
 .footerBox {
-  top: 395%;
+  top: 2600px ;
   text-align: center;
 }
 
@@ -575,7 +572,7 @@
     top: 235% !important;
   }
   .footerBox {
-    top: 270%;
+    top: 1700px !important;
   }
 }
 
