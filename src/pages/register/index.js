@@ -102,7 +102,7 @@ const Register = () => {
           Join the inner circle to receive all festival updates, from artist
           lineup to tickets, schedule, guides & more. This one’s for you!
         </Typography>
-        <Box position={"relative"}>
+        <Box className={'regCenter'}>
           <img src={RegisterBanner} className="regBannerSize" />
           <form className="formStyle">
             <Grid container className="regBoxSize">
@@ -111,12 +111,12 @@ const Register = () => {
                 xs={6}
                 display={"flex"}
                 justifyContent={"end"}
-                sx={{ mt: { sm: 2, lg: 3 } }}
+                sx={{ mt: { sm: 1, md: 2, lg: 3 } }}
               >
                 <Box className="registerBox">
                   <Typography
                     sx={{
-                      p: { xs: 0, sm: 1 },
+                      p: { xs: 0, md: 1 },
                       textAlign: "start",
                       fontSize: { xs: "12px", sm: "15px", lg: "20px" },
                       height: "20px",
@@ -130,10 +130,9 @@ const Register = () => {
               <Grid
                 item
                 xs={6}
-                sx={{ mt: { sm: 2, lg: 3 }}}
+                sx={{ mt: { sm: 1, md: 2, lg: 3 } }}
                 display={"flex"}
                 justifyContent={"start"}
-
               >
                 <input
                   className="registerTextfield"
@@ -148,12 +147,12 @@ const Register = () => {
                 xs={6}
                 display={"flex"}
                 justifyContent={"end"}
-                sx={{ mt: { sm: 2, lg: 3 } }}
+                sx={{ mt: { sm: 1, md: 2, lg: 3 } }}
               >
                 <Box className="registerBox">
                   <Typography
                     sx={{
-                      p: { xs: 0, sm: 1 },
+                      p: { xs: 0, md: 1 },
 
                       textAlign: "start",
                       fontSize: { xs: "12px", sm: "15px", lg: "20px" },
@@ -168,7 +167,7 @@ const Register = () => {
               <Grid
                 item
                 xs={6}
-                sx={{ mt: { sm: 2, lg: 3 } }}
+                sx={{ mt: { sm: 1, md: 2, lg: 3 } }}
                 display={"flex"}
                 justifyContent={"start"}
               >
@@ -185,12 +184,12 @@ const Register = () => {
                 xs={6}
                 display={"flex"}
                 justifyContent={"end"}
-                sx={{ mt: { sm: 2, lg: 3 } }}
+                sx={{ mt: { sm: 1, md: 2, lg: 3 } }}
               >
                 <Box className="registerBox">
                   <Typography
                     sx={{
-                      p: { xs: 0, sm: 1 },
+                      p: { xs: 0, md: 1 },
 
                       textAlign: "start",
                       fontSize: { xs: "12px", sm: "15px", lg: "20px" },
@@ -206,7 +205,7 @@ const Register = () => {
               <Grid
                 item
                 xs={6}
-                sx={{ mt: { sm: 2, lg: 3 } }}
+                sx={{ mt: { sm: 1, md: 2, lg: 3 } }}
                 display={"flex"}
                 justifyContent={"start"}
               >
@@ -223,12 +222,12 @@ const Register = () => {
                 xs={6}
                 display={"flex"}
                 justifyContent={"end"}
-                sx={{ mt: { sm: 2, lg: 3 } }}
+                sx={{ mt: { sm: 1, md: 2, lg: 3 } }}
               >
                 <Box className="registerBox">
                   <Typography
                     sx={{
-                      p: { xs: 0, sm: 1 },
+                      p: { xs: 0, md: 1 },
                       textAlign: "start",
                       fontSize: { xs: "12px", sm: "15px", lg: "20px" },
                       height: "20px",
@@ -242,7 +241,7 @@ const Register = () => {
               <Grid
                 item
                 xs={6}
-                sx={{ mt: { sm: 2, lg: 3 } }}
+                sx={{ mt: { sm: 1, md: 2, lg: 3 } }}
                 display={"flex"}
                 justifyContent={"start"}
               >
@@ -259,13 +258,16 @@ const Register = () => {
                 xs={12}
                 display={"flex"}
                 justifyContent={"center"}
-                sx={{ mt: {xs: 1, sm: 3 }}}
+                sx={{ mt: { xs: 1, sm: 3, md: 5 } }}
               >
                 <Button
-                size="small"
-                  variant="contained"    
+                  size="small"
+                  variant="contained"
                   className="texturinaFont"
-                  sx={{ backgroundColor: "#44C0A8", height: {xs:'22px', sm: '20px'} }}
+                  sx={{
+                    backgroundColor: "#44C0A8",
+                    height: { xs: "22px",sm: "40px", lg: "60px" },
+                  }}
                   onClick={handleRegisterNow}
                 >
                   {" "}
@@ -311,8 +313,11 @@ const Register = () => {
           </Button>
         </Box>
         <img src={BMSLiveSvg} className="rotate BMSLogo" />
-        <Box sx={{mt: {xs:0,sm:2}}}>
-          <Typography variant="caption" sx={{ fontFamily: "Texturina", fontSize: {xs: 6, sm:12} }}>
+        <Box sx={{ mt: { xs: 0, sm: 2 } }}>
+          <Typography
+            variant="caption"
+            sx={{ fontFamily: "Texturina", fontSize: { xs: 6, sm: 12 } }}
+          >
             © | Privacy | Terms & Conditions
           </Typography>
         </Box>
