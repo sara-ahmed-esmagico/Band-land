@@ -155,10 +155,10 @@
   top: 0;
 }
 
-.mainLogo {
+/* .mainLogo {
   top: 390px;
   width: 30%;
-}
+} */
 
 .regMainLogoBox {
   top: 300px;
@@ -265,9 +265,9 @@
 
 .orangeDesc {
   top: 450px;
-  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .midDesc1 {
@@ -289,12 +289,11 @@
 }
 
 .belowOrangeBand {
-  top: 1100px;
-  width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  top: 1850px;
 }
 
 .signUpBtnPos {
@@ -386,10 +385,10 @@
     font-size: 12px !important;
     margin-top: 8px;
   }
-  .mainLogo {
+  /* .mainLogo {
     top: 18%;
     width: 30%;
-  }
+  } */
   .textBanner {
     top: 35%;
     width: 220px;
@@ -484,6 +483,18 @@
   }
 }
 @media (min-width: 375px) and (max-width: 424px) {
+  .secondTextBanner {
+    width: 250px;
+  }
+
+  .secBriefPos {
+    top:490px;
+    width: 200px;
+  }
+  .secondBannerSubBrief {
+    width: 200px;
+    font-size: 8px !important;
+  }
   .register-page-container {
     height: 80vh;
   }
@@ -508,35 +519,32 @@
     font-size: 12px !important;
     margin-top: 8px;
   }
-  .mainLogo {
+  /* .mainLogo {
     top: 18%;
     width: 30%;
-  }
+  } */
   .textBanner {
     top: 35%;
     width: 220px;
   }
   .midBannerHead {
-    top: 28%;
+    top: 170px;
   }
   .midHeading {
     font-size: 20px !important;
   }
-  .school {
-    top: 26%;
-  }
+  
   .schoolDesc {
     font-size: 5px !important;
   }
 
   .bannerBrief {
-    top: 36%;
+    top: 210px;
     width: 150px;
     font-size: 6px !important ;
   }
   .orangeDesc {
-    top: 47%;
-    width: 250px;
+    top: 100px;
   }
   .orangeMidPoint {
     margin-top: 60px;
@@ -555,7 +563,12 @@
     font-size: 20px !important;
   }
   .belowOrangeBand {
-    top: 75%;
+    top: 450px;
+  }
+  .signUpBtnPos {
+    font-size: 6px !important;
+    margin-top: 4px !important;
+    padding: 0 !important;
   }
   .regMainLogo {
     width: 150px;
@@ -674,35 +687,34 @@
     font-size: 12px !important;
     margin-top: 8px;
   }
-  .mainLogo {
+  /* .mainLogo {
     top: 15%;
     width: 30%;
-  }
+  } */
   .textBanner {
-    top: 35%;
     width: 250px;
   }
   .midBannerHead {
-    top: 30%;
+    top: 190px;
   }
   .midHeading {
     font-size: 20px !important;
   }
-
+/* 
   .school {
     top: 24%;
-  }
+  } */
   .schoolDesc {
     font-size: 5px !important;
   }
 
   .bannerBrief {
-    top: 37%;
+    top: 235px;
     width: 150px;
     font-size: 6px !important ;
   }
   .orangeDesc {
-    top: 55%;
+    top: 120px;
     width: 250px;
   }
   .orangeMidPoint {
@@ -722,21 +734,19 @@
     font-size: 20px !important;
   }
   .belowOrangeBand {
-    top: 85%;
+    top: 500px;
   }
 
   .secondTextBanner {
-    top: 92%;
     width: 250px;
   }
-  .secondBannerBrief {
-    top: 94%;
-    font-size: 10px !important;
-  }
   .secondBannerSubBrief {
-    top: 96%;
-    width: 200px;
+    width: 220px;
     font-size: 8px !important;
+  }
+  
+  .secBriefPos {
+    top: 540px;
   }
   .signUpBtnPos {
     top: 100.5% !important;
@@ -817,16 +827,16 @@
     font-size: 12px !important;
     margin-top: 8px;
   }
-  .mainLogo {
+  /* .mainLogo {
     top: 15%;
     width: 30%;
-  }
+  } */
   .textBanner {
     top: 35%;
     width: 250px;
   }
   .midBannerHead {
-    top: 30%;
+    top: 380px;
   }
   .midHeading {
     font-size: 20px !important;
@@ -872,12 +882,11 @@
     top: 92%;
     width: 250px;
   }
-  .secondBannerBrief {
-    top: 94%;
-    font-size: 10px !important;
+ 
+  .secBriefPos {
+    top: 500px;
   }
   .secondBannerSubBrief {
-    top: 96%;
     width: 200px;
     font-size: 8px !important;
   }
@@ -905,8 +914,8 @@
   .BMSLogo {
     width: 70px;
     height: 70px;
-    margin-top: -10px;
-    margin-bottom: -10px;
+    margin-top: -15px;
+    margin-bottom: -30px;
   }
   .regHomeBtn {
     font-size: 15px !important;
@@ -945,28 +954,32 @@
   .boltBtn {
     font-size: 20px !important;
   }
-  .mainLogo {
+  /* .mainLogo {
     top: 30%;
-  }
+  } */
   .textBanner {
     top: 70%;
     width: 400px;
   }
   .midBannerHead {
-    top: 55%;
+    top: 340px;
+  }
+
+  .midHeading {
+    font-size: 50px !important;
   }
 
   .school {
     top: 45%;
   }
   .bannerBrief {
-    top: 72%;
-    width: 300px;
+    top: 440px;
+    width: 320px;
     font-size: 12px !important;
   }
   .orangeDesc {
-    top: 95%;
-    width: 250px;
+    top: 220px;
+    width: 100%;
   }
 
   .midDesc1 {
@@ -981,23 +994,23 @@
     font-size: 40px !important;
   }
   .belowOrangeBand {
-    top: 150%;
+    top: 900px;
   }
   .secondTextBanner {
-    top: 165%;
     width: 450px;
   }
-  .secondBannerBrief {
+  /* .secondBannerBrief {
     top: 168%;
     font-size: 13px !important;
+  } */
+
+  .secBriefPos {
+    top: 1000px;
+    width: 400px;
   }
   .secondBannerSubBrief {
-    top: 172%;
-    width: 370px;
-    font-size: 13px !important;
-  }
-  .signUpBtnPos {
-    top: 178% !important;
+    width: 340px;
+    font-size: 14px !important;
   }
   .footerBox {
     top: 190%;
@@ -1023,8 +1036,8 @@
   .BMSLogo {
     width: 80px;
     height: 80px;
-    margin-top: -10px;
-    margin-bottom: -10px;
+    margin-top: -15px;
+    margin-bottom: -15px;
   }
 
   .regBannerSize {
@@ -1033,30 +1046,30 @@
   .headerBtn {
     top: -15px;
   }
-  .mainLogo {
+  /* .mainLogo {
     top: 40%;
     width: 30%;
-  }
-  .textBanner {
-    top: 88%;
-    width: 600px;
-  }
+  } */
+
   .midBannerHead {
-    top: 75%;
+    top: 450px;
   }
 
-  .school {
-    top: 60%;
+  .midHeading {
+    font-size: 68px !important;
   }
+
+  /* .school {
+    top: 60%;
+  } */
 
   .bannerBrief {
-    top: 94%;
-    width: 450px;
-    font-size: medium;
+    top: 575px;
+    width: 420px;
+    font-size: 16px !important;
   }
   .orangeDesc {
-    top: 125%;
-    width: 200px;
+    top: 300px;
   }
 
   .midDesc1 {
@@ -1071,20 +1084,25 @@
     font-size: 55px !important;
   }
   .belowOrangeBand {
-    top: 200%;
+    top: 1200px;
+  }
+  .textBanner {
+    top: 600px;
+    width: 500px;
   }
   .secondTextBanner {
-    top: 215%;
+    top: 1300px;
+    width: 500px;
   }
-  .secondBannerBrief {
+  /* .secondBannerBrief {
     top: 220%;
-  }
+  } */
   .secondBannerSubBrief {
-    top: 225%;
+    width: 430px;
   }
-  .signUpBtnPos {
+  /* .signUpBtnPos {
     top: 235% !important;
-  }
+  } */
   .footerBox {
     top: 1700px !important;
   }
@@ -1100,6 +1118,10 @@
     top: 200px;
   }
   .regMainLogo {
+    width: 400px;
+  }
+  .secBriefPos {
+    top: 1320px;
     width: 400px;
   }
 }

@@ -88,12 +88,6 @@ const Home = () => {
               </Box>
             </Grid>
           </Box>
-          <Box className="pos-absolute belowOrangeBand">
-            <Typography className="midHeading">
-              BE A CITIZEN OF BANDLAND!
-            </Typography>
-            <img className="secondTextBanner" src={TextBanner} />
-          </Box>
         </Box>
 
         <Typography className=" pos-absolute bannerBrief">
@@ -103,20 +97,25 @@ const Home = () => {
           homecoming, back to Bangalore. Trends may come & go, but Bandland is
           forever.
         </Typography>
-
-        <Box className='pos-absolute secBriefPos'>
-        <Typography className="secondBannerSubBrief">
-          <strong>Pass on the mic. Grab the stand. Take the stage.</strong>
-          <br />
-          Join the inner circle to receive all festival updates, from artist
-          lineup to tickets, schedule, guides & more. This one’s for you!
-        </Typography>
-        <Button href="/register" variant="contained" className="signUpBtnPos">
-          {" "}
-          Sign Up{" "}
-        </Button>
+        <Box className="pos-absolute belowOrangeBand">
+          <Typography className="midHeading">
+            BE A CITIZEN OF BANDLAND!
+          </Typography>
+          <img className="secondTextBanner" src={TextBanner} />
         </Box>
-       
+
+        <Box className="pos-absolute secBriefPos">
+          <Typography className="secondBannerSubBrief">
+            <strong>Pass on the mic. Grab the stand. Take the stage.</strong>
+            <br />
+            Join the inner circle to receive all festival updates, from artist
+            lineup to tickets, schedule, guides & more. This one’s for you!
+          </Typography>
+          <Button href="/register" variant="contained" className="signUpBtnPos">
+            {" "}
+            Sign Up{" "}
+          </Button>
+        </Box>
 
         {/* <Typography
           style={{ fontFamily: "Texturina" }}
@@ -126,7 +125,6 @@ const Home = () => {
           
         </Typography> */}
 
-        
         {/* <Box className="footerBox pos-absolute">
           <img src={WhiteLogo} className="rotate" />
 
