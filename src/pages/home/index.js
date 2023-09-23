@@ -159,9 +159,7 @@ const Home = () => {
           <Button href="/" className="homeBtn texturinaFont">
             HOME
           </Button>
-          <Box>
-            <Bolt className="boltBtn" />
-          </Box>
+          <Bolt />
           <Button href="/register" className="homeBtn texturinaFont">
             REGISTER
           </Button>
@@ -174,15 +172,12 @@ const Home = () => {
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
-            className={"navContainer"}
+            className={"mt--5"}
           >
             <Button href="/" className="regHomeBtn">
               HOME
             </Button>
-            <Box>
-              <Bolt className="boltBtn" />
-            </Box>
-
+            <Bolt />
             <Button href="/register" className="regHomeBtn">
               REGISTER
             </Button>

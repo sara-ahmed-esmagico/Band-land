@@ -9,7 +9,7 @@ import axios from "axios";
 import AlertMessage from "../../common/AlertMessage";
 import HeaderBase from "../../images/BaseHeader.svg";
 // import MainBg from "../../images/BGOrange.svg";
-import SideBorder from "../../images/OutlineBorder.svg";
+import SideBorder from "../../images/Border.png";
 // import MidBanner1 from "../../images/Banner1.png";
 import MidBanner from "../../images/Banner2.png";
 import FooterBase from "../../images/FooterBase.png";
@@ -289,7 +289,7 @@ const Register = () => {
         <Button href="/" className="homeBtn texturinaFont">
           HOME
         </Button>
-        <Bolt />
+        <Bolt className="boltBtn" />
         <Button href="/register" className="homeBtn texturinaFont">
           REGISTER
         </Button>
@@ -307,7 +307,7 @@ const Register = () => {
           <Button href="/" className="regHomeBtn">
             HOME
           </Button>
-          <Bolt />
+          <Bolt className="boltBtn" />
           <Button href="/register" className="regHomeBtn">
             REGISTER
           </Button>
