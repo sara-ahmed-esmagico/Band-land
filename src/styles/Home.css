@@ -1,0 +1,136 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #44c0a8;
+}
+
+.full-screen-background {
+  background-image: url("../images/Home/HomeMainBack.png"); /* Set the background image */
+  background-size: cover; /* Optional: Cover the entire container */
+  background-repeat: no-repeat;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.no-overlap {
+  z-index: 9999;
+}
+
+.allow-overlap {
+  z-index: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.relative-top {
+  top: 60%;
+}
+
+.font-relative {
+  font-size: 50px !important;
+}
+
+.text-center {
+  text-align: center;
+}
+.relative-width {
+  width: 60%;
+}
+.text-shadow {
+  text-shadow: 3px 3px 0px #390c06 !important;
+}
+.heading-relative {
+  font-size: 80px !important;
+}
+.relative-banner-width-height {
+  width: 70%;
+  height: 300px;
+}
+@media (max-width: 424px) {
+  .relative-top {
+    top: 15%;
+  }
+  .font-relative {
+    font-size: 8px !important;
+  }
+  .relative-width {
+    width: 50%;
+  }
+  .heading-relative {
+    font-size: 20px !important;
+  }
+}
+@media (min-width: 425px) and (max-width: 767px) {
+  .relative-top {
+    top: 20%;
+  }
+  .font-relative {
+    font-size: 8px !important;
+  }
+  .relative-width {
+    width: 50%;
+  }
+  .heading-relative {
+    font-size: 30px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .relative-top {
+    top: 30%;
+  }
+  .font-relative {
+    font-size: 12px !important;
+  }
+  .relative-width {
+    width: 45%;
+  }
+  .heading-relative {
+    font-size: 50px !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+  .relative-top {
+    top: 40%;
+  }
+
+  .font-relative {
+    font-size: 20px !important;
+  }
+  .relative-width {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1401px) {
+  .relative-banner-width-height {
+    width: 120%;
+  }
+}
