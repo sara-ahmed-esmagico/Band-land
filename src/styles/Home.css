@@ -33,6 +33,10 @@ body {
   top: 5%;
 }
 
+.top-10 {
+  top: 10%
+}
+
 .bottom-0 {
   bottom: 0;
 }
@@ -52,6 +56,9 @@ body {
 }
 .z-index-4 {
   z-index: 4;
+}
+.z-index-5 {
+  z-index: 5;
 }
 .allow-overlap {
   z-index: 1;

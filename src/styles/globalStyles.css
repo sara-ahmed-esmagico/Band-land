@@ -22,6 +22,17 @@
   height: 248vh;
   position: relative;
 } */
+.header-base {
+  width: 120%;
+  height: 120px;
+  margin-top: -35px;
+}
+.banner-width {
+  margin-top: -15px;
+  }
+.side-border {
+
+}
 
 .page-container {
   position: relative;
@@ -364,6 +375,10 @@
   height: 120px;
 }
 
+.hamburger {
+  width: 320px;
+}
+
 @media (min-width: 280px) and (max-width: 374px) {
   /* .navContainer {
     margin-bottom: -15px;
@@ -500,6 +515,9 @@
   }
 }
 @media (min-width: 375px) and (max-width: 424px) {
+  .hamburger {
+    width: 375px;
+  }
   .secondTextBanner {
     width: 250px;
   }
@@ -637,6 +655,9 @@
 }
 
 @media (min-width: 425px) and (max-width: 500px) {
+  .hamburger {
+    width: 425px;
+  }
   .regHomeBtn {
     font-size: 12px !important;
   }
@@ -914,9 +935,17 @@
   .regBoxSize {
     width: 250px !important;
   }
+  .header-base {
+    height: 150px;
+  }
+ 
 }
 
 @media (min-width: 768px) and (max-width: 911px) {
+  .header-base {
+    height: 150px;
+  }
+ 
   .registerTextfield {
     width: 120px;
   }
@@ -1034,6 +1063,10 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1400px) {
+  .header-base {
+    height: 180px;
+  }
+  
   .registerTextfield {
     width: 160px;
   }
@@ -1133,7 +1166,7 @@
   }
 }
 
-@media (min-width: 1044px) {
+@media (min-width: 1401px) {
   .midDesc1 {
     font-size: 155px !important;
   }
@@ -1141,4 +1174,12 @@
   .midDesc2 {
     font-size: 55px !important;
   }
+   .header-base {
+    height: 250px;
+    margin-top: -50px;
+  }
+  .banner-width {
+    width: 100%;
+  }
+  
 }
