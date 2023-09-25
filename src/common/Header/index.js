@@ -1,4 +1,4 @@
-import { Box, Button, CardMedia, Drawer, Typography } from "@mui/material";
+import { Box, Button, Drawer, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Foot from "../../images/Home/Foot.png";
 import HeaderBase from "../../images/Header Base.png";
@@ -30,7 +30,7 @@ const Header = () => {
         src={Foot}
         style={{ width: "100%" }}
       />
-      <img src={HeaderBase} className="pos-fixed top-0 z-index-4 header-base" />
+      <img src={HeaderBase} className="pos-fixed top-0 z-index-5 header-base" />
       <Box className="pos-fixed top-0 z-index-5">
         {isScreenXtraSmall ? (
           <IconButton
