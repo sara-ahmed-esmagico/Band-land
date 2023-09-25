@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import "../../styles/globalStyles.css";
 import axios from "axios";
 import AlertMessage from "../../common/AlertMessage";
-import RegisterBanner from "../../images/Register Banner.svg";
 import "../../styles/Register.css";
 import Footer from "../../common/Footer";
 import TextBanner from "../../images/Home/Text Banner.png";

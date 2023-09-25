@@ -8,20 +8,20 @@
 
 .orangeMidPoint {
 }
-.regCenter {
+/* .regCenter {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.navContainer {
+} */
+/* .navContainer {
   margin-top: -5px;
-}
+} */
 
-.register-page-container {
+/* .register-page-container {
   height: 248vh;
   position: relative;
-}
+} */
 
 .page-container {
   position: relative;
@@ -365,12 +365,12 @@
 }
 
 @media (min-width: 280px) and (max-width: 374px) {
-  .navContainer {
+  /* .navContainer {
     margin-bottom: -15px;
   }
   .register-page-container {
     height: 650px;
-  }
+  } */
   .registerTextfield {
     font-size: 10px;
     width: 60px;
@@ -512,9 +512,9 @@
     width: 200px;
     font-size: 8px !important;
   }
-  .register-page-container {
+  /* .register-page-container {
     height: 90vh;
-  }
+  } */
   .registerTextfield {
     font-size: 10px;
     width: 60px;
@@ -650,9 +650,9 @@
   .footerBox {
     top: 120%;
   }
-  .register-page-container {
+  /* .register-page-container {
     height: 100vh;
-  }
+  } */
   .registerTextfield {
     font-size: 12px;
     width: 80px;
@@ -791,9 +791,9 @@
     height: 20px;
   }
 
-  .register-page-container {
+  /* .register-page-container {
     height: 1000px;
-  }
+  } */
   .registerTextfield {
     font-size: 12px;
     width: 80px;
@@ -936,9 +936,9 @@
   .logoSize {
     width: 150px;
   }
-  .register-page-container {
+  /* .register-page-container {
     height: 180vh;
-  }
+  } */
 
   .regBoxSize {
     width: 250px !important;
