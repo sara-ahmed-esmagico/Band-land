@@ -1,4 +1,4 @@
-import { Box, Button, CardMedia, Drawer, Typography } from "@mui/material";
+import { Box, Button, Drawer, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Foot from "../../images/Home/Foot.png";
 import HeaderBase from "../../images/Header Base.png";
@@ -92,7 +92,7 @@ const Header = () => {
         </Box>
       </Box>
       <img
-        className="top-0 z-index-2 side-border"
+        className="top-0 z-index-2"
         style={{ position: isMediumScreen ? "fixed" : "absolute" }}
         src={SideBorder}
         width={"100%"}
@@ -103,7 +103,7 @@ const Header = () => {
         onClose={handleDrawerToggle}
       >
         {/* Add your menu content here */}
-        <div className="hamburger" style={{backgroundColor: 'coral', height: "100%" }}>
+        <div className="hamburger" style={{ width: '100vw', height: "100%" }}>
           <Hamburger handleDrawerToggle={handleDrawerToggle} />{" "}
         </div>
       </Drawer>

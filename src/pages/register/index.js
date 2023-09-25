@@ -1,4 +1,4 @@
-import { Box, Button, Typography, Grid, TextField } from "@mui/material";
+import { Box, Button, Typography, Grid, input } from "@mui/material";
 import React, { useState } from "react";
 import "../../styles/globalStyles.css";
 import axios from "axios";
@@ -6,8 +6,14 @@ import AlertMessage from "../../common/AlertMessage";
 import "../../styles/Register.css";
 import Footer from "../../common/Footer";
 import TextBanner from "../../images/Home/Text Banner.png";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Register = () => {
+  const theme = useTheme();
+  const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
+  const isScreenXtraSmall = useMediaQuery(theme.breakpoints.up("xs"));
   const [formValues, setFormValues] = useState({
     name: "",
     phone: "",
@@ -67,8 +73,8 @@ const Register = () => {
   return (
     <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center ">
       <Typography
-        sx={{ fontSize: { xs: "30px", sm: "50px", lg: "70px" } }}
-        className="text-shadow font-modesto-condensed"
+        sx={{ fontSize: { xs: "30px", sm: "50px", lg: "70px" }, mt: 2 }}
+        className="text-shadow text-stroke font-modesto-condensed"
         color={"white"}
         width={{ xs: "75%", sm: "100%" }}
       >
@@ -89,9 +95,9 @@ const Register = () => {
           src={TextBanner}
           style={{ marginTop: 30 }}
         />
-        <form className="pos-absolute form-width" style={{ marginTop: 10 }}>
+        <form className="pos-absolute form-width" >
           <Grid container>
-            <Grid item xs={6} sx={{ mt: 1 }}>
+            <Grid item xs={5}>
               <Typography
                 backgroundColor="white"
                 className="flex border font-texturina"
@@ -99,18 +105,17 @@ const Register = () => {
                 Name:
               </Typography>
             </Grid>
-            <Grid item xs={6}>
-              <TextField
-                fullWidth
+            <Grid item xs={7}>
+              <input
+                style={{ width: "100%", height: "28px" }}
                 className="border"
                 size="small"
                 value={formValues?.name}
                 name="name"
                 onChange={handleTextInputChange}
-                sx={{ mt: { xs: 1 }, backgroundColor: "white " }}
               />
             </Grid>
-            <Grid item xs={6} sx={{ mt: 1 }}>
+            <Grid item xs={5} sx={{mt: {xs: 2}}}>
               <Typography
                 backgroundColor="white"
                 className="flex border font-texturina"
@@ -118,18 +123,16 @@ const Register = () => {
                 Phone No:
               </Typography>
             </Grid>
-            <Grid item xs={6}>
-              <TextField
-                fullWidth
-                size="small"
+            <Grid item xs={7} sx={{mt: {xs: 2}}}>
+              <input
+                style={{ width: "100%", height: "28px" }}
                 value={formValues?.phone}
                 name="phone"
                 className="border"
                 onChange={handleTextInputChange}
-                sx={{ mt: { xs: 1 }, backgroundColor: "white " }}
               />
             </Grid>
-            <Grid item xs={6} sx={{ mt: 1 }}>
+            <Grid item xs={5} sx={{mt: {xs: 2}}}>
               <Typography
                 backgroundColor="white"
                 className="flex border font-texturina"
@@ -137,19 +140,15 @@ const Register = () => {
                 Email ID:
               </Typography>
             </Grid>
-
-            <Grid item xs={6}>
-              <TextField
-                fullWidth
-                className="border"
-                size="small"
+            <Grid item xs={7} sx={{mt: {xs: 2}}}>
+              <input
+                style={{ width: "100%", height: "28px" }}
                 value={formValues?.email}
                 name="email"
                 onChange={handleTextInputChange}
-                sx={{ mt: { xs: 1 }, backgroundColor: "white " }}
               />
             </Grid>
-            <Grid item xs={6} sx={{ mt: 1 }}>
+            <Grid item xs={5} sx={{mt: {xs: 2}}}>
               <Typography
                 backgroundColor="white"
                 className="flex border font-texturina"
@@ -157,31 +156,28 @@ const Register = () => {
                 City:
               </Typography>
             </Grid>
-            <Grid item xs={6}>
-              <TextField
-                fullWidth
-                className="border"
-                size="small"
+            <Grid item xs={7} sx={{mt: {xs: 2}}}>
+              <input
+                style={{ width: "100%", height: "28px" }}
                 value={formValues?.city}
                 name="city"
                 onChange={handleTextInputChange}
-                sx={{ mt: { xs: 1 }, backgroundColor: "white " }}
               />
             </Grid>
             <Grid item xs={12} display={"flex"} justifyContent={"center"}>
-              <Button
-                size="small"
-                variant="contained"
-                className="font-texturina"
-                sx={{
+              <button
+                className="font-modesto-condensed text-stroke"
+                style={{
                   backgroundColor: "#44C0A8",
-                  mt: { xs: 3, sm: 2 },
+                  fontSize: "30px",
+                  color: "#fffde7",
+                  marginTop: '12px',
                 }}
                 onClick={handleRegisterNow}
               >
                 {" "}
                 Register Now{" "}
-              </Button>
+              </button>
             </Grid>
           </Grid>
         </form>

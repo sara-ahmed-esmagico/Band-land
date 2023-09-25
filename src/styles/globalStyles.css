@@ -30,9 +30,6 @@
 .banner-width {
   margin-top: 20px;
   }
-.side-border {
-
-}
 .page-container {
   position: relative;
   display: flex;
@@ -375,7 +372,8 @@
 }
 
 .hamburger {
-  width: 320px;
+  background-image: url('../images/Home/Hamburger.png');
+  background-size: 115% ;
 }
 
 @media (min-width: 280px) and (max-width: 374px) {

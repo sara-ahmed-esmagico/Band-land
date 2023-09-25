@@ -1,70 +1,76 @@
 .text-shadow {
   text-shadow: 1px 1px 0px #390c06 !important;
 }
+
+.text-stroke {
+  -webkit-text-stroke: 1px black !important;
+}
 .register-banner {
   width: 75%;
   height: 400px;
 }
 .border {
   border: 1px solid black;
-  height: 30px;
+  height: 28px;
+  font-size: 14px !important;
+  padding-block: 2px;
 }
 
 .form-width {
   width: 70%;
-  top: 12%;
+  top: 15%;
 }
 
 .form-background {
-  height: 320px;
+  height: 380px;
   width: 220px;
 }
 
 @media (max-width: 424px) {
-  .form-background {
-    height: 320px;
-    width: 230px;
-  }
+ 
   .form-width {
     width: 75%;
-    top: 15%;
+    top: 20%;
   }
 }
 @media (min-width: 425px) and (max-width: 767px) {
   .form-background {
-    height: 320px;
-    width: 300px;
+   
+    width: 305px;
   }
   .form-width {
     width: 75%;
-    top: 15%;
+    top: 20%;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .form-background {
-    height: 320px;
+  
     width: 400px;
   }
   .form-width {
     width: 75%;
-    top: 15%;
+    top: 20%;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1400px) {
   .form-background {
-    height: 320px;
+    
     width: 500px;
+  }
+  .form-width {
+    width: 80%;
+    top: 20%;
   }
 }
 
 @media (min-width: 1401px) {
   .form-background {
-    height: 320px;
     width: 80%;
   }
   .form-width {
     width: 60%;
-    top: 15%;
+    top: 20%;
   }
 }
