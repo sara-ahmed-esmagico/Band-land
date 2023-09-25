@@ -34,11 +34,11 @@ const Home = () => {
             className="orange-banner"
           />
           <Box className="pos-absolute top-0" width={"100%"}>
-            <Grid container>
+            <Grid className="desc" container>
               <Grid
                 item
                 xs={12}
-                sm={6}
+                sm={5.5}
                 display={{ sm: "flex" }}
                 justifyContent={{ sm: "end" }}
               >
@@ -66,7 +66,7 @@ const Home = () => {
               <Grid
                 item
                 xs={12}
-                sm={6}
+                sm={5.5}
                 sx={{ mt: { xs: -2 } }}
                 display={{ sm: "flex" }}
                 justifyContent={{ sm: "end" }}

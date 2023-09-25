@@ -30,7 +30,7 @@ const Header = () => {
         src={Foot}
         style={{ width: "100%" }}
       />
-      <img src={HeaderBase} className="pos-fixed top-0 z-index-4 header-base" />
+      <img src={HeaderBase} className="pos-fixed top-0 z-index-5 header-base" />
       <Box className="pos-fixed top-0 z-index-5">
         {isScreenXtraSmall ? (
           <IconButton
