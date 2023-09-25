@@ -31,7 +31,7 @@ const Header = () => {
         style={{ width: "100%" }}
       />
       <img src={HeaderBase} className="pos-fixed top-0 z-index-4 header-base" />
-      <Box className="z-index-5">
+      <Box className="pos-fixed top-0 z-index-5">
         {isScreenXtraSmall ? (
           <IconButton
             edge="start"
@@ -79,7 +79,7 @@ const Header = () => {
         <img src={MidBanner} className="z-index-3 banner-width" />
         <Box
           className="flex-center flex-col align-center pos-absolute"
-          sx={{ top: { xs: "4%", sm: "5%" } }}
+          sx={{ top: { xs: "6%", sm: "5%" } }}
         >
           <img src={MainLogo} className="relative-width" />
           <Typography
