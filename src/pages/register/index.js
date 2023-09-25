@@ -1,4 +1,4 @@
-import { Box, Button, Typography, Grid, TextField } from "@mui/material";
+import { Box, Button, Typography, Grid, textarea } from "@mui/material";
 import React, { useState } from "react";
 import "../../styles/globalStyles.css";
 import axios from "axios";
@@ -100,7 +100,7 @@ const Register = () => {
               </Typography>
             </Grid>
             <Grid item xs={6}>
-              <TextField
+              <textarea
                 fullWidth
                 className="border"
                 size="small"
@@ -119,7 +119,7 @@ const Register = () => {
               </Typography>
             </Grid>
             <Grid item xs={6}>
-              <TextField
+              <textarea
                 fullWidth
                 size="small"
                 value={formValues?.phone}
@@ -139,7 +139,7 @@ const Register = () => {
             </Grid>
 
             <Grid item xs={6}>
-              <TextField
+              <textarea
                 fullWidth
                 className="border"
                 size="small"
@@ -158,7 +158,7 @@ const Register = () => {
               </Typography>
             </Grid>
             <Grid item xs={6}>
-              <TextField
+              <textarea
                 fullWidth
                 className="border"
                 size="small"
