@@ -281,18 +281,14 @@
 .midDesc1 {
   text-shadow: 3px 3px 0px #390c06 !important;
   font-family: "modesto-open-caps" !important;
-  font-size: 200px !important;
+  font-size: 120px !important;
   color: white;
-}
-
-.midSeparator {
-  margin-top: 65px !important;
 }
 
 .midDesc2 {
   text-shadow: 3px 3px 0px #390c06 !important;
   font-family: "modesto-condensed" !important;
-  font-size: 60px !important;
+  font-size: 40px !important;
   color: white;
 }
 
@@ -301,7 +297,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  top: 1850px;
+  
 }
 
 .signUpBtnPos {
@@ -440,25 +436,21 @@
   .orangeDesc {
     top: 80px;
   }
-  .orangeMidPoint {
-    margin-top: 60px;
-  }
+ 
 
-  .midDesc1 {
+  /* .midDesc1 {
     font-size: 50px !important;
-  }
+  } */
 
-  .midSeparator {
-    margin-top: 18px !important;
+  /* .midSeparator {
+    margin-top: 15px !important;
     margin-left: 10px !important;
-  }
+  } */
 
-  .midDesc2 {
+  /* .midDesc2 {
     font-size: 15px !important;
-  }
-  .belowOrangeBand {
-    top: 380px;
-  }
+  } */
+  
   .regMainLogo {
     width: 150px;
   }
@@ -575,7 +567,7 @@
     margin-top: 60px;
   }
 
-  .midDesc1 {
+  /* .midDesc1 {
     font-size: 70px !important;
   }
 
@@ -586,7 +578,7 @@
 
   .midDesc2 {
     font-size: 20px !important;
-  }
+  } */
   .belowOrangeBand {
     top: 450px;
   }
@@ -745,7 +737,7 @@
   .orangeMidPoint {
     margin-top: 60px;
   }
-
+/* 
   .midDesc1 {
     font-size: 70px !important;
   }
@@ -757,7 +749,7 @@
 
   .midDesc2 {
     font-size: 20px !important;
-  }
+  } */
   .belowOrangeBand {
     top: 500px;
   }
@@ -887,19 +879,13 @@
   .orangeMidPoint {
     margin-top: 60px;
   }
-
-  .midDesc1 {
-    font-size: 70px !important;
-  }
-
-  .midSeparator {
-    margin-top: 25px !important;
-    margin-left: 10px !important;
+.midDesc1 {
+    font-size: 160px !important;
   }
 
   .midDesc2 {
-    font-size: 20px !important;
-  }
+    font-size: 55px !important;
+  } 
   .belowOrangeBand {
     top: 85%;
   }
@@ -1011,11 +997,6 @@
   .midDesc1 {
     font-size: 130px !important;
   }
-
-  .midSeparator {
-    margin-top: 40px !important;
-  }
-
   .midDesc2 {
     font-size: 40px !important;
   }
@@ -1099,11 +1080,7 @@
   }
 
   .midDesc1 {
-    font-size: 175px !important;
-  }
-
-  .midSeparator {
-    margin-top: 55px !important;
+    font-size: 155px !important;
   }
 
   .midDesc2 {
@@ -1156,11 +1133,12 @@
   }
 }
 
-.full-screen-background {
-  background-color: #44c0a8;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (min-width: 1044px) {
+  .midDesc1 {
+    font-size: 155px !important;
+  }
+
+  .midDesc2 {
+    font-size: 55px !important;
+  }
 }
