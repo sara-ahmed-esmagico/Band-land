@@ -4,13 +4,11 @@ import Register from "./pages/register";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "../src/styles/Home.css";
 import { useEffect, useState } from "react";
-import Header from "./common/Header";
+
 
 function App() {
   const [backgroundColor, setBackgroundColor] = useState("");
   const currentLocation = window.location.pathname;
-
-  console.log(currentLocation, " crr");
 
   useEffect(() => {
     if (currentLocation === "/") {
@@ -24,7 +22,6 @@ function App() {
       style={{ backgroundColor: backgroundColor }}
       className="full-screen-background flex-center flex-col align-center pos-relative "
     >
-      <Header />
       <BrowserRouter>
         <Routes>
           <Route path="/" Component={Home} />
