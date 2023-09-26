@@ -4,13 +4,16 @@ import TextBanner from "../../images/Home/Text Banner.png";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import OrangeBand from "../../images/Home/Orange Band.png";
 import Footer from "../../common/Footer";
+import Header from "../../common/Header";
 
 const Home = () => {
   return (
     <>
-      <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center ">
+      <Header />
+
+      <Box className="pos-absolute relative-top flex-center flex-col align-center text-center top-18">
         <Typography
-          sx={{ mt: 2 }}
+          sx={{ mt: 20 }}
           color={"white"}
           className="font-modesto-condensed text-shadow heading-relative"
         >
@@ -29,7 +32,7 @@ const Home = () => {
         </Box>
         <Box sx={{ mt: { sm: 5, lg: 10 } }} className="pos-relative">
           <img
-            style={{ marginTop: "20px" }}
+            style={{ marginTop: "5px" }}
             src={OrangeBand}
             className="orange-banner"
           />
