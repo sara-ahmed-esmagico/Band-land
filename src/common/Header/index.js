@@ -4,14 +4,16 @@ import Foot from "../../images/Home/Foot.png";
 import HeaderBase from "../../images/Header Base.png";
 import SideBorder from "../../images/Home/SideBorder.svg";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import MidBanner from "../../images/Banner-Crop.png";
+import MidBanner from "../../images/Banner1.png";
+import MidBanner2 from "../../images/Banner2.png";
 import MainLogo from "../../images/Bandland Logo@3x@2x.png";
 import { useTheme } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Bolt } from "@mui/icons-material";
 import Hamburger from "../Hamburger";
-const Header = () => {
+
+const Header = ({ banner2 }) => {
   const theme = useTheme();
   const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
   const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
@@ -76,17 +78,20 @@ const Header = () => {
       </Box>
 
       <Box className="flex-center flex-col align-center pos-relative ">
-        <img src={MidBanner} className="z-index-3 banner-width" />
+        <img
+          src={banner2 ? MidBanner2 : MidBanner}
+          className="z-index-3 banner-width banner-width-desktop"
+        />
         <Box
           className="flex-center flex-col align-center pos-absolute"
-          sx={{ top: { xs: "6%", sm: "5%" } }}
+          sx={{ top: { xs: "15%", sm: banner2 ? "24%" : "14%" } }}
         >
           <img src={MainLogo} className="relative-width" />
           <Typography
             className="font-texturina font-relative flex-center align-center "
             width={"100%"}
             color={"white"}
-            style={{zIndex:"2"}}
+            style={{ zIndex: "2" }}
           >
             EMBASSY INTERNATIONAL RIDING SCHOOL
           </Typography>
@@ -104,7 +109,7 @@ const Header = () => {
         onClose={handleDrawerToggle}
       >
         {/* Add your menu content here */}
-        <div className="hamburger" style={{ width: '100vw', height: "100%" }}>
+        <div className="hamburger" style={{ width: "100vw", height: "100%" }}>
           <Hamburger handleDrawerToggle={handleDrawerToggle} />{" "}
         </div>
       </Drawer>

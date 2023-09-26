@@ -8,6 +8,7 @@ import Footer from "../../common/Footer";
 import TextBanner from "../../images/Home/Text Banner.png";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Header from "../../common/Header";
 
 const Register = () => {
   const theme = useTheme();
@@ -71,121 +72,132 @@ const Register = () => {
     console.log(formValues, " fv ");
   };
   return (
-    <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center ">
-      <Typography
-        sx={{ fontSize: { xs: "30px", sm: "50px", lg: "70px" }, mt: 2, zIndex:2 }}
-        className="text-shadow text-stroke font-modesto-condensed"
-        color={"white"}
-        width={{ xs: "75%", sm: "100%" }}
-      >
-        PLEDGE ALLEGIANCE TO THE BAND!
-      </Typography>
-      <Typography
-        sx={{ fontSize: { xs: "10px", sm: "20px", lg: "30px" }, zIndex:2 }}
-        className="font-texturina"
-        color={"white"}
-        width={{ xs: "70%", sm: "75%", lg: "50%" }}
-      >
-        Join the inner circle to receive all festival updates, from artist
-        lineup to tickets, schedule, guides & more. This one’s for you!
-      </Typography>
-      <Box className={"pos-relative flex-center align-center z-index-4"}>
-        <img
-          className="form-background"
-          src={TextBanner}
-          style={{ marginTop: 30 }}
-        />
-        <form className="pos-absolute form-width" >
-          <Grid container>
-            <Grid item xs={5}>
-              <Typography
-                backgroundColor="white"
-                className="flex border font-texturina"
-              >
-                Name:
-              </Typography>
+    <>
+      <Header banner2={true} />
+      <Box className="pos-absolute relative-top flex-center flex-col align-center text-center top-18">
+        <Typography
+          sx={{
+            fontSize: { xs: "30px", sm: "50px", lg: "70px" },
+            mt: 50,
+            zIndex: 2,
+          }}
+          className="text-shadow text-stroke font-modesto-condensed"
+          color={"white"}
+          width={{ xs: "75%", sm: "100%" }}
+        >
+          PLEDGE ALLEGIANCE TO THE BAND!
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: { xs: "10px", sm: "20px", lg: "30px" },
+            mt: 3,
+            zIndex: 2,
+          }}
+          className="font-texturina"
+          color={"white"}
+          width={{ xs: "70%", sm: "75%", lg: "50%" }}
+        >
+          Join the inner circle to receive all festival updates, from artist
+          lineup to tickets, schedule, guides & more. This one’s for you!
+        </Typography>
+        <Box className={"pos-relative flex-center align-center z-index-4"}>
+          <img
+            className="form-background"
+            src={TextBanner}
+            style={{ marginTop: 30 }}
+          />
+          <form className="pos-absolute form-width">
+            <Grid container>
+              <Grid item xs={5}>
+                <Typography
+                  backgroundColor="white"
+                  className="flex border font-texturina"
+                >
+                  Name:
+                </Typography>
+              </Grid>
+              <Grid item xs={7}>
+                <input
+                  style={{ width: "100%", height: "28px" }}
+                  className="border"
+                  size="small"
+                  value={formValues?.name}
+                  name="name"
+                  onChange={handleTextInputChange}
+                />
+              </Grid>
+              <Grid item xs={5} sx={{ mt: { xs: 2 } }}>
+                <Typography
+                  backgroundColor="white"
+                  className="flex border font-texturina"
+                >
+                  Phone No:
+                </Typography>
+              </Grid>
+              <Grid item xs={7} sx={{ mt: { xs: 2 } }}>
+                <input
+                  style={{ width: "100%", height: "28px" }}
+                  value={formValues?.phone}
+                  name="phone"
+                  className="border"
+                  onChange={handleTextInputChange}
+                />
+              </Grid>
+              <Grid item xs={5} sx={{ mt: { xs: 2 } }}>
+                <Typography
+                  backgroundColor="white"
+                  className="flex border font-texturina"
+                >
+                  Email ID:
+                </Typography>
+              </Grid>
+              <Grid item xs={7} sx={{ mt: { xs: 2 } }}>
+                <input
+                  style={{ width: "100%", height: "28px" }}
+                  value={formValues?.email}
+                  name="email"
+                  onChange={handleTextInputChange}
+                />
+              </Grid>
+              <Grid item xs={5} sx={{ mt: { xs: 2 } }}>
+                <Typography
+                  backgroundColor="white"
+                  className="flex border font-texturina"
+                >
+                  City:
+                </Typography>
+              </Grid>
+              <Grid item xs={7} sx={{ mt: { xs: 2 } }}>
+                <input
+                  style={{ width: "100%", height: "28px" }}
+                  value={formValues?.city}
+                  name="city"
+                  onChange={handleTextInputChange}
+                />
+              </Grid>
+              <Grid item xs={12} display={"flex"} justifyContent={"center"}>
+                <button
+                  className="font-modesto-condensed text-stroke"
+                  style={{
+                    backgroundColor: "#44C0A8",
+                    fontSize: "30px",
+                    color: "#fffde7",
+                    marginTop: "12px",
+                  }}
+                  onClick={handleRegisterNow}
+                >
+                  {" "}
+                  Register Now{" "}
+                </button>
+              </Grid>
             </Grid>
-            <Grid item xs={7}>
-              <input
-                style={{ width: "100%", height: "28px" }}
-                className="border"
-                size="small"
-                value={formValues?.name}
-                name="name"
-                onChange={handleTextInputChange}
-              />
-            </Grid>
-            <Grid item xs={5} sx={{mt: {xs: 2}}}>
-              <Typography
-                backgroundColor="white"
-                className="flex border font-texturina"
-              >
-                Phone No:
-              </Typography>
-            </Grid>
-            <Grid item xs={7} sx={{mt: {xs: 2}}}>
-              <input
-                style={{ width: "100%", height: "28px" }}
-                value={formValues?.phone}
-                name="phone"
-                className="border"
-                onChange={handleTextInputChange}
-              />
-            </Grid>
-            <Grid item xs={5} sx={{mt: {xs: 2}}}>
-              <Typography
-                backgroundColor="white"
-                className="flex border font-texturina"
-              >
-                Email ID:
-              </Typography>
-            </Grid>
-            <Grid item xs={7} sx={{mt: {xs: 2}}}>
-              <input
-                style={{ width: "100%", height: "28px" }}
-                value={formValues?.email}
-                name="email"
-                onChange={handleTextInputChange}
-              />
-            </Grid>
-            <Grid item xs={5} sx={{mt: {xs: 2}}}>
-              <Typography
-                backgroundColor="white"
-                className="flex border font-texturina"
-              >
-                City:
-              </Typography>
-            </Grid>
-            <Grid item xs={7} sx={{mt: {xs: 2}}}>
-              <input
-                style={{ width: "100%", height: "28px" }}
-                value={formValues?.city}
-                name="city"
-                onChange={handleTextInputChange}
-              />
-            </Grid>
-            <Grid item xs={12} display={"flex"} justifyContent={"center"}>
-              <button
-                className="font-modesto-condensed text-stroke"
-                style={{
-                  backgroundColor: "#44C0A8",
-                  fontSize: "30px",
-                  color: "#fffde7",
-                  marginTop: '12px',
-                }}
-                onClick={handleRegisterNow}
-              >
-                {" "}
-                Register Now{" "}
-              </button>
-            </Grid>
-          </Grid>
-        </form>
-      </Box>
-      <Footer />
+          </form>
+        </Box>
+        <Footer />
 
-      <AlertMessage snackbar={snackbar} setSnackbar={setSnackbar} />
-    </Box>
+        <AlertMessage snackbar={snackbar} setSnackbar={setSnackbar} />
+      </Box>
+    </>
   );
 };
 

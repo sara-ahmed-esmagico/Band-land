@@ -24,7 +24,7 @@ function App() {
       style={{ backgroundColor: backgroundColor }}
       className="full-screen-background flex-center flex-col align-center pos-relative "
     >
-      <Header />
+      {/* <Header /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" Component={Home} />
