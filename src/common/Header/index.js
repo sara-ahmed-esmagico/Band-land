@@ -4,7 +4,7 @@ import Foot from "../../images/Home/Foot.png";
 import HeaderBase from "../../images/Header Base.png";
 import SideBorder from "../../images/Home/SideBorder.svg";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import MidBanner from "../../images/Banner.png";
+import MidBanner from "../../images/Banner-Crop.png";
 import MainLogo from "../../images/Bandland Logo@3x@2x.png";
 import { useTheme } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
@@ -86,6 +86,7 @@ const Header = () => {
             className="font-texturina font-relative flex-center align-center "
             width={"100%"}
             color={"white"}
+            style={{zIndex:"2"}}
           >
             EMBASSY INTERNATIONAL RIDING SCHOOL
           </Typography>

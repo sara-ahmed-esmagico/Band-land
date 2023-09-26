@@ -73,7 +73,7 @@ const Register = () => {
   return (
     <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center ">
       <Typography
-        sx={{ fontSize: { xs: "30px", sm: "50px", lg: "70px" }, mt: 2 }}
+        sx={{ fontSize: { xs: "30px", sm: "50px", lg: "70px" }, mt: 2, zIndex:2 }}
         className="text-shadow text-stroke font-modesto-condensed"
         color={"white"}
         width={{ xs: "75%", sm: "100%" }}
@@ -81,7 +81,7 @@ const Register = () => {
         PLEDGE ALLEGIANCE TO THE BAND!
       </Typography>
       <Typography
-        sx={{ fontSize: { xs: "10px", sm: "20px", lg: "30px" } }}
+        sx={{ fontSize: { xs: "10px", sm: "20px", lg: "30px" }, zIndex:2 }}
         className="font-texturina"
         color={"white"}
         width={{ xs: "70%", sm: "75%", lg: "50%" }}
