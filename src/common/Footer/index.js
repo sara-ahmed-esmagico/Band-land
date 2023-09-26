@@ -6,7 +6,7 @@ import WhiteLogo from "../../images/Bandland Logo White.svg";
 import BMSLiveSvg from "../../images/BMS LIVE.svg";
 import "../../styles/Home.css";
 import { Box, Button, Typography } from "@mui/material";
-import FooterBase from "../../images/Home/SmallFooter.png";
+import FooterBase from "../../images/Home/Footer.png";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import SmallFooter from "../../images/Home/SmallFooter.png";
@@ -29,8 +29,8 @@ const Footer = () => {
         style={{ width: "100%" }}
       />
       <Box className="pos-relative z-index-4">
-        <img src={SmallFooter} className="small-footer  " />
-        <img
+        <img src={SmallFooter} className="small-footer" />
+        <img style={{height:"700px"}}
           src={FooterBase}
           className="large-footer"
         />
