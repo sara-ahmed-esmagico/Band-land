@@ -8,6 +8,7 @@ import About from "./pages/about";
 import artists from "./pages/the-artists";
 import Tickets from "./pages/tickets";
 import FAQ from "./pages/faq";
+import Test from "./pages/test";
 
 function App() {
   const [backgroundColor, setBackgroundColor] = useState("");
@@ -33,8 +34,8 @@ function App() {
         <Route path="/register" Component={Register} />
         <Route path="/about" Component={About} />
         <Route path="/the-artists" Component={Register} />
-        <Route path="/tickets" Component={Register} />
-        <Route path="/faq" Component={Register} />
+        <Route path="/tickets" Component={Test} />
+        <Route path="/faq" Component={FAQ} />
       </Routes>
     </div>
   );
