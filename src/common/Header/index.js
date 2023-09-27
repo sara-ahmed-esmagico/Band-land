@@ -4,21 +4,20 @@ import Foot from "../../images/Home/Foot.png";
 import HeaderBase from "../../images/Header Base.png";
 import SideBorder from "../../images/Home/SideBorder.svg";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import MidBanner from "../../images/Banner-Crop.png";
 import MainLogo from "../../images/Bandland Logo@3x@2x.png";
 import { useTheme } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Bolt } from "@mui/icons-material";
+import "./header.css";
 import Hamburger from "../Hamburger";
-const Header = () => {
+
+const Header = ({ mobileCss, midBanner, bandLandContainer }) => {
   const theme = useTheme();
   const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
   const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
   const isScreenXtraSmall = useMediaQuery(theme.breakpoints.up("xs"));
-
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
   const handleDrawerToggle = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
@@ -30,6 +29,7 @@ const Header = () => {
         src={Foot}
         style={{ width: "100%" }}
       />
+
       <img src={HeaderBase} className="pos-fixed top-0 z-index-5 header-base" />
       <Box className="pos-fixed top-0 z-index-5">
         {isScreenXtraSmall ? (
@@ -76,10 +76,12 @@ const Header = () => {
       </Box>
 
       <Box className="flex-center flex-col align-center pos-relative ">
-        <img src={MidBanner} className="z-index-3 banner-width" />
+        <img
+          src={midBanner}
+          className={`z-index-3 banner-width banner-width-desktop mobile ${mobileCss}`}
+        />
         <Box
-          className="flex-center flex-col align-center pos-absolute"
-          sx={{ top: { xs: "6%", sm: "5%" } }}
+          className={`flex-center flex-col align-center pos-absolute ${bandLandContainer}`}
         >
           <img src={MainLogo} className="relative-width" />
           <Typography
@@ -104,7 +106,7 @@ const Header = () => {
         onClose={handleDrawerToggle}
       >
         {/* Add your menu content here */}
-        <div className="hamburger" style={{ width: '100vw', height: "100%" }}>
+        <div className="hamburger" style={{ width: "100vw", height: "100%" }}>
           <Hamburger handleDrawerToggle={handleDrawerToggle} />{" "}
         </div>
       </Drawer>

@@ -156,6 +156,10 @@ body {
   width: 80%;
 }
 
+.homeTop,.registerTop{
+  top:18%
+}
+
 @media (max-width: 424px) {
   .font-relative {
     font-size: 8px !important;
@@ -173,6 +177,12 @@ body {
   .small-footer {
     visibility: visible;
     height: 300px;
+  }
+ .registerTop{
+    top:0%
+  }
+  .homeTop{
+    top:3%
   }
 }
 @media (min-width: 425px) and (max-width: 767px) {
@@ -200,6 +210,13 @@ body {
   .orange-banner {
     height: 600px;
   }
+  .registerTop{
+    top:0%
+  }
+
+  .homeTop{
+    top:4%
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .font-relative {
@@ -224,6 +241,9 @@ body {
   }
   .small-footer {
     visibility: hidden;
+  }
+  .homeTop{
+    top:5%
   }
 }
 
