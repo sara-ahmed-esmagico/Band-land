@@ -1,29 +1,46 @@
-.bandLandHomeContainer {
-  top: 14%;
+
+
+.marginNegative img.mobileViewBannerRegister{
+  padding-top: 90px;
+  width: 1050px;
+  height:1670px;
 }
 
-.bandLandRegisterContainer {
-  top: 24%;
+.marginNegative img.mobileViewBannerHome {
+  margin-top: -1720px;
+  width: 1050px;
+  height:5400px;
+}
+
+.marginNegative img.mobileViewBannerAbout {
+  margin-top: -325px;
+  width: 1050px;
+  height:2627px;
 }
 
 @media (min-width: 320px) and (max-width: 423px) {
-  .mobileViewBannerHome {
-    height: 1650px;
-    width: 320px;
+  .marginNegative img.mobileViewBannerHome {
+    margin-top: -1300px;
+    width: 290px;
+    height: 3230px;
   }
 
-  .mobileViewBannerRegister {
-    height: 1150px;
-    width: 320px;
+  .marginNegative img.mobileViewBannerAbout {
+    margin-top: -850px;
+    width: 290px;
+    height: 2330px;
   }
 
-  .bandLandHomeContainer {
-    top: 6%;
+  div.navWidth{
+    border: 1px solid red;
+  max-width: 500px;
   }
 
-  .bandLandRegisterContainer {
-    top: 18%;
+  .marginNegative img.mobileViewBannerRegister{
+    margin-top: -530px;
+    height: 1570px;
   }
+  
 }
 
 @media (min-width: 424px) and (max-width: 529px) {
@@ -32,17 +49,19 @@
     width: 390px;
   }
 
+  .mobileViewBannerAbout {
+    height: 1800px;
+    width: 390px;
+  }
+
   .mobileViewBannerRegister {
+    padding-top: 90px;
     height: 1100px;
     width: 400px;
   }
 
   .bandLandHomeContainer {
     top: 6%;
-  }
-
-  .bandLandRegisterContainer {
-    top: 18%;
   }
 }
 
@@ -52,16 +71,18 @@
     width: 480px;
   }
 
+  .mobileViewBannerAbout {
+    height: 1830px;
+    width: 480px;
+  }
+
   .mobileViewBannerRegister {
+    padding-top: 90px;
     height: 1150px;
     width: 450px;
   }
   .bandLandHomeContainer {
     top: 6%;
-  }
-
-  .bandLandRegisterContainer {
-    top: 18%;
   }
 }
 
@@ -71,16 +92,18 @@
     width: 550px;
   }
 
+  .mobileViewBannerAbout {
+    height: 1870px;
+    width: 550px;
+  }
+
   .mobileViewBannerRegister {
+    padding-top: 90px;
     height: 1200px;
     width: 450px;
   }
   .bandLandHomeContainer {
     top: 6%;
-  }
-
-  .bandLandRegisterContainer {
-    top: 18%;
   }
 }
 
@@ -90,15 +113,17 @@
     width: 600px;
   }
 
+  .mobileViewBannerAbout {
+    height: 1870px;
+    width: 600px;
+  }
+
   .mobileViewBannerRegister {
+    padding-top: 90px;
     height: 1200px;
     width: 600px;
   }
   .bandLandHomeContainer {
     top: 6%;
-  }
-
-  .bandLandRegisterContainer {
-    top: 18%;
   }
 }

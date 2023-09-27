@@ -1,24 +1,17 @@
-
 @media (min-width: 320px) and (max-width: 423px) {
-
-  .mobileFooterHeight{
+  .mobileFooterHeight {
     height: 250px;
-
   }
-   }
+}
 
 @media (min-width: 424px) and (max-width: 529px) {
- .mobileFooterHeight{
+  .mobileFooterHeight {
     height: 250px;
-
   }
 }
 
 @media (min-width: 530px) and (max-width: 767px) {
-
-    
-     .mobileFooterHeight{
-        height: 300px;
-    
-      } 
-   }
+  .mobileFooterHeight {
+    height: 300px;
+  }
+}

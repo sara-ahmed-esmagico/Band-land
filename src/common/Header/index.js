@@ -1,23 +1,27 @@
-import { Box, Button, Drawer, Typography } from "@mui/material";
+import { Box, Button, Drawer } from "@mui/material";
 import React, { useState } from "react";
 import Foot from "../../images/Home/Foot.png";
 import HeaderBase from "../../images/Header Base.png";
 import SideBorder from "../../images/Home/SideBorder.svg";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import MainLogo from "../../images/Bandland Logo@3x@2x.png";
 import { useTheme } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Bolt } from "@mui/icons-material";
 import "./header.css";
 import Hamburger from "../Hamburger";
+import { useLocation, Link } from "react-router-dom";
 
-const Header = ({ mobileCss, midBanner, bandLandContainer }) => {
+const Header = ({ mobileCss, midBanner,  }) => {
   const theme = useTheme();
   const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
   const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
   const isScreenXtraSmall = useMediaQuery(theme.breakpoints.up("xs"));
+
+  const { pathname } = useLocation();
+
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
   const handleDrawerToggle = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
@@ -27,10 +31,15 @@ const Header = ({ mobileCss, midBanner, bandLandContainer }) => {
       <img
         className="pos-fixed top-0 rotate"
         src={Foot}
+        alt='img'
         style={{ width: "100%" }}
       />
 
-      <img src={HeaderBase} className="pos-fixed top-0 z-index-5 header-base" />
+      <img
+        src={HeaderBase}
+        className={`pos-fixed top-0 z-index-5 header-base`}
+        alt="img"
+      />
       <Box className="pos-fixed top-0 z-index-5">
         {isScreenXtraSmall ? (
           <IconButton
@@ -47,52 +56,96 @@ const Header = ({ mobileCss, midBanner, bandLandContainer }) => {
         )}
         {isSmallScreen ? (
           <Box
-            className="flex-center align-center"
-            sx={{ mt: { sm: -6, lg: -5 } }}
+            className="flex-center align-center navWidth"
+            sx={{ mt: { sm: -5, lg: -3 } }}
           >
-            <Button
-              href="/"
-              className="font-modesto-condensed btn-text"
-              sx={{
-                fontSize: { xs: "20px", sm: "40px", lg: "50px" },
-              }}
-            >
-              HOME
-            </Button>
+            <Link to={"/"}>
+              <Button
+                className={`font-modesto-condensed btn-text`}
+                sx={{
+                  fontSize: { xs: "20px", sm: "30px", lg: "40px" },
+                }}
+                style={{ color: pathname === "/" && "white" }}
+              >
+                HOME
+              </Button>
+            </Link>
             <Bolt fontSize="large" />
-            <Button
-              href="/register"
-              className="font-modesto-condensed btn-text"
-              sx={{
-                fontSize: { xs: "20px", sm: "40px", lg: "50px" },
-              }}
-            >
-              REGISTER
-            </Button>
+            <Link to={"/register"}>
+              <Button
+                className={`font-modesto-condensed btn-text`}
+                sx={{
+                  fontSize: { xs: "20px", sm: "30px", lg: "40px" },
+                }}
+                style={{ color: pathname === "/register" && "white" }}
+              >
+                REGISTER
+              </Button>
+            </Link>
+
+            <Bolt fontSize="large" />
+            <Link to={"/about"}>
+              <Button
+                className={`font-modesto-condensed btn-text ${
+                  pathname === "/about" && "navActive"
+                } `}
+                sx={{
+                  fontSize: { xs: "20px", sm: "30px", lg: "40px" },
+                }}
+                style={{ color: pathname === "/about" && "white" }}
+              >
+                ABOUT
+              </Button>
+            </Link>
+            <Bolt fontSize="large" />
+            <Link to="/the-artists">
+              <Button
+                className={`font-modesto-condensed btn-text ${
+                  pathname === "/the-artists" && "navActive"
+                } `}
+                sx={{
+                  fontSize: { xs: "20px", sm: "30px", lg: "40px" },
+                }}
+                style={{ color: pathname === "/the-artists" && "white" }}
+              >
+                THE ARTISTS
+              </Button>
+            </Link>
+            <Bolt fontSize="large" />
+            <Link to="/tickets">
+              <Button
+                className="font-modesto-condensed btn-text"
+                sx={{
+                  fontSize: { xs: "20px", sm: "30px", lg: "40px" },
+                }}
+                style={{ color: pathname === "/tickets" && "white" }}
+              >
+                TICKETS
+              </Button>
+            </Link>
+            <Bolt fontSize="large" />
+            <Link to="/faq">
+              <Button
+                className={`font-modesto-condensed btn-text `}
+                sx={{
+                  fontSize: { xs: "20px", sm: "30px", lg: "40px" },
+                }}
+                style={{ color: pathname === "/faq" && "white" }}
+              >
+                FAQ
+              </Button>
+            </Link>
           </Box>
         ) : (
           ""
         )}
       </Box>
 
-      <Box className="flex-center flex-col align-center pos-relative ">
+      <Box className="flex-center flex-col align-center pos-relative marginNegative">
         <img
           src={midBanner}
           className={`z-index-3 banner-width banner-width-desktop mobile ${mobileCss}`}
         />
-        <Box
-          className={`flex-center flex-col align-center pos-absolute ${bandLandContainer}`}
-        >
-          <img src={MainLogo} className="relative-width" />
-          <Typography
-            className="font-texturina font-relative flex-center align-center "
-            width={"100%"}
-            color={"white"}
-            style={{zIndex:"2"}}
-          >
-            EMBASSY INTERNATIONAL RIDING SCHOOL
-          </Typography>
-        </Box>
       </Box>
       <img
         className="top-0 z-index-2"
