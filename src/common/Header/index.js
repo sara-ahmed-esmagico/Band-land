@@ -88,6 +88,7 @@ const Header = ({ mobileCss, midBanner, bandLandContainer }) => {
             className="font-texturina font-relative flex-center align-center "
             width={"100%"}
             color={"white"}
+            style={{zIndex:"2"}}
           >
             EMBASSY INTERNATIONAL RIDING SCHOOL
           </Typography>
