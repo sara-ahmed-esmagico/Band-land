@@ -8,7 +8,6 @@ import About from "./pages/about";
 import artists from "./pages/the-artists";
 import Tickets from "./pages/tickets";
 import FAQ from "./pages/faq";
-import Test from "./pages/test";
 
 function App() {
   const [backgroundColor, setBackgroundColor] = useState("");
@@ -22,8 +21,15 @@ function App() {
     }else if(currentLocation === "/about")
     {
       setBackgroundColor('#7B1AA7')
+    }else if(currentLocation === "/tickets")
+    {
+      setBackgroundColor('#7B1AA7')
     }
-  }, [currentLocation]);
+    else if(currentLocation === "/faq")
+    {
+      setBackgroundColor('#7B1AA7')
+    }
+  }, [currentLocation,setBackgroundColor]);
   return (
     <div
       style={{ backgroundColor: backgroundColor }}
@@ -34,7 +40,7 @@ function App() {
         <Route path="/register" Component={Register} />
         <Route path="/about" Component={About} />
         <Route path="/the-artists" Component={Register} />
-        <Route path="/tickets" Component={Test} />
+        <Route path="/tickets" Component={Tickets} />
         <Route path="/faq" Component={FAQ} />
       </Routes>
     </div>

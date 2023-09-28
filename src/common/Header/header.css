@@ -18,6 +18,19 @@
   height:2627px;
 }
 
+.marginNegative img.mobileViewBannerFAQ
+{
+  margin-top: 40px; 
+  width: 1050px; 
+   max-height:1400px ;
+}
+
+.marginNegative img.mobileViewBannerTicket{
+  margin-top: -940px;
+  height: 3850px;
+  width: 1050px;
+}
+
 @media (min-width: 320px) and (max-width: 423px) {
   .marginNegative img.mobileViewBannerHome {
     margin-top: -1300px;
@@ -32,7 +45,6 @@
   }
 
   div.navWidth{
-    border: 1px solid red;
   max-width: 500px;
   }
 
@@ -40,6 +52,20 @@
     margin-top: -530px;
     height: 1570px;
   }
+
+  .marginNegative img.mobileViewBannerFAQ
+{
+  /* margin-top: 30px;  */
+   width: 300px ; 
+   height:950px;
+}
+
+.marginNegative img.mobileViewBannerTicket{
+  margin-top: -600px; 
+  width: 300px ; 
+  height:1800px;
+ 
+}
   
 }
 
@@ -62,6 +88,14 @@
 
   .bandLandHomeContainer {
     top: 6%;
+  }
+
+  .marginNegative img.mobileViewBannerTicket{
+
+    margin-top: -560px; 
+     width: 340px ; 
+     height:1800px;
+   
   }
 }
 

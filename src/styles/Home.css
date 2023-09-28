@@ -166,6 +166,14 @@ div button.btn-text {
   top: 18%;
 }
 
+.ticketTop{
+  top:30%
+}
+
+.faqTop{
+  top:40%
+}
+
 .gogoDollBanner{
   width: 1050px;
   position: relative;
@@ -205,6 +213,10 @@ div button.btn-text {
     margin-top: 100px;
     margin-bottom: -220px;
   }
+
+  .ticketTop{
+    top:20%
+  }
 }
 @media (min-width: 425px) and (max-width: 767px) {
   .font-relative {
@@ -237,6 +249,10 @@ div button.btn-text {
 
   .homeTop {
     top: 4%;
+  }
+
+  .ticketTop{
+    top:20%
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
