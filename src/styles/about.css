@@ -1,0 +1,30 @@
+img.greenBorderLeft {
+    position: absolute;
+  left: 210px  ;
+  z-index: 3 ;
+  bottom: 45px ;
+  
+}
+
+img.greenBorderRight {
+    position: absolute;
+  right: 210px ;
+  z-index: 3 ;
+  bottom: 45px ;
+}
+
+
+@media (min-width: 320px) and (max-width: 423px) {
+    img.greenBorderLeft {
+        height: 200px;
+      left: 35px;
+        width: 20px;
+      
+    }
+    
+    img.greenBorderRight {
+        height: 200px;
+        right: 35px ;
+        width: 20px;
+    }
+    }

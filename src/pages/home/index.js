@@ -5,22 +5,20 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import OrangeBand from "../../images/Home/Orange Band.png";
 import Footer from "../../common/Footer";
 import Header from "../../common/Header";
-import midBanner1 from "../../images/Banner1.png";
-import midBanner from "../../images/Banner.png";
+import Banner from "../../images/testBanner.svg";
+import gogoDollBanner from "../../images/gogoDollBanner.svg";
 
 const Home = () => {
-  let windowWidth = document.documentElement.clientWidth;
-
   return (
     <>
-      <Header
-        mobileCss={"mobileViewBannerHome"}
-        midBanner={windowWidth < 700 ? midBanner : midBanner1}
-        bandLandContainer={"bandLandHomeContainer"}
-      />
+      <Header mobileCss={"mobileViewBannerHome"} midBanner={Banner} />
+
       <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center homeTop ">
+        <Box sx={{ mt: { sm: 5, lg: 10 } }} className="pos-relative">
+          <img src={gogoDollBanner} className="gogoDollBanner" />
+        </Box>
         <Typography
-          sx={{ mt: 20 }}
+          sx={{ mt: 25 }}
           color={"white"}
           className="font-modesto-condensed text-shadow heading-relative"
         >
@@ -101,9 +99,7 @@ const Home = () => {
                 <Typography
                   sx={{ mt: { xs: -2, sm: -5 } }}
                   className="midDesc2"
-                >
-                  PERFORMANCES.
-                </Typography>
+                ></Typography>
               </Grid>
             </Grid>
           </Box>

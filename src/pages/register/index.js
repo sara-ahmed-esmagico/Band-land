@@ -10,7 +10,8 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../common/Header";
 import MidBanner from "../../images/Banner1.png";
-import MidBanner2 from "../../images/Banner2.png";
+// import MidBanner2 from "../../images/Banner2.png";
+import MidBanner2 from '../../images/testBanner.svg'
 
 const Register = () => {
   const theme = useTheme();
@@ -78,8 +79,7 @@ const Register = () => {
       <Header
         banner2={true}
         mobileCss={"mobileViewBannerRegister"}
-        midBanner={windowWidth < 700 ? MidBanner : MidBanner2}
-        bandLandContainer={"bandLandRegisterContainer"}
+        midBanner={ MidBanner2}
       />
       <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center registerTop  ">
         <Typography
