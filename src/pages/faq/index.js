@@ -9,13 +9,11 @@ import FAQAccordion from "../../common/FAQAccordion/FAQAccordion";
 import { questions } from "../../common/FAQQuestions/question";
 
 const FAQ = () => {
-
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
-    
     setExpanded(isExpanded ? panel : false);
-  }
+  };
 
   return (
     <>
@@ -30,12 +28,20 @@ const FAQ = () => {
           FREQUENTLY ASKED QUESTIONS
         </Typography>
         {questions.map((item) => {
-          return <FAQAccordion questions={item} accordionPannel={item?.pannel} expanded={expanded} onChange={handleChange} />;
+          return (
+            <FAQAccordion
+              questions={item}
+              accordionPannel={item?.pannel}
+              expanded={expanded}
+              onChange={handleChange}
+            />
+          );
         })}
 
         <Box
           sx={{ mt: { xs: 5, lg: 10 } }}
           className="pos-relative flex-center flex-col align-center"
+          style={{ background: "#7B1AA7" }}
         >
           <Footer />
         </Box>
