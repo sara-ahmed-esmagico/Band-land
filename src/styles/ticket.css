@@ -32,18 +32,32 @@ p.ticketText {
 }
 
 @media (min-width: 320px) and (max-width: 423px) {
-  .ticketBanner {
-    width: 296px;
-    height: 220px;
-  }
-
-  h1.ticketHeading {
-    color: white;
-    font-size: 12px;
-    text-shadow: 4px 4px black;
-    margin: 0px;
-    padding: 0px;
-  }
+    h1.ticketHeading {
+        color: white;
+        font-size: 20px;
+        text-shadow: 4px 4px black;
+        margin: 0px;
+        padding: 0px;
+      }
+    
+      p.ticketText {
+        width: 193px;
+        height: 84px;
+        margin: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 10px;
+        letter-spacing: 0px;
+        color: #390c06;
+        opacity: 1;
+        padding-bottom: 0px;
+        overflow: hidden;
+      }
+    
+      .ticketBanner {
+        width: 256px;
+        height: 220px;
+      }
 }
 
 @media (min-width: 424px) and (max-width: 529px) {

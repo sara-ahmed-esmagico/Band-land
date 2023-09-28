@@ -1,0 +1,102 @@
+.artistGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  z-index: 2;
+  height: max-content;
+}
+.gridBox {
+  width: 80%;
+}
+
+.artistTextBannerLeft {
+  width: 420px;
+  height: 300px;
+  left: 0;
+}
+
+.artistTextBannerRight {
+  width: 420px;
+  height: 300px;
+  right: 0;
+}
+
+.artistTextContainer {
+  margin-top: -65px;
+  width: 420px;
+  height: 300px;
+}
+
+.artistImage img {
+  width: 403px;
+  height: 475px;
+}
+
+.artistText {
+  padding: 40px 50px;
+}
+
+.artistImage {
+  width: 420px;
+}
+
+@media (min-width: 320px) and (max-width: 423px) {
+  .artistGrid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    border: 1px solid red;
+    height: 300px;
+    overflow: scroll !important;
+  }
+
+  .artistImage img {
+    width: 220px;
+    height: 300px;
+  }
+
+  .artistTextBannerLeft {
+    width:235px;
+    height: 280px;
+    left:95px;
+  }
+  
+  .artistTextBannerRight {
+      width:235px;
+      height: 280px;
+      right: 95px;
+    }
+
+    .artistTextContainer {
+      margin-top: -50px;
+      width: 420px;
+      height: 300px;
+    }
+    .artistText {
+      padding: 20px 110px;
+      font-size: 12px !important;
+     
+    }
+}
+
+@media (min-width: 424px) and (max-width: 529px) {
+  .artistGrid {
+    grid-template-columns: repeat(1, 1fr);
+    
+    gap: 50px;
+  }
+  .artistImage img {
+    width: 220px;
+  }
+
+  .artistTextBannerLeft {
+    width:270px;
+    height: 300px;
+    left: 0;
+  }
+  
+  .artistTextBannerRight {
+      width:270px;
+      height: 300px;
+      right: 0;
+    }
+}

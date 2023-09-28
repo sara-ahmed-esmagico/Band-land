@@ -373,7 +373,7 @@
 
 .hamburger {
   background-image: url('../images/Home/Hamburger.png');
-  background-size: 115% ;
+  background-size: 115% 
 }
 
 @media (min-width: 280px) and (max-width: 374px) {

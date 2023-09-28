@@ -12,7 +12,7 @@ import "./header.css";
 import Hamburger from "../Hamburger";
 import { useLocation, Link } from "react-router-dom";
 
-const Header = ({ mobileCss, midBanner,  }) => {
+const Header = ({ mobileCss, midBanner }) => {
   const theme = useTheme();
   const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
   const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
@@ -31,7 +31,7 @@ const Header = ({ mobileCss, midBanner,  }) => {
       <img
         className="pos-fixed top-0 rotate"
         src={Foot}
-        alt='img'
+        alt="img"
         style={{ width: "100%" }}
       />
 
@@ -145,6 +145,7 @@ const Header = ({ mobileCss, midBanner,  }) => {
         <img
           src={midBanner}
           className={`z-index-3 banner-width banner-width-desktop mobile ${mobileCss}`}
+          alt="img"
         />
       </Box>
       <img
@@ -152,6 +153,7 @@ const Header = ({ mobileCss, midBanner,  }) => {
         style={{ position: isMediumScreen ? "fixed" : "absolute" }}
         src={SideBorder}
         width={"100%"}
+        alt="img"
       />
       <Drawer
         anchor="right" // Change to 'left' for a left-side menu
@@ -159,7 +161,7 @@ const Header = ({ mobileCss, midBanner,  }) => {
         onClose={handleDrawerToggle}
       >
         {/* Add your menu content here */}
-        <div className="hamburger" style={{ width: "100vw", height: "100%" }}>
+        <div className="hamburger" style={{ width: "100vw", height: "120%" }}>
           <Hamburger handleDrawerToggle={handleDrawerToggle} />{" "}
         </div>
       </Drawer>

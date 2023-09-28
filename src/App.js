@@ -5,7 +5,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import "../src/styles/Home.css";
 import { useEffect, useState } from "react";
 import About from "./pages/about";
-import artists from "./pages/the-artists";
+import Artists from "./pages/the-artists";
 import Tickets from "./pages/tickets";
 import FAQ from "./pages/faq";
 
@@ -23,11 +23,15 @@ function App() {
       setBackgroundColor('#7B1AA7')
     }else if(currentLocation === "/tickets")
     {
-      setBackgroundColor('#7B1AA7')
+      setBackgroundColor('#44c0a8')
     }
     else if(currentLocation === "/faq")
     {
       setBackgroundColor('#7B1AA7')
+    }
+    else if(currentLocation === "/the-artists")
+    {
+      setBackgroundColor('coral')
     }
   }, [currentLocation,setBackgroundColor]);
   return (
@@ -39,7 +43,7 @@ function App() {
         <Route path="/" Component={Home} />
         <Route path="/register" Component={Register} />
         <Route path="/about" Component={About} />
-        <Route path="/the-artists" Component={Register} />
+        <Route path="/the-artists" Component={Artists} />
         <Route path="/tickets" Component={Tickets} />
         <Route path="/faq" Component={FAQ} />
       </Routes>

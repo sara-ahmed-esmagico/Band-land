@@ -13,9 +13,9 @@ const Home = () => {
     <>
       <Header mobileCss={"mobileViewBannerHome"} midBanner={Banner} />
 
-      <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center homeTop ">
-        <Box sx={{ mt: { sm: 5, lg: 10 } }} className="pos-relative">
-          <img src={gogoDollBanner} className="gogoDollBanner" />
+      <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center homeTop">
+        <Box sx={{ mt: { sm: 5, lg: 10 } }} className="pos-relative homeMargin">
+          <img src={gogoDollBanner} className="gogoDollBanner" alt="img" />
         </Box>
         <Typography
           sx={{ mt: 25 }}
@@ -26,7 +26,11 @@ const Home = () => {
         </Typography>
 
         <Box className="pos-relative flex-center flex-col align-center ">
-          <img className="relative-banner-width-height" src={TextBanner} />
+          <img
+            className="relative-banner-width-height"
+            src={TextBanner}
+            alt="img"
+          />
           <Typography className="pos-absolute bannerText font-texturina z-index-3">
             Welcome to the state of Bandland. It doesn’t matter who you are or
             where you’re from. All that matters is that you belong. Sling that
@@ -40,6 +44,7 @@ const Home = () => {
             style={{ marginTop: "5px" }}
             src={OrangeBand}
             className="orange-banner"
+            alt="img"
           />
           <Box className="pos-absolute top-0" width={"100%"}>
             <Grid className="desc" container>
@@ -119,6 +124,7 @@ const Home = () => {
           <img
             className="relative-banner-width-height z-index-2"
             src={TextBanner}
+            alt="img"
           />
           <Box className="pos-absolute top-5 flex-center flex-col align-center">
             <Typography className=" bannerText font-texturina z-index-3">
@@ -137,7 +143,6 @@ const Home = () => {
               Sign Up{" "}
             </Button>
           </Box>
-
           <Footer />
         </Box>
       </Box>

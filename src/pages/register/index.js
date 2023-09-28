@@ -1,7 +1,6 @@
-import { Box, Typography, Grid, input } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import React, { useState } from "react";
 import "../../styles/globalStyles.css";
-import axios from "axios";
 import AlertMessage from "../../common/AlertMessage";
 import "../../styles/Register.css";
 import Footer from "../../common/Footer";
@@ -9,22 +8,24 @@ import TextBanner from "../../images/Home/Text Banner.png";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../common/Header";
-import MidBanner from "../../images/Banner1.png";
-// import MidBanner2 from "../../images/Banner2.png";
-import MidBanner2 from '../../images/testBanner.svg'
+import MidBanner2 from "../../images/testBanner.svg";
+
+const token =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBpbmZvIjp7Im5hbWUiOiJiYW5kbGFuZCIsInVyaW5hbWUiOiJiYW5kbGFuZCJ9LCJhdWQiOiJyZWdzeXN0ZW0iLCJjbGllbnRfaWQiOiJiYW5kbGFuZCIsImNsaWVudF90eXBlIjoiYXBwIiwiY291bnRyeSI6ImluIiwiZXhwIjoyMDExMzgxMTIxLCJleHBpcmVzIjozMTU1NzYwMDAsImlhdCI6MTY5NTgwNTEyMSwiaXNzIjoiaWFtLmJvb2tteXNob3cuY29tIiwic2NvcGUiOiJwcmVzYWxlIiwidGllciI6InByb2R1Y3Rpb24ifQ.hwqYqr37wvTN9yTvoV5v5mL5jB-9EMld79-9P47j_-I";
 
 const Register = () => {
   const theme = useTheme();
   const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
   const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
   const isScreenXtraSmall = useMediaQuery(theme.breakpoints.up("xs"));
-  let windowWidth = document.documentElement.clientWidth;
+
   const [formValues, setFormValues] = useState({
     name: "",
     phone: "",
     email: "",
     city: "",
   });
+
   const [snackbar, setSnackbar] = useState({
     open: false,
     message: "",
@@ -36,20 +37,43 @@ const Register = () => {
     setFormValues({ ...formValues, [name]: value });
   };
 
-  const handleRegisterNow = () => {
+  const isValid = (data) => {
+    if (
+      data.name.trim() !== "" &&
+      data.primary_email.trim() !== "" &&
+      data.city.trim() !== "" &&
+      data.primary_phoneNo.trim !== ""
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const handleRegisterNow = (e) => {
+    e.preventDefault();
+
     const data = {
-      Name: formValues?.name,
-      Phone: formValues?.phone,
-      Email: formValues?.email,
-      City: formValues?.city,
+      name: formValues?.name,
+      primary_phoneNo: formValues?.phone,
+      primary_email: formValues?.email,
+      city: formValues?.city,
+      i_agree_to_the_terms_and_conditions_: true,
     };
-    try {
-      axios
-        .post(
-          "https://sheet.best/api/sheets/71d158a6-7d77-48b6-8296-caab074f402f",
-          data
-        )
-        .then((response) => {
+
+    if (isValid(data)) {
+      try {
+        fetch(
+          "https://regsystem.bookmyshow.com/usersubmission/ET00370953?formType=Presales",
+          {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+              Authorization: "Bearer " + token,
+              "Content-Type": "application/json",
+            },
+          }
+        ).then((response) => {
           console.log(response, "Adding Data to Sheet Best ");
           if (response?.status === 200) {
             setSnackbar({
@@ -57,35 +81,48 @@ const Register = () => {
               message: "You response has be recorded successfully!",
               severity: "success",
             });
+            setFormValues({
+              name: "",
+              phone: "",
+              email: "",
+              city: "",
+            });
+          } else {
+            setSnackbar({
+              open: true,
+              message: "Something went wrong!",
+              severity: "error",
+            });
           }
-          setFormValues({
-            name: "",
-            phone: "",
-            email: "",
-            city: "",
-          });
         });
-    } catch (error) {
+      } catch (error) {
+        setSnackbar({
+          open: true,
+          message: "Something went wrong!",
+          severity: "error",
+        });
+      }
+    } else {
       setSnackbar({
         open: true,
-        message: "Something went wrong!",
+        message: "All Fields are required!",
         severity: "error",
       });
     }
-
   };
+
   return (
     <>
       <Header
         banner2={true}
         mobileCss={"mobileViewBannerRegister"}
-        midBanner={ MidBanner2}
+        midBanner={MidBanner2}
       />
       <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center registerTop  ">
         <Typography
           sx={{
             fontSize: { xs: "30px", sm: "50px", lg: "70px" },
-            mt: 50,
+            mt: { xs: 35, sm: 50 },
             zIndex: 2,
           }}
           className="text-shadow text-stroke font-modesto-condensed"
@@ -108,8 +145,12 @@ const Register = () => {
             className="form-background"
             src={TextBanner}
             style={{ marginTop: 30 }}
+            alt="img"
           />
-          <form className="pos-absolute form-width">
+          <form
+            className="pos-absolute form-width"
+            onSubmit={handleRegisterNow}
+          >
             <Grid container>
               <Grid item xs={5}>
                 <Typography
@@ -159,6 +200,7 @@ const Register = () => {
                   style={{ width: "100%", height: "28px" }}
                   value={formValues?.email}
                   name="email"
+                  type="email"
                   onChange={handleTextInputChange}
                 />
               </Grid>
@@ -187,7 +229,7 @@ const Register = () => {
                     color: "#fffde7",
                     marginTop: "12px",
                   }}
-                  onClick={handleRegisterNow}
+                  type="submit"
                 >
                   {" "}
                   Register Now{" "}
