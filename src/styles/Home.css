@@ -5,7 +5,7 @@ body {
   height: 100%;
 }
 
-.homeMargin{
+.homeMargin {
   margin-bottom: -280px;
 }
 
@@ -140,7 +140,7 @@ body {
 .red-banner {
   width: 100%;
   height: 600px;
-  object-fit: cover
+  object-fit: cover;
 }
 
 .small-footer {
@@ -154,7 +154,7 @@ body {
 }
 
 div button.btn-text {
-  color: black ;
+  color: black;
   text-decoration: none !important;
 }
 .live-logo {
@@ -165,59 +165,55 @@ div button.btn-text {
   width: 80%;
 }
 
-
 .registerTop {
   top: 18%;
 }
 
-.homeTop{
- top:18%
+.homeTop {
+  top: 18%;
 }
 
-.aboutTop{
-  top:18%
- }
-
-.ticketTop{
-  top:25%
+.aboutTop {
+  top: 18%;
 }
 
-.artistTop{
-  top:12%
+.ticketTop {
+  top: 25%;
 }
 
-.faqTop{
-  top:40%;
+.artistTop {
+  top: 18%;
+}
+
+.faqTop {
+  top: 40%;
   width: 65vw;
-
 }
 
-.gogoDollBanner{
-  width: 100%;
+.gogoDollBanner {
+  width: 1200px;
   position: relative;
   z-index: 3;
   margin-top: -260px;
 }
 
-.homeMargin{
+.homeMargin {
   width: 80vw;
 }
 
 @media (min-width: 750px) and (max-width: 1190px) {
-  .gogoDollBanner{
-   margin: 0;
-   width: 100%;
+  .gogoDollBanner {
+    margin-top: -15px;
+    width: 100%;
   }
 
-  .faqTop{
+  .faqTop {
     width: 70vw;
   }
 
-  
-  
-  .aboutTop{
-    top:10%
-   }
+  .aboutTop {
+    top: 10%;
+  }
 }
 
 @media (max-width: 424px) {
@@ -225,7 +221,7 @@ div button.btn-text {
     font-size: 8px !important;
   }
 
-  .homeMargin{
+  .homeMargin {
     margin-bottom: 0px;
   }
 
@@ -247,19 +243,19 @@ div button.btn-text {
     top: 0%;
   }
   .homeTop {
-    top: 3%;
+    top: 70px;
   }
 
-  .gogoDollBanner{
-    width: 310px;
+  .gogoDollBanner {
+    width: 300px;
     position: relative;
     z-index: 3;
     margin-top: 100px;
     margin-bottom: -220px;
   }
 
-  .ticketTop{
-    top:20%
+  .ticketTop {
+    top: 20%;
   }
 
   .relative-banner-width-height {
@@ -270,14 +266,14 @@ div button.btn-text {
   .red-banner {
     width: 100%;
     height: 450px;
-    object-fit: cover
+    object-fit: cover;
   }
 }
 @media (min-width: 425px) and (max-width: 767px) {
   .font-relative {
     font-size: 8px !important;
   }
-  .homeMargin{
+  .homeMargin {
     margin-bottom: 0px;
   }
   .relative-width {
@@ -305,7 +301,7 @@ div button.btn-text {
   .red-banner {
     width: 100%;
     height: 400px;
-    object-fit: cover
+    object-fit: cover;
   }
   .registerTop {
     top: 0%;
@@ -315,8 +311,8 @@ div button.btn-text {
     top: 4%;
   }
 
-   .ticketTop{
-    top:20%
+  .ticketTop {
+    top: 20%;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -344,7 +340,7 @@ div button.btn-text {
     visibility: hidden;
   }
   .homeTop {
-    top: 5%;
+    top: 7%;
   }
 }
 
