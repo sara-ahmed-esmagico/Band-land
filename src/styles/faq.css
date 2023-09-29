@@ -1,0 +1,7 @@
+
+
+.scrollFAQContainer{
+    height: 400px;
+    overflow-y: scroll;
+    z-index: 3;
+}

@@ -25,4 +25,5 @@ export const questions=[
         questions:['Your personal belongings- sunglasses, wallets, masks and such.','Your personal belongings- sunglasses, wallets, masks and such.','Your personal belongings- sunglasses, wallets, masks and such.','Your personal belongings- sunglasses, wallets, masks and such.'],
         bgColor:'#FFF5E0'
     }
+    
 ]
