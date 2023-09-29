@@ -14,7 +14,7 @@ const About = () => {
   return (
     <>
       <Header mobileCss={"mobileViewBannerAbout"} midBanner={Banner} />
-      <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center homeTop ">
+      <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center aboutTop ">
         <Typography
           sx={{ mt: {xs: 25 ,sm:36} }}
           color={"white"}

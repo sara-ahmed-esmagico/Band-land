@@ -6,6 +6,8 @@ import Header from "../../common/Header";
 import Banner from "../../images/faqBanner1.png";
 import FAQAccordion from "../../common/FAQAccordion/FAQAccordion";
 import { questions } from "../../common/FAQQuestions/question";
+import '../../styles/faq.css'
+
 
 const FAQ = () => {
   
@@ -27,6 +29,7 @@ const FAQ = () => {
         >
           FREQUENTLY ASKED QUESTIONS
         </Typography>
+        <Box className="scrollFAQContainer">
         {questions.map((item) => {
           return (
             <FAQAccordion
@@ -37,6 +40,7 @@ const FAQ = () => {
             />
           );
         })}
+        </Box>
 
         <Box
           sx={{ mt: { xs: 5, lg: 10 } }}
