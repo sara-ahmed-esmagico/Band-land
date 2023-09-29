@@ -64,7 +64,7 @@ const Header = ({ mobileCss, midBanner }) => {
         )}
         {isSmallScreen ? (
           <Box
-            className="flex-center align-center navWidth"
+            className="flex-center align-center navWidth navLinkText"
             sx={{ mt: { sm: -5, lg: -3 } }}
           >
             <Link to={"/"}>

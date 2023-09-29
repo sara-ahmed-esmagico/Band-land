@@ -14,7 +14,10 @@ const Home = () => {
       <Header mobileCss={"mobileViewBannerHome"} midBanner={Banner} />
 
       <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center homeTop">
-        <Box sx={{ mt: { sm: 5, lg: 10 } }} className="pos-relative homeMargin">
+        <Box
+          sx={{ mt: { sm: 15, lg: 15 } }}
+          className="pos-relative homeMargin"
+        >
           <img src={gogoDollBanner} className="gogoDollBanner" alt="img" />
         </Box>
         <Typography
@@ -104,7 +107,9 @@ const Home = () => {
                 <Typography
                   sx={{ mt: { xs: -2, sm: -5 } }}
                   className="midDesc2"
-                ></Typography>
+                >
+                  PERFORMANCES
+                </Typography>
               </Grid>
             </Grid>
           </Box>

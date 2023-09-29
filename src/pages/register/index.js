@@ -1,4 +1,4 @@
-import { Box, Typography, Grid } from "@mui/material";
+import {Box, Typography, Grid} from "@mui/material";
 import React, { useState } from "react";
 import "../../styles/globalStyles.css";
 import AlertMessage from "../../common/AlertMessage";
@@ -12,7 +12,7 @@ import { Token } from "../../common/Credential/credential";
 const Register = () => {
   const [formValues, setFormValues] = useState({
     name: "",
-    phone: "",
+    phone: "+91-",
     email: "",
     city: "",
   });
@@ -64,23 +64,24 @@ const Register = () => {
       primary_phoneNo: formValues?.phone,
       primary_email: formValues?.email,
       city: formValues?.city,
-      i_agree_to_the_terms_and_conditions_: true,
+      i_agree_to_the_terms_and_conditions_: "true",
     };
 
     if (isValid(data)) {
       if (isMobileNoValid(data.primary_phoneNo)) {
         try {
-          fetch(
-            "https://regsystem.bookmyshow.com/usersubmission/ET00370953?formType=Presales",
-            {
-              method: "POST",
-              body: JSON.stringify(data),
-              headers: {
-                Authorization: "Bearer " + Token,
-                "Content-Type": "application/json",
-              },
-            }
-          )
+          const myHeaders = new Headers();
+          myHeaders.append("Authorization", "Bearer "+ Token);
+          myHeaders.append("Content-Type", "application/json");
+          const formData = JSON.stringify(data);
+          var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: formData,
+            redirect: 'follow'
+          };
+
+          fetch("https://regsystem.bookmyshow.com/usersubmission/ET00370953?formType=Presales", requestOptions)
             .then((res) => res.json())
             .then((response) => {
               if (response?.status === 200) {
@@ -91,7 +92,7 @@ const Register = () => {
                 });
                 setFormValues({
                   name: "",
-                  phone: "",
+                  phone: "+91-",
                   email: "",
                   city: "",
                 });
@@ -102,7 +103,7 @@ const Register = () => {
                   severity: "error",
                 });
               }
-            });
+            })
         } catch (error) {
           setSnackbar({
             open: true,
