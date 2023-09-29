@@ -1,7 +1,15 @@
-
-
-.scrollFAQContainer{
+.scrollFAQContainer {
     height: 400px;
+    width: 80%;
     overflow-y: scroll;
     z-index: 3;
-}
+  }
+  
+  @media (min-width: 750px) and (max-width: 1190px) {
+    .scrollFAQContainer {
+      height: 400px;
+      width: 90%;
+      overflow-y: scroll;
+      z-index: 3;
+    }
+  }
