@@ -40,13 +40,51 @@
   width: 420px;
 }
 
+.scrollBox {
+  height: 1000px;
+  overflow-y: scroll !important;
+  margin-top: 500px;
+  z-index: 4;
+}
+
+/* Style the scrollbar track (the area behind the thumb) */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the width to make it thinner */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Change the color of the thumb */
+  border-radius: 4px; /* Add some border radius to make it rounded */
+}
+
+/* Style the scrollbar track on hover */
+::-webkit-scrollbar:hover {
+  width: 12px; /* Adjust the width on hover if desired */
+}
+
+.scrollBox::-webkit-scrollbar {
+  /* display: none; */
+}
+
 @media (min-width: 320px) and (max-width: 423px) {
   .artistGrid {
     grid-template-columns: repeat(1, 1fr);
     gap: 50px;
-    border: 1px solid red;
-    height: 300px;
+  }
+
+  .scrollBox {
+    height: 550px;
     overflow: scroll !important;
+    margin-top: 100px;
+    margin-bottom: -30px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  /* Hide the scrollbar for Webkit-based browsers like Chrome and Safari */
+  .scrollBox::-webkit-scrollbar {
+    display: none;
   }
 
   .artistImage img {
@@ -55,48 +93,68 @@
   }
 
   .artistTextBannerLeft {
-    width:235px;
+    width: 235px;
     height: 280px;
-    left:95px;
+    left: 95px;
   }
-  
-  .artistTextBannerRight {
-      width:235px;
-      height: 280px;
-      right: 95px;
-    }
 
-    .artistTextContainer {
-      margin-top: -50px;
-      width: 420px;
-      height: 300px;
-    }
-    .artistText {
-      padding: 20px 110px;
-      font-size: 12px !important;
-     
-    }
+  .artistTextBannerRight {
+    width: 235px;
+    height: 280px;
+    right: 95px;
+  }
+
+  .artistTextContainer {
+    margin-top: -50px;
+    width: 420px;
+    height: 300px;
+  }
+  .artistText {
+    padding: 20px 110px;
+    font-size: 12px !important;
+  }
 }
 
 @media (min-width: 424px) and (max-width: 529px) {
   .artistGrid {
     grid-template-columns: repeat(1, 1fr);
-    
+
     gap: 50px;
   }
   .artistImage img {
     width: 220px;
   }
 
+  .scrollBox {
+    height: 550px;
+    overflow: scroll !important;
+    margin-top: 100px;
+    margin-bottom: -30px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  /* Hide the scrollbar for Webkit-based browsers like Chrome and Safari */
+  .scrollBox::-webkit-scrollbar {
+    display: none;
+  }
+
   .artistTextBannerLeft {
-    width:270px;
+    width: 270px;
     height: 300px;
     left: 0;
   }
-  
+
+  .scrollBox {
+    height: 550px;
+    overflow: scroll !important;
+    margin-top: 100px;
+    margin-bottom: -30px;
+  }
+
   .artistTextBannerRight {
-      width:270px;
-      height: 300px;
-      right: 0;
-    }
+    width: 270px;
+    height: 300px;
+    right: 0;
+  }
 }

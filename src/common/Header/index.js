@@ -27,7 +27,7 @@ const Header = ({ mobileCss, midBanner }) => {
   };
 
   return (
-    <div className="full-screen-background flex-center flex-col align-center pos-relative ">
+    <div className="full-screen-background flex-center flex-col align-center pos-relative " >
       <img
         className="pos-fixed top-0 rotate"
         src={Foot}
@@ -161,7 +161,7 @@ const Header = ({ mobileCss, midBanner }) => {
         onClose={handleDrawerToggle}
       >
         {/* Add your menu content here */}
-        <div className="hamburger" style={{ width: "100vw", height: "120%" }}>
+        <div className="hamburger" style={{ width: "100vw", height: "140%" }}>
           <Hamburger handleDrawerToggle={handleDrawerToggle} />{" "}
         </div>
       </Drawer>

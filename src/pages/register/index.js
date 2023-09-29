@@ -60,7 +60,7 @@ const Register = () => {
       city: formValues?.city,
       i_agree_to_the_terms_and_conditions_: true,
     };
-
+    console.log(data);
     if (isValid(data)) {
       try {
         fetch(
@@ -73,28 +73,30 @@ const Register = () => {
               "Content-Type": "application/json",
             },
           }
-        ).then((response) => {
-          console.log(response, "Adding Data to Sheet Best ");
-          if (response?.status === 200) {
-            setSnackbar({
-              open: true,
-              message: "You response has be recorded successfully!",
-              severity: "success",
-            });
-            setFormValues({
-              name: "",
-              phone: "",
-              email: "",
-              city: "",
-            });
-          } else {
-            setSnackbar({
-              open: true,
-              message: "Something went wrong!",
-              severity: "error",
-            });
-          }
-        });
+        )
+          .then((res) => res.json())
+          .then((response) => {
+            console.log(response, "Adding Data to Sheet Best ");
+            if (response?.status === 200) {
+              setSnackbar({
+                open: true,
+                message: "You response has be recorded successfully!",
+                severity: "success",
+              });
+              setFormValues({
+                name: "",
+                phone: "",
+                email: "",
+                city: "",
+              });
+            } else {
+              setSnackbar({
+                open: true,
+                message: "Something went wrong!",
+                severity: "error",
+              });
+            }
+          });
       } catch (error) {
         setSnackbar({
           open: true,
@@ -228,6 +230,7 @@ const Register = () => {
                     fontSize: "30px",
                     color: "#fffde7",
                     marginTop: "12px",
+                    cursor: "pointer",
                   }}
                   type="submit"
                 >
@@ -238,7 +241,9 @@ const Register = () => {
             </Grid>
           </form>
         </Box>
-        <Footer />
+        <Box style={{ backgroundColor: "coral" }}>
+          <Footer />
+        </Box>
 
         <AlertMessage snackbar={snackbar} setSnackbar={setSnackbar} />
       </Box>

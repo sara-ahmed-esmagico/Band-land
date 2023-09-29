@@ -143,7 +143,9 @@ const Home = () => {
               Sign Up{" "}
             </Button>
           </Box>
-          <Footer />
+          <Box style={{ backgroundColor: "#44c0a8" }}>
+            <Footer />
+          </Box>
         </Box>
       </Box>
     </>

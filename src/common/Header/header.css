@@ -28,8 +28,8 @@
   width: 1050px;
 }
 .marginNegative img.mobileViewBannerArtist {
-  margin-top: -3750px;
-  height: 9450px;
+  margin-top: -200px;
+  height: 2350px;
   width: 1050px;
 }
 
@@ -68,8 +68,8 @@
   }
 
   .marginNegative img.mobileViewBannerArtist {
-    margin-top: -3750px;
-    height: 10550px;
+    margin-top: -300px;
+    height: 1150px;
     width: 280px;
   }
 }

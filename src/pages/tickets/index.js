@@ -68,6 +68,7 @@ const Tickets = () => {
         <Box
           sx={{ mt: { xs: 5, lg: 10 } }}
           className="pos-relative flex-center flex-col align-center"
+          style={{ backgroundColor: "#44c0a8" }}
         >
           <Footer />
         </Box>

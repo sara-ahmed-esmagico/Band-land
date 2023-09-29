@@ -18,7 +18,8 @@ const Artists = () => {
       <Header mobileCss={"mobileViewBannerArtist"} midBanner={Banner} />
 
       <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center artistTop ">
-        <Box className="pos-relative artistGrid ">
+       <Box className='scrollBox'>
+       <Box className="pos-relative artistGrid ">
           <Box className="gridBox">
             <Box className="artistImage">
               <img src={artistGreen} alt="img" />
@@ -266,10 +267,12 @@ const Artists = () => {
             </Box>
           </Box>
         </Box>
+       </Box>
 
         <Box
           sx={{ mt: { xs: 5, lg: 10 } }}
           className="pos-relative flex-center flex-col align-center"
+          style={{ backgroundColor: "coral" }}
         >
           <Footer />
         </Box>
