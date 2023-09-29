@@ -1,6 +1,6 @@
 .marginNegative img.mobileViewBannerRegister {
   padding-top: 90px;
-  width: 1050px;
+  width: 100%;
   height: 1670px;
 }
 
@@ -18,35 +18,65 @@
 
 .marginNegative img.mobileViewBannerFAQ {
   margin-top: 40px;
-  width: 1050px;
+  width: 120%;
   max-height: 1555px;
 }
 
 .marginNegative img.mobileViewBannerTicket {
-  margin-top: -850px;
-  height: 3650px;
-  width: 1050px;
+  margin-top: -750px;
+  height: 3500px;
+  width: 70%;
 }
+
 .marginNegative img.mobileViewBannerArtist {
-  margin-top: -200px;
-  height: 2350px;
+  margin-top: -100px;
+  height: 2100px;
   width: 80%;
 }
 
 @media (min-width: 750px) and (max-width: 1190px) {
   .marginNegative img.mobileViewBannerHome {
-    margin-top: -1150px; 
+    margin-top: -1150px;
     height: 3500px;
   }
+
   .navLinkText {
     margin: 10px;
   }
-  .navLinkText button{
+
+  .navLinkText button {
     font-size: 1.3rem;
 
   }
-}
 
+  .marginNegative img.mobileViewBannerRegister {
+    margin-top: -220px;
+    height: 1470px;
+    width: 80%;
+  }
+
+  .marginNegative img.mobileViewBannerAbout {
+    width: 80%;
+    margin-top: -555px;
+    height: 2330px;
+
+  }
+
+  .marginNegative img.mobileViewBannerArtist {
+    margin-top: -490px;
+    height: 2180px;
+  }
+
+  .marginNegative img.mobileViewBannerTicket{
+    width: 80%;
+    margin-top: -1150px;
+    height: 3520px;
+  }
+
+  .marginNegative img.mobileViewBannerFAQ{
+    width: 80%;
+  }
+}
 
 @media (min-width: 320px) and (max-width: 423px) {
   .marginNegative img.mobileViewBannerHome {
@@ -66,19 +96,18 @@
   }
 
   .marginNegative img.mobileViewBannerRegister {
-    margin-top: -520px;
+    margin-top: -550px;
     height: 1470px;
     width: 280px;
   }
 
   .marginNegative img.mobileViewBannerFAQ {
-    width: 280px;
     height: 950px;
   }
 
   .marginNegative img.mobileViewBannerTicket {
     margin-top: -600px;
-    width: 280px;
+    width: 80%;
     height: 1800px;
   }
 
@@ -86,6 +115,9 @@
     margin-top: -300px;
     height: 1150px;
     width: 280px;
+  }
+  .marginNegative img.mobileViewBannerFAQ{
+    width: 80%;
   }
 }
 
@@ -121,6 +153,9 @@
     height: 9450px;
     width: 340px;
   }
+  .marginNegative img.mobileViewBannerFAQ{
+    width: 80%;
+  }
 }
 
 @media (min-width: 530px) and (max-width: 599px) {
@@ -139,8 +174,13 @@
     height: 1150px;
     width: 450px;
   }
+
   .bandLandHomeContainer {
     top: 6%;
+  }
+
+  .marginNegative img.mobileViewBannerFAQ{
+    width: 80%;
   }
 }
 
@@ -160,8 +200,13 @@
     height: 1200px;
     width: 450px;
   }
+
   .bandLandHomeContainer {
     top: 6%;
+  }
+
+  .marginNegative img.mobileViewBannerFAQ{
+    width: 80%;
   }
 }
 
@@ -181,7 +226,12 @@
     height: 1200px;
     width: 600px;
   }
+
   .bandLandHomeContainer {
     top: 6%;
+  }
+
+  .marginNegative img.mobileViewBannerFAQ{
+    width: 80%;
   }
 }
