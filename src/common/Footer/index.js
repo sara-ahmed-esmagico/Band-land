@@ -45,7 +45,7 @@ const Footer = () => {
 
           <Box
             sx={{ flexDirection: { xs: "column", sm: "row" } }}
-            className="flex align-center"
+            className="flex align-center footerLinkText"
           >
             <Link to="/" component={RouteLink}>
               <Button
