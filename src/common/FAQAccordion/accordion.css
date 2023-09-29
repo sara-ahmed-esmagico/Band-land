@@ -1,0 +1,95 @@
+div.accordionContainer {
+  position: "relative";
+  z-index: 4;
+  margin-top: 15px;
+  width: 600px;
+}
+
+.Mui-expanded{
+  margin: 0 !important;
+}
+
+div.mainAccordion {
+  padding: "7px";
+  box-shadow: "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset";
+  margin: 0px;
+}
+
+.accordionIcon {
+  font-size: 50px !important;
+}
+
+p.accordionTitle {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Texturina";
+}
+
+li.questionList {
+  text-align: left;
+  font-size: 14px;
+  font-family: "Texturina";
+}
+
+.accordionHeight{
+    height: 90px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+@media (min-width: 320px) and (max-width: 423px) {
+  div.accordionContainer {
+    margin-top: 10px;
+    width: 220px;
+  }
+
+  div.mainAccordion {
+    padding: "5px";
+  }
+
+  p.accordionTitle {
+    font-size: 12px;
+  }
+
+  li.questionList {
+    font-size: 10px;
+  }
+
+  .accordionIcon {
+    font-size: 30px !important;  
+  }
+  .accordionHeight{
+    height: 100px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+}
+
+@media (min-width: 424px) and (max-width: 529px) {
+  div.accordionContainer {
+    margin-top: 10px;
+    width: 220px;
+  }
+
+  div.mainAccordion {
+    padding: "5px";
+    box-shadow: "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset";
+    margin: 0px;
+  }
+
+  p.accordionTitle {
+    font-size: 12px;
+  }
+
+  li.questionList {
+    font-size: 10px;
+  }
+
+  .accordionIcon {
+    font-size: 30px !important;
+  }
+  .accordionHeight{
+    height: 100px;
+   
+}
+}

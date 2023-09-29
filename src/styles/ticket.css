@@ -1,0 +1,90 @@
+.ticketBanner {
+  width: 634px;
+  height: 520px;
+  position: relative;
+  z-index: 3;
+  opacity: 1;
+}
+
+h1.ticketHeading {
+  color: white;
+  font-size: 50px;
+  text-shadow: 4px 4px black;
+  margin: 0px;
+  padding: 0px;
+}
+
+p.ticketText {
+  width: 412px;
+  height: 180px;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font: normal normal medium 16px/25px Texturina;
+  letter-spacing: 0px;
+  color: #390c06;
+  opacity: 1;
+  padding-bottom: 0px;
+}
+
+.ticketBannerMargin {
+  margin: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 423px) {
+    h1.ticketHeading {
+        color: white;
+        font-size: 20px;
+        text-shadow: 4px 4px black;
+        margin: 0px;
+        padding: 0px;
+      }
+    
+      p.ticketText {
+        width: 193px;
+        height: 84px;
+        margin: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 10px;
+        letter-spacing: 0px;
+        color: #390c06;
+        opacity: 1;
+        padding-bottom: 0px;
+        overflow: hidden;
+      }
+    
+      .ticketBanner {
+        width: 256px;
+        height: 220px;
+      }
+}
+
+@media (min-width: 424px) and (max-width: 529px) {
+  h1.ticketHeading {
+    color: white;
+    font-size: 22px;
+    text-shadow: 4px 4px black;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  p.ticketText {
+    width: 193px;
+    height: 84px;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 10px;
+    letter-spacing: 0px;
+    color: #390c06;
+    opacity: 1;
+    padding-bottom: 0px;
+    overflow: hidden;
+  }
+
+  .ticketBanner {
+    width: 296px;
+    height: 220px;
+  }
+}

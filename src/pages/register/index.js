@@ -1,30 +1,22 @@
-import { Box, Typography, Grid, input } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import React, { useState } from "react";
 import "../../styles/globalStyles.css";
-import axios from "axios";
 import AlertMessage from "../../common/AlertMessage";
 import "../../styles/Register.css";
 import Footer from "../../common/Footer";
 import TextBanner from "../../images/Home/Text Banner.png";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../common/Header";
-import MidBanner from "../../images/Banner1.png";
-// import MidBanner2 from "../../images/Banner2.png";
-import MidBanner2 from '../../images/testBanner.svg'
+import MidBanner2 from "../../images/testBanner.svg";
+import { Token } from "../../common/Credential/credential";
 
 const Register = () => {
-  const theme = useTheme();
-  const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
-  const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
-  const isScreenXtraSmall = useMediaQuery(theme.breakpoints.up("xs"));
-  let windowWidth = document.documentElement.clientWidth;
   const [formValues, setFormValues] = useState({
     name: "",
     phone: "",
     email: "",
     city: "",
   });
+
   const [snackbar, setSnackbar] = useState({
     open: false,
     message: "",
@@ -36,56 +28,110 @@ const Register = () => {
     setFormValues({ ...formValues, [name]: value });
   };
 
-  const handleRegisterNow = () => {
-    const data = {
-      Name: formValues?.name,
-      Phone: formValues?.phone,
-      Email: formValues?.email,
-      City: formValues?.city,
-    };
-    try {
-      axios
-        .post(
-          "https://sheet.best/api/sheets/71d158a6-7d77-48b6-8296-caab074f402f",
-          data
-        )
-        .then((response) => {
-          console.log(response, "Adding Data to Sheet Best ");
-          if (response?.status === 200) {
-            setSnackbar({
-              open: true,
-              message: "You response has be recorded successfully!",
-              severity: "success",
-            });
-          }
-          setFormValues({
-            name: "",
-            phone: "",
-            email: "",
-            city: "",
-          });
-        });
-    } catch (error) {
+  const isValid = (data) => {
+    if (
+      data.name.trim() !== "" &&
+      data.primary_email.trim() !== "" &&
+      data.city.trim() !== "" &&
+      data.primary_phoneNo.trim !== ""
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  // mobile no format +91-XXXXXXXXXX
+  const isMobileNoValid = (mobileNumber) => {
+    const pattern = /^\+91-\d{10}$/;
+    if (!pattern.test(mobileNumber)) {
       setSnackbar({
         open: true,
-        message: "Something went wrong!",
+        message: "Mobile No should be in +91-XXXXXXXXXX Format",
+        severity: "error",
+      });
+      return false;
+    } else {
+      return true;
+    }
+  };
+
+  const handleRegisterNow = (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: formValues?.name,
+      primary_phoneNo: formValues?.phone,
+      primary_email: formValues?.email,
+      city: formValues?.city,
+      i_agree_to_the_terms_and_conditions_: true,
+    };
+
+    if (isValid(data)) {
+      if (isMobileNoValid(data.primary_phoneNo)) {
+        try {
+          fetch(
+            "https://regsystem.bookmyshow.com/usersubmission/ET00370953?formType=Presales",
+            {
+              method: "POST",
+              body: JSON.stringify(data),
+              headers: {
+                Authorization: "Bearer " + Token,
+                "Content-Type": "application/json",
+              },
+            }
+          )
+            .then((res) => res.json())
+            .then((response) => {
+              if (response?.status === 200) {
+                setSnackbar({
+                  open: true,
+                  message: "You response has be recorded successfully!",
+                  severity: "success",
+                });
+                setFormValues({
+                  name: "",
+                  phone: "",
+                  email: "",
+                  city: "",
+                });
+              } else {
+                setSnackbar({
+                  open: true,
+                  message: "Something went wrong!",
+                  severity: "error",
+                });
+              }
+            });
+        } catch (error) {
+          setSnackbar({
+            open: true,
+            message: "Something went wrong!",
+            severity: "error",
+          });
+        }
+      }
+    } else {
+      setSnackbar({
+        open: true,
+        message: "All Fields are required!",
         severity: "error",
       });
     }
-
   };
+
   return (
     <>
       <Header
         banner2={true}
         mobileCss={"mobileViewBannerRegister"}
-        midBanner={ MidBanner2}
+        midBanner={MidBanner2}
       />
       <Box className="pos-absolute top-5 relative-top flex-center flex-col align-center text-center registerTop  ">
         <Typography
           sx={{
             fontSize: { xs: "30px", sm: "50px", lg: "70px" },
-            mt: 50,
+            mt: { xs: 35, sm: 50 },
             zIndex: 2,
           }}
           className="text-shadow text-stroke font-modesto-condensed"
@@ -108,8 +154,12 @@ const Register = () => {
             className="form-background"
             src={TextBanner}
             style={{ marginTop: 30 }}
+            alt="img"
           />
-          <form className="pos-absolute form-width">
+          <form
+            className="pos-absolute form-width"
+            onSubmit={handleRegisterNow}
+          >
             <Grid container>
               <Grid item xs={5}>
                 <Typography
@@ -159,6 +209,7 @@ const Register = () => {
                   style={{ width: "100%", height: "28px" }}
                   value={formValues?.email}
                   name="email"
+                  type="email"
                   onChange={handleTextInputChange}
                 />
               </Grid>
@@ -186,8 +237,9 @@ const Register = () => {
                     fontSize: "30px",
                     color: "#fffde7",
                     marginTop: "12px",
+                    cursor: "pointer",
                   }}
-                  onClick={handleRegisterNow}
+                  type="submit"
                 >
                   {" "}
                   Register Now{" "}
@@ -196,7 +248,9 @@ const Register = () => {
             </Grid>
           </form>
         </Box>
-        <Footer />
+        <Box style={{ backgroundColor: "coral" }}>
+          <Footer />
+        </Box>
 
         <AlertMessage snackbar={snackbar} setSnackbar={setSnackbar} />
       </Box>

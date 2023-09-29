@@ -1,30 +1,47 @@
-import * as React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import * as React from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import "./accordion.css";
 
-const FAQAccordian = ({questions}) => {
+const FAQAccordian = ({ questions,accordionPannel,expanded,onChange }) => {
+
+ 
   return (
-    <div style={{position:'relative', zIndex:4,marginTop:'20px', width:'600px'}}>  
-      <Accordion style={{backgroundColor:questions?.bgColor,color:`${questions?.bgColor!=='white' ? 'white' :'black'}`,padding:"10px"}} >
+    <div className="accordionContainer">
+      <Accordion
+      expanded={expanded === accordionPannel} onChange={onChange(accordionPannel)}
+        style={{
+          backgroundColor: questions?.bgColor,
+          color: `${questions?.bgColor !== "#FFF5E0" ? "#FFF5E0" : "black"}`,
+        }}
+        className="mainAccordion"
+      >
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon style={{color:`${questions?.bgColor!=='white' ? 'white' :'black'}`}}  />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          expandIcon={
+            <ExpandMoreIcon className="accordionIcon"
+              style={{
+                color: `${
+                  questions?.bgColor !== "#FFF5E0" ? "#FFF5E0" : "black"
+                }`
+              }}
+            />
+          }
         >
-          <Typography>Accordion 2</Typography>
+          <Typography className="accordionTitle">{questions?.title}</Typography>
         </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+        <AccordionDetails className="accordionHeight">
+          <ul>
+            {questions?.questions?.map((question) => {
+              return <li className="questionList">{question}</li>;
+            })}
+          </ul>
         </AccordionDetails>
       </Accordion>
     </div>
-  )
-}
+  );
+};
 
-export default FAQAccordian
+export default FAQAccordian;

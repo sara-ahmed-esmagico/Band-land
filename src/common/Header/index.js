@@ -1,5 +1,5 @@
 import { Box, Button, Drawer } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Foot from "../../images/Home/Foot.png";
 import HeaderBase from "../../images/Header Base.png";
 import SideBorder from "../../images/Home/SideBorder.svg";
@@ -11,8 +11,9 @@ import { Bolt } from "@mui/icons-material";
 import "./header.css";
 import Hamburger from "../Hamburger";
 import { useLocation, Link } from "react-router-dom";
+import ReactGA from "react-ga";
 
-const Header = ({ mobileCss, midBanner,  }) => {
+const Header = ({ mobileCss, midBanner }) => {
   const theme = useTheme();
   const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
   const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
@@ -26,13 +27,20 @@ const Header = ({ mobileCss, midBanner,  }) => {
     setIsDrawerOpen(!isDrawerOpen);
   };
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
-    <div className="full-screen-background flex-center flex-col align-center pos-relative ">
+    <div
+      className="full-screen-background flex-center flex-col align-center pos-relative "
+      style={{ width: "100vw" }}
+    >
       <img
         className="pos-fixed top-0 rotate"
         src={Foot}
-        alt='img'
-        style={{ width: "100%" }}
+        alt="img"
+        style={{ width: "90%" }}
       />
 
       <img
@@ -145,6 +153,7 @@ const Header = ({ mobileCss, midBanner,  }) => {
         <img
           src={midBanner}
           className={`z-index-3 banner-width banner-width-desktop mobile ${mobileCss}`}
+          alt="img"
         />
       </Box>
       <img
@@ -152,6 +161,7 @@ const Header = ({ mobileCss, midBanner,  }) => {
         style={{ position: isMediumScreen ? "fixed" : "absolute" }}
         src={SideBorder}
         width={"100%"}
+        alt="img"
       />
       <Drawer
         anchor="right" // Change to 'left' for a left-side menu
@@ -159,7 +169,7 @@ const Header = ({ mobileCss, midBanner,  }) => {
         onClose={handleDrawerToggle}
       >
         {/* Add your menu content here */}
-        <div className="hamburger" style={{ width: "100vw", height: "100%" }}>
+        <div className="hamburger" style={{ width: "100vw", height: "140%" }}>
           <Hamburger handleDrawerToggle={handleDrawerToggle} />{" "}
         </div>
       </Drawer>

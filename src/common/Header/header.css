@@ -1,46 +1,77 @@
-
-
-.marginNegative img.mobileViewBannerRegister{
+.marginNegative img.mobileViewBannerRegister {
   padding-top: 90px;
   width: 1050px;
-  height:1670px;
+  height: 1670px;
 }
 
 .marginNegative img.mobileViewBannerHome {
-  margin-top: -1720px;
+  margin-top: -1420px;
   width: 1050px;
-  height:5400px;
+  height: 4800px;
 }
 
 .marginNegative img.mobileViewBannerAbout {
   margin-top: -325px;
   width: 1050px;
-  height:2627px;
+  height: 2627px;
+}
+
+.marginNegative img.mobileViewBannerFAQ {
+  margin-top: 40px;
+  width: 1050px;
+  max-height: 1555px;
+}
+
+.marginNegative img.mobileViewBannerTicket {
+  margin-top: -850px;
+  height: 3650px;
+  width: 1050px;
+}
+.marginNegative img.mobileViewBannerArtist {
+  margin-top: -200px;
+  height: 2350px;
+  width: 1050px;
 }
 
 @media (min-width: 320px) and (max-width: 423px) {
   .marginNegative img.mobileViewBannerHome {
     margin-top: -1300px;
-    width: 290px;
+    width: 280px;
     height: 3230px;
   }
 
   .marginNegative img.mobileViewBannerAbout {
-    margin-top: -850px;
-    width: 290px;
-    height: 2330px;
+    margin-top: -670px;
+    width: 280px;
+    height: 1930px;
   }
 
-  div.navWidth{
-    border: 1px solid red;
-  max-width: 500px;
+  div.navWidth {
+    max-width: 500px;
   }
 
-  .marginNegative img.mobileViewBannerRegister{
-    margin-top: -530px;
-    height: 1570px;
+  .marginNegative img.mobileViewBannerRegister {
+    margin-top: -520px;
+    height: 1470px;
+    width: 280px;
   }
-  
+
+  .marginNegative img.mobileViewBannerFAQ {
+    width: 280px;
+    height: 950px;
+  }
+
+  .marginNegative img.mobileViewBannerTicket {
+    margin-top: -600px;
+    width: 280px;
+    height: 1800px;
+  }
+
+  .marginNegative img.mobileViewBannerArtist {
+    margin-top: -300px;
+    height: 1150px;
+    width: 280px;
+  }
 }
 
 @media (min-width: 424px) and (max-width: 529px) {
@@ -62,6 +93,18 @@
 
   .bandLandHomeContainer {
     top: 6%;
+  }
+
+  .marginNegative img.mobileViewBannerTicket {
+    margin-top: -560px;
+    width: 340px;
+    height: 1800px;
+  }
+
+  .marginNegative img.mobileViewBannerArtist {
+    margin-top: -3750px;
+    height: 9450px;
+    width: 340px;
   }
 }
 

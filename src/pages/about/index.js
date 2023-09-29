@@ -97,6 +97,7 @@ const About = () => {
         <Box
           sx={{ mt: { xs: 5, lg: 10 } }}
           className="pos-relative flex-center flex-col align-center"
+          style={{ backgroundColor: "#7B1AA7" }}
         >
           <Footer />
         </Box>
