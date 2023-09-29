@@ -32,12 +32,15 @@ const Header = ({ mobileCss, midBanner }) => {
   }, []);
 
   return (
-    <div className="full-screen-background flex-center flex-col align-center pos-relative ">
+    <div
+      className="full-screen-background flex-center flex-col align-center pos-relative "
+      style={{ width: "100vw" }}
+    >
       <img
         className="pos-fixed top-0 rotate"
         src={Foot}
         alt="img"
-        style={{ width: "100%" }}
+        style={{ width: "90%" }}
       />
 
       <img
