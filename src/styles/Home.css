@@ -221,6 +221,10 @@ div button.btn-text {
     font-size: 8px !important;
   }
 
+  .artistTop {
+    top: 13%;
+  }
+
   .homeMargin {
     margin-bottom: 0px;
   }
