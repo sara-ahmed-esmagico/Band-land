@@ -4,6 +4,8 @@
   gap: 50px;
   z-index: 2;
   height: max-content;
+  height: 100vh;
+
 }
 .gridBox {
   width: 80%;
@@ -43,7 +45,7 @@
 .scrollBox {
   height: 1000px;
   overflow-y: scroll !important;
-  margin-top: 500px;
+  margin-top: 300px;
   z-index: 4;
   width: 100vw;
   display: flex;
@@ -72,8 +74,19 @@
   /* display: none; */
 }
 
+@media (min-width: 423px) and (max-width: 1180px) {
+  .artistGrid {
+    height: 80vh;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .scrollBox{
+    margin-top: 200px;
+  }
+
+}
 @media (min-width: 320px) and (max-width: 423px) {
   .artistGrid {
+    height: 60vh;
     grid-template-columns: repeat(1, 1fr);
     gap: 50px;
   }

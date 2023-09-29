@@ -183,7 +183,9 @@ div button.btn-text {
 }
 
 .faqTop{
-  top:40%
+  top:40%;
+  width: 65vw;
+
 }
 
 .gogoDollBanner{
@@ -201,6 +203,10 @@ div button.btn-text {
   .gogoDollBanner{
    margin: 0;
    width: 100%;
+  }
+
+  .faqTop{
+    width: 70vw;
   }
 }
 

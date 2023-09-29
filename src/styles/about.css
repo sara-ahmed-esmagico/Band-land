@@ -12,7 +12,7 @@ img.greenBorderRight {
   bottom: 45px;
 }
 
-@media (min-width: 320px) and (max-width: 700px) {
+@media (min-width: 320px) and (max-width: 1180px) {
   img.greenBorderLeft {
     display: none;
   }

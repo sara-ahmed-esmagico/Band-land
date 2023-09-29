@@ -2,7 +2,7 @@ div.accordionContainer {
   position: "relative";
   z-index: 4;
   margin-top: 15px;
-  width: 600px;
+  width: 80%;
 }
 
 .Mui-expanded{
@@ -40,7 +40,6 @@ li.questionList {
 @media (min-width: 320px) and (max-width: 423px) {
   div.accordionContainer {
     margin-top: 10px;
-    width: 220px;
   }
 
   div.mainAccordion {
@@ -68,7 +67,6 @@ li.questionList {
 @media (min-width: 424px) and (max-width: 529px) {
   div.accordionContainer {
     margin-top: 10px;
-    width: 220px;
   }
 
   div.mainAccordion {

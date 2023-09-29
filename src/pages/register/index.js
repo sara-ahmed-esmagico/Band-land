@@ -1,4 +1,4 @@
-import {Box, Typography, Grid} from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import React, { useState } from "react";
 import "../../styles/globalStyles.css";
 import AlertMessage from "../../common/AlertMessage";
@@ -71,17 +71,20 @@ const Register = () => {
       if (isMobileNoValid(data.primary_phoneNo)) {
         try {
           const myHeaders = new Headers();
-          myHeaders.append("Authorization", "Bearer "+ Token);
+          myHeaders.append("Authorization", "Bearer " + Token);
           myHeaders.append("Content-Type", "application/json");
           const formData = JSON.stringify(data);
           var requestOptions = {
-            method: 'POST',
+            method: "POST",
             headers: myHeaders,
             body: formData,
-            redirect: 'follow'
+            redirect: "follow",
           };
 
-          fetch("https://regsystem.bookmyshow.com/usersubmission/ET00370953?formType=Presales", requestOptions)
+          fetch(
+            "https://regsystem.bookmyshow.com/usersubmission/ET00370953?formType=Presales",
+            requestOptions
+          )
             .then((res) => res.json())
             .then((response) => {
               if (response?.status === 200) {
@@ -103,7 +106,7 @@ const Register = () => {
                   severity: "error",
                 });
               }
-            })
+            });
         } catch (error) {
           setSnackbar({
             open: true,
@@ -137,15 +140,15 @@ const Register = () => {
           }}
           className="text-shadow text-stroke font-modesto-condensed"
           color={"white"}
-          width={{ xs: "75%", sm: "100%" }}
+          width={{ xs: "65%", sm: "90%" }}
         >
           PLEDGE ALLEGIANCE TO THE BAND!
         </Typography>
         <Typography
           sx={{ fontSize: { xs: "10px", sm: "20px", lg: "30px" } }}
-          className="font-texturina"
+          className="font-texturina typographyTextSecond"
           color={"white"}
-          width={{ xs: "70%", sm: "75%", lg: "50%" }}
+          width={{ xs: "60%", sm: "60%", lg: "50%" }}
         >
           Join the inner circle to receive all festival updates, from artist
           lineup to tickets, schedule, guides & more. This one’s for you!
