@@ -5,17 +5,10 @@ import AlertMessage from "../../common/AlertMessage";
 import "../../styles/Register.css";
 import Footer from "../../common/Footer";
 import TextBanner from "../../images/Home/Text Banner.png";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../common/Header";
 import MidBanner2 from "../../images/testBanner.svg";
-  
-const Register = () => {
-  const theme = useTheme();
-  const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
-  const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
-  const isScreenXtraSmall = useMediaQuery(theme.breakpoints.up("xs"));
 
+const Register = () => {
   const [formValues, setFormValues] = useState({
     name: "",
     phone: "",
@@ -47,9 +40,24 @@ const Register = () => {
     }
   };
 
+  // mobile no format +91-XXXXXXXXXX
+  const isMobileNoValid = (mobileNumber) => {
+    const pattern = /^\+91-\d{10}$/;
+    if (!pattern.test(mobileNumber)) {
+      setSnackbar({
+        open: true,
+        message: "Mobile No should be in +91-XXXXXXXXXX Format",
+        severity: "error",
+      });
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   const handleRegisterNow = (e) => {
     e.preventDefault();
-    console.log(process.env.REACT_APP_TOKEN)
+
     const data = {
       name: formValues?.name,
       primary_phoneNo: formValues?.phone,
@@ -57,49 +65,50 @@ const Register = () => {
       city: formValues?.city,
       i_agree_to_the_terms_and_conditions_: true,
     };
-    console.log(data);
+
     if (isValid(data)) {
-      try {
-        fetch(
-          "https://regsystem.bookmyshow.com/usersubmission/ET00370953?formType=Presales",
-          {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-              Authorization: "Bearer " + process.env.REACT_APP_TOKEN,
-              "Content-Type": "application/json",
-            },
-          }
-        )
-          .then((res) => res.json())
-          .then((response) => {
-            console.log(response, "Adding Data to Sheet Best ");
-            if (response?.status === 200) {
-              setSnackbar({
-                open: true,
-                message: "You response has be recorded successfully!",
-                severity: "success",
-              });
-              setFormValues({
-                name: "",
-                phone: "",
-                email: "",
-                city: "",
-              });
-            } else {
-              setSnackbar({
-                open: true,
-                message: "Something went wrong!",
-                severity: "error",
-              });
+      if (isMobileNoValid(data.primary_phoneNo)) {
+        try {
+          fetch(
+            "https://regsystem.bookmyshow.com/usersubmission/ET00370953?formType=Presales",
+            {
+              method: "POST",
+              body: JSON.stringify(data),
+              headers: {
+                Authorization: "Bearer " + process.env.REACT_APP_TOKEN,
+                "Content-Type": "application/json",
+              },
             }
+          )
+            .then((res) => res.json())
+            .then((response) => {
+              if (response?.status === 200) {
+                setSnackbar({
+                  open: true,
+                  message: "You response has be recorded successfully!",
+                  severity: "success",
+                });
+                setFormValues({
+                  name: "",
+                  phone: "",
+                  email: "",
+                  city: "",
+                });
+              } else {
+                setSnackbar({
+                  open: true,
+                  message: "Something went wrong!",
+                  severity: "error",
+                });
+              }
+            });
+        } catch (error) {
+          setSnackbar({
+            open: true,
+            message: "Something went wrong!",
+            severity: "error",
           });
-      } catch (error) {
-        setSnackbar({
-          open: true,
-          message: "Something went wrong!",
-          severity: "error",
-        });
+        }
       }
     } else {
       setSnackbar({
