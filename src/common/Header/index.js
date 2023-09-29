@@ -1,5 +1,5 @@
 import { Box, Button, Drawer } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Foot from "../../images/Home/Foot.png";
 import HeaderBase from "../../images/Header Base.png";
 import SideBorder from "../../images/Home/SideBorder.svg";
@@ -11,6 +11,7 @@ import { Bolt } from "@mui/icons-material";
 import "./header.css";
 import Hamburger from "../Hamburger";
 import { useLocation, Link } from "react-router-dom";
+import ReactGA from "react-ga";
 
 const Header = ({ mobileCss, midBanner }) => {
   const theme = useTheme();
@@ -26,8 +27,12 @@ const Header = ({ mobileCss, midBanner }) => {
     setIsDrawerOpen(!isDrawerOpen);
   };
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
-    <div className="full-screen-background flex-center flex-col align-center pos-relative " >
+    <div className="full-screen-background flex-center flex-col align-center pos-relative ">
       <img
         className="pos-fixed top-0 rotate"
         src={Foot}

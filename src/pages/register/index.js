@@ -9,10 +9,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../common/Header";
 import MidBanner2 from "../../images/testBanner.svg";
-
-const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBpbmZvIjp7Im5hbWUiOiJiYW5kbGFuZCIsInVyaW5hbWUiOiJiYW5kbGFuZCJ9LCJhdWQiOiJyZWdzeXN0ZW0iLCJjbGllbnRfaWQiOiJiYW5kbGFuZCIsImNsaWVudF90eXBlIjoiYXBwIiwiY291bnRyeSI6ImluIiwiZXhwIjoyMDExMzgxMTIxLCJleHBpcmVzIjozMTU1NzYwMDAsImlhdCI6MTY5NTgwNTEyMSwiaXNzIjoiaWFtLmJvb2tteXNob3cuY29tIiwic2NvcGUiOiJwcmVzYWxlIiwidGllciI6InByb2R1Y3Rpb24ifQ.hwqYqr37wvTN9yTvoV5v5mL5jB-9EMld79-9P47j_-I";
-
+  
 const Register = () => {
   const theme = useTheme();
   const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
@@ -52,7 +49,7 @@ const Register = () => {
 
   const handleRegisterNow = (e) => {
     e.preventDefault();
-
+    console.log(process.env.REACT_APP_TOKEN)
     const data = {
       name: formValues?.name,
       primary_phoneNo: formValues?.phone,
@@ -69,7 +66,7 @@ const Register = () => {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
-              Authorization: "Bearer " + token,
+              Authorization: "Bearer " + process.env.REACT_APP_TOKEN,
               "Content-Type": "application/json",
             },
           }

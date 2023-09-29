@@ -8,10 +8,15 @@ import About from "./pages/about";
 import Artists from "./pages/the-artists";
 import Tickets from "./pages/tickets";
 import FAQ from "./pages/faq";
+import ReactGA from 'react-ga';
+
 
 function App() {
   const [backgroundColor, setBackgroundColor] = useState("");
   const { pathname: currentLocation } = useLocation();
+
+  // add your tracking id here
+  ReactGA.initialize(process.env.REACT_APP_YOUR_TRACKING_ID);
 
   useEffect(() => {
     if (currentLocation === "/") {
@@ -34,6 +39,7 @@ function App() {
       setBackgroundColor('coral')
     }
   }, [currentLocation,setBackgroundColor]);
+
   return (
     <div
       style={{ backgroundColor: backgroundColor }}
