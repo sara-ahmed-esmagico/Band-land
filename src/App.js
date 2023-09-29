@@ -9,6 +9,7 @@ import Artists from "./pages/the-artists";
 import Tickets from "./pages/tickets";
 import FAQ from "./pages/faq";
 import ReactGA from 'react-ga';
+import { YOUR_TRACKING_ID } from "./common/Credential/credential";
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
   const { pathname: currentLocation } = useLocation();
 
   // add your tracking id here
-  ReactGA.initialize(process.env.REACT_APP_YOUR_TRACKING_ID);
+  ReactGA.initialize(YOUR_TRACKING_ID);
 
   useEffect(() => {
     if (currentLocation === "/") {

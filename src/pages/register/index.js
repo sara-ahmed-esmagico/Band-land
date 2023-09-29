@@ -7,6 +7,7 @@ import Footer from "../../common/Footer";
 import TextBanner from "../../images/Home/Text Banner.png";
 import Header from "../../common/Header";
 import MidBanner2 from "../../images/testBanner.svg";
+import { Token } from "../../common/Credential/credential";
 
 const Register = () => {
   const [formValues, setFormValues] = useState({
@@ -75,7 +76,7 @@ const Register = () => {
               method: "POST",
               body: JSON.stringify(data),
               headers: {
-                Authorization: "Bearer " + process.env.REACT_APP_TOKEN,
+                Authorization: "Bearer " + Token,
                 "Content-Type": "application/json",
               },
             }
